@@ -1,24 +1,567 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPz-rP-uc2">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Book.ttf">
+            <string>CircularStd-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="sZP-aW-sVN">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="wPz-rP-uc2" customClass="ViewController" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Kf-GW-Rrf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-oX-Zvg" userLabel="Login">
+                                <rect key="frame" x="65" y="288" width="260" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to your account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh6-IU-JaD" userLabel="titolo">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fCh-uV-JVo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="25"/>
+                                        <color key="textColor" red="0.1058809236" green="0.1058813706" blue="0.1058824137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fck-bz-Mci" userLabel="name">
+                                        <rect key="frame" x="0.0" y="65" width="260" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGn-DL-mN4" userLabel="password">
+                                        <rect key="frame" x="0.0" y="114" width="260" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="R1t-82-Q0R"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7w1-MD-a2x" userLabel="Other_Stack">
+                                <rect key="frame" x="127" y="510.66666666666669" width="136" height="58.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow1-VK-iBc" userLabel="pass_dimenticata">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="29.333333333333332"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Password Forgotten">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.1123935059" green="0.45580279829999998" blue="0.98436647649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="15" name="CircularStd-Book"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXT-dY-cii" userLabel="Registrati">
+                                        <rect key="frame" x="0.0" y="29.333333333333314" width="136" height="29.333333333333329"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Sign up">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.1112059727" green="0.46399325130000002" blue="0.98828798529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="15" name="CircularStd-Book"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="915-KH-90B" userLabel="submit">
+                                <rect key="frame" x="155" y="457" width="80" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="aqz-CC-Gzz"/>
+                                    <constraint firstAttribute="height" constant="32" id="bfy-qG-GcS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" red="0.1058809236" green="0.1058813706" blue="0.1058824137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="MV2-Et-lPb" kind="presentation" modalPresentationStyle="fullScreen" id="ae9-tf-Bk5"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_naNome" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-9e-0zo">
+                                <rect key="frame" x="123" y="87" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="JSj-Ld-WWt"/>
+                                    <constraint firstAttribute="width" constant="150" id="knF-nW-wee"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uPC-mB-Ren"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EKa-9e-0zo" firstAttribute="centerY" secondItem="3Kf-GW-Rrf" secondAttribute="centerY" constant="-260" id="8pc-DD-ukN"/>
+                            <constraint firstItem="EKa-9e-0zo" firstAttribute="centerX" secondItem="3Kf-GW-Rrf" secondAttribute="centerX" constant="3" id="Aok-Wn-dwJ"/>
+                            <constraint firstItem="xUo-oX-Zvg" firstAttribute="centerX" secondItem="3Kf-GW-Rrf" secondAttribute="centerX" id="EnG-bM-jaz"/>
+                            <constraint firstItem="915-KH-90B" firstAttribute="centerY" secondItem="3Kf-GW-Rrf" secondAttribute="centerY" constant="51" id="iVM-mG-6A3"/>
+                            <constraint firstItem="915-KH-90B" firstAttribute="centerX" secondItem="3Kf-GW-Rrf" secondAttribute="centerX" id="laF-P3-rN3"/>
+                            <constraint firstItem="7w1-MD-a2x" firstAttribute="centerY" secondItem="3Kf-GW-Rrf" secondAttribute="centerY" constant="118" id="r6h-kN-poS"/>
+                            <constraint firstItem="xUo-oX-Zvg" firstAttribute="centerY" secondItem="3Kf-GW-Rrf" secondAttribute="centerY" constant="-60" id="wmF-Na-Abf"/>
+                            <constraint firstItem="7w1-MD-a2x" firstAttribute="centerX" secondItem="3Kf-GW-Rrf" secondAttribute="centerX" id="xex-OU-zJ8"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNz-eu-CGe" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-317" y="42"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="cfv-hQ-dXd">
+            <objects>
+                <viewController id="MV2-Et-lPb" customClass="Register" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="coh-YM-b0A">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVC-NZ-C9I">
+                                <rect key="frame" x="0.0" y="44" width="390" height="956"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3V-fP-c6m">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c23-qX-GlQ" userLabel="icons">
+                                                <rect key="frame" x="70" y="137" width="250" height="320"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your profile picture" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO2-g4-Ag5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="72.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hpK-tS-Uvf" userLabel="row1">
+                                                        <rect key="frame" x="0.0" y="82.666666666666686" width="250" height="72.333333333333314"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAP-MT-ds6" userLabel="im1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="72.333333333333329"/>
+                                                                <state key="normal" backgroundImage="bear"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB4-qm-jyJ" userLabel="im2">
+                                                                <rect key="frame" x="86.666666666666657" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
+                                                                <state key="normal" backgroundImage="cat"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4f-eF-A2s" userLabel="im3">
+                                                                <rect key="frame" x="173.33333333333334" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
+                                                                <state key="normal" backgroundImage="dog"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1iN-br-11h" userLabel="row2">
+                                                        <rect key="frame" x="0.0" y="165" width="250" height="72.666666666666686"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdh-6i-McN" userLabel="im4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="72.666666666666671"/>
+                                                                <state key="normal" backgroundImage="frog"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay7-ok-jyr" userLabel="im5">
+                                                                <rect key="frame" x="86.666666666666657" y="0.0" width="76.666666666666657" height="72.666666666666671"/>
+                                                                <state key="normal" backgroundImage="giraffe"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvU-Bg-Oge" userLabel="im6">
+                                                                <rect key="frame" x="173.33333333333334" y="0.0" width="76.666666666666657" height="72.666666666666671"/>
+                                                                <state key="normal" backgroundImage="gorilla"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mWr-tm-zFZ" userLabel="row3">
+                                                        <rect key="frame" x="0.0" y="247.66666666666671" width="250" height="72.333333333333343"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQX-Dp-not" userLabel="im7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="72.333333333333329"/>
+                                                                <state key="normal" backgroundImage="lion"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK5-Te-Wp3" userLabel="im8">
+                                                                <rect key="frame" x="86.666666666666657" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
+                                                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                                                <state key="normal" backgroundImage="rabbit"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZM-oj-CJY" userLabel="im9">
+                                                                <rect key="frame" x="173.33333333333334" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
+                                                                <state key="normal" backgroundImage="tiger"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="tigerFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="8in-Kn-hKc"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="320" id="TJo-cd-ull"/>
+                                                    <constraint firstAttribute="width" constant="250" id="kBC-9L-A3M"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-kc-7Zl" userLabel="fillDetails">
+                                                <rect key="frame" x="44" y="525.33333333333337" width="302" height="309.33333333333337"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Ro-AOk" userLabel="Name">
+                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="37"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SC-vt-WhJ" userLabel="nameTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. John" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rqr-xn-v17" userLabel="inName">
+                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="195" id="0lr-J0-2rL"/>
+                                                                    <constraint firstAttribute="height" constant="37" id="Efa-v6-3Xi"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="WCi-ck-uKi"/>
+                                                            <constraint firstAttribute="width" constant="302" id="ylS-zM-4gh"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ajP-sn-8X5" userLabel="Email">
+                                                        <rect key="frame" x="0.0" y="49" width="302" height="37"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KN-8m-vir" userLabel="emailTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. msc21@gmail.com" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="euB-Ms-duG" userLabel="inEmail">
+                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="37" id="RG5-Df-pmM"/>
+                                                                    <constraint firstAttribute="width" constant="195" id="fKO-dQ-8uO"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="302" id="2vQ-Ih-8Uu"/>
+                                                            <constraint firstAttribute="height" constant="37" id="sCX-h7-xlO"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-D6-yKm" userLabel="username">
+                                                        <rect key="frame" x="0.0" y="98" width="302" height="37"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YC-4m-dc9" userLabel="userTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. msc_2021" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-wU-yDY" userLabel="inUser">
+                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="195" id="QCv-DQ-GQB"/>
+                                                                    <constraint firstAttribute="height" constant="37" id="RQg-yW-P9q"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="302" id="TsY-xO-7QJ"/>
+                                                            <constraint firstAttribute="height" constant="37" id="vbq-xm-eha"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aTI-1S-YDP" userLabel="password">
+                                                        <rect key="frame" x="0.0" y="147" width="302" height="37"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxh-85-7yJ" userLabel="passTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="mAc-V8-Vhi" userLabel="inTag">
+                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="195" id="rrS-oH-sny"/>
+                                                                    <constraint firstAttribute="height" constant="37" id="xmZ-PA-aog"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="D4u-zJ-bk2"/>
+                                                            <constraint firstAttribute="width" constant="302" id="b3z-mL-NCD"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxm-MC-syC" userLabel="criteriPass">
+                                                        <rect key="frame" x="0.0" y="196" width="302" height="64.333333333333314"/>
+                                                        <string key="text">    Criteria:     -   Minimum 8 characters     -   No whitespaces
+    -   Minimum one uppercase  </string>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="11"/>
+                                                        <color key="textColor" red="0.1058809236" green="0.1058813706" blue="0.1058824137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FnU-pm-MAg" userLabel="ripetiPass">
+                                                        <rect key="frame" x="0.0" y="272.33333333333326" width="302" height="37"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-80-Qmc" userLabel="ripetipassTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="37"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="88" id="HHd-Aw-mCq"/>
+                                                                    <constraint firstAttribute="height" constant="37" id="a7p-wY-j4n"/>
+                                                                </constraints>
+                                                                <string key="text">Repeat
+Password</string>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgU-0g-tDH" userLabel="inRipetiPass">
+                                                                <rect key="frame" x="108" y="0.0" width="194" height="37"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="302" id="8S3-IC-cxQ"/>
+                                                            <constraint firstAttribute="height" constant="37" id="DLM-Gb-W1p"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up, it's easy!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1S-A8-joz">
+                                                <rect key="frame" x="45" y="71.666666666666671" width="300" height="43"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="35"/>
+                                                <color key="textColor" red="0.1058809236" green="0.1058813706" blue="0.1058824137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X6z-h1-VJf">
+                                                <rect key="frame" x="19.333333333333332" y="16.666666666666664" width="51.666666666666671" height="26.666666666666664"/>
+                                                <state key="normal" image="chevron.backward" catalog="system">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Exit">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1070647165" green="0.4558022618" blue="0.98436659569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="23" name="CircularStd-Book"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rk-4M-vTh" userLabel="submit">
+                                                <rect key="frame" x="155" y="911" width="80" height="32"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Lkf-bf-0BZ"/>
+                                                    <constraint firstAttribute="height" constant="32" id="Sqi-kd-KQD"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Save">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1239466593" green="0.46167117359999998" blue="0.95299142599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="18" name="CircularStd-Book"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="d1S-A8-joz" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="-407" id="0KE-mc-yVc"/>
+                                            <constraint firstItem="c23-qX-GlQ" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="-203" id="9fE-6V-VtH"/>
+                                            <constraint firstItem="d1S-A8-joz" firstAttribute="centerX" secondItem="R3V-fP-c6m" secondAttribute="centerX" id="BhQ-9z-MqC"/>
+                                            <constraint firstAttribute="height" constant="1000" id="CGm-8V-NB3"/>
+                                            <constraint firstItem="cxa-kc-7Zl" firstAttribute="centerX" secondItem="R3V-fP-c6m" secondAttribute="centerX" id="DsC-ZF-6T0"/>
+                                            <constraint firstItem="X6z-h1-VJf" firstAttribute="centerX" secondItem="R3V-fP-c6m" secondAttribute="centerX" constant="-150" id="MSY-cx-7uQ"/>
+                                            <constraint firstItem="3Rk-4M-vTh" firstAttribute="centerX" secondItem="R3V-fP-c6m" secondAttribute="centerX" id="Trs-kR-NwG"/>
+                                            <constraint firstItem="c23-qX-GlQ" firstAttribute="centerX" secondItem="R3V-fP-c6m" secondAttribute="centerX" id="Y2o-Yr-ulh"/>
+                                            <constraint firstItem="X6z-h1-VJf" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="-470" id="cPD-LP-c25"/>
+                                            <constraint firstItem="cxa-kc-7Zl" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="180" id="eln-pu-595"/>
+                                            <constraint firstItem="3Rk-4M-vTh" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="427" id="zt9-13-adS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="R3V-fP-c6m" firstAttribute="top" secondItem="FVC-NZ-C9I" secondAttribute="top" id="SAo-R0-X8H"/>
+                                    <constraint firstAttribute="trailing" secondItem="R3V-fP-c6m" secondAttribute="trailing" id="V2f-VT-MFM"/>
+                                    <constraint firstItem="R3V-fP-c6m" firstAttribute="leading" secondItem="FVC-NZ-C9I" secondAttribute="leading" id="ciR-Uu-Y41"/>
+                                    <constraint firstAttribute="bottom" secondItem="R3V-fP-c6m" secondAttribute="bottom" id="j92-Ft-QbN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PBf-RA-B5X"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PBf-RA-B5X" firstAttribute="trailing" secondItem="FVC-NZ-C9I" secondAttribute="trailing" id="HXj-gL-1WE"/>
+                            <constraint firstAttribute="bottom" secondItem="FVC-NZ-C9I" secondAttribute="bottom" id="fbe-tz-3Nu"/>
+                            <constraint firstItem="FVC-NZ-C9I" firstAttribute="leading" secondItem="PBf-RA-B5X" secondAttribute="leading" id="i3v-WX-WGC"/>
+                            <constraint firstItem="FVC-NZ-C9I" firstAttribute="top" secondItem="PBf-RA-B5X" secondAttribute="top" id="thJ-Fj-Cp8"/>
+                            <constraint firstItem="R3V-fP-c6m" firstAttribute="width" secondItem="coh-YM-b0A" secondAttribute="width" id="wfi-Lt-JvH"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="390" height="1000"/>
+                    <connections>
+                        <outlet property="bearBack" destination="LAP-MT-ds6" id="CqD-ZO-382"/>
+                        <outlet property="catBack" destination="cB4-qm-jyJ" id="UDM-VP-qGQ"/>
+                        <outlet property="dogBack" destination="B4f-eF-A2s" id="ohd-Om-uvn"/>
+                        <outlet property="frogBack" destination="pdh-6i-McN" id="fTD-UY-vss"/>
+                        <outlet property="giraffeBack" destination="Ay7-ok-jyr" id="k1b-Mf-ZJV"/>
+                        <outlet property="gorillaBack" destination="zvU-Bg-Oge" id="fAb-y2-La1"/>
+                        <outlet property="lionBack" destination="VQX-Dp-not" id="azA-rH-fhk"/>
+                        <outlet property="rabbitBack" destination="bK5-Te-Wp3" id="6al-Ew-nQX"/>
+                        <outlet property="tigerBack" destination="XZM-oj-CJY" id="u18-jW-0Dw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHV-O1-Zuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="42"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bear" width="32" height="32"/>
+        <image name="cat" width="32" height="32"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="dog" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="frog" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="giraffe" width="32" height="32"/>
+        <image name="gorilla" width="32" height="32"/>
+        <image name="lion" width="32" height="32"/>
+        <image name="logo_naNome" width="208.66667175292969" height="208.66667175292969"/>
+        <image name="rabbit" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="tiger" width="32" height="32"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

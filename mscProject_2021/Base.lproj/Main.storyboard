@@ -93,6 +93,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <segue destination="MV2-Et-lPb" kind="presentation" modalPresentationStyle="fullScreen" id="01P-Nz-WqA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -112,9 +115,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="MV2-Et-lPb" kind="presentation" modalPresentationStyle="fullScreen" id="ae9-tf-Bk5"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_naNome" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-9e-0zo">
                                 <rect key="frame" x="123" y="87" width="150" height="150"/>
@@ -176,6 +176,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="bearFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="M3h-ox-90W"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB4-qm-jyJ" userLabel="im2">
                                                                 <rect key="frame" x="86.666666666666657" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
@@ -185,6 +188,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="catFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="kMl-ye-yua"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4f-eF-A2s" userLabel="im3">
                                                                 <rect key="frame" x="173.33333333333334" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
@@ -194,6 +200,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="dogFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="lfl-0j-AFd"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -208,6 +217,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="frogFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="LJb-fQ-Lrg"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay7-ok-jyr" userLabel="im5">
                                                                 <rect key="frame" x="86.666666666666657" y="0.0" width="76.666666666666657" height="72.666666666666671"/>
@@ -217,6 +229,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="giraffeFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="si3-vn-X2r"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvU-Bg-Oge" userLabel="im6">
                                                                 <rect key="frame" x="173.33333333333334" y="0.0" width="76.666666666666657" height="72.666666666666671"/>
@@ -226,6 +241,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="gorillaFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="HSp-IO-67U"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -240,6 +258,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="lionFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="cnh-cm-5jz"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK5-Te-Wp3" userLabel="im8">
                                                                 <rect key="frame" x="86.666666666666657" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
@@ -250,6 +271,9 @@
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="rabbitFunc:" destination="MV2-Et-lPb" eventType="touchUpInside" id="JmZ-Qn-4mv"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZM-oj-CJY" userLabel="im9">
                                                                 <rect key="frame" x="173.33333333333334" y="0.0" width="76.666666666666657" height="72.333333333333329"/>
@@ -272,26 +296,26 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-kc-7Zl" userLabel="fillDetails">
-                                                <rect key="frame" x="44" y="525.33333333333337" width="302" height="309.33333333333337"/>
+                                                <rect key="frame" x="44" y="556.33333333333337" width="302" height="247.33333333333337"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Ro-AOk" userLabel="Name">
                                                         <rect key="frame" x="0.0" y="0.0" width="302" height="37"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SC-vt-WhJ" userLabel="nameTag">
-                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SC-vt-WhJ" userLabel="nameTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="37"/>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. John" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rqr-xn-v17" userLabel="inName">
-                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
+                                                                <rect key="frame" x="102" y="0.0" width="200" height="37"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="195" id="0lr-J0-2rL"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="0lr-J0-2rL"/>
                                                                     <constraint firstAttribute="height" constant="37" id="Efa-v6-3Xi"/>
                                                                 </constraints>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -306,56 +330,24 @@
                                                             <constraint firstAttribute="width" constant="302" id="ylS-zM-4gh"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ajP-sn-8X5" userLabel="Email">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-D6-yKm" userLabel="username">
                                                         <rect key="frame" x="0.0" y="49" width="302" height="37"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KN-8m-vir" userLabel="emailTag">
-                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
-                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. msc21@gmail.com" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="euB-Ms-duG" userLabel="inEmail">
-                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
-                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="37" id="RG5-Df-pmM"/>
-                                                                    <constraint firstAttribute="width" constant="195" id="fKO-dQ-8uO"/>
-                                                                </constraints>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </textField>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="302" id="2vQ-Ih-8Uu"/>
-                                                            <constraint firstAttribute="height" constant="37" id="sCX-h7-xlO"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-D6-yKm" userLabel="username">
-                                                        <rect key="frame" x="0.0" y="98" width="302" height="37"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YC-4m-dc9" userLabel="userTag">
-                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YC-4m-dc9" userLabel="userTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="37"/>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. msc_2021" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-wU-yDY" userLabel="inUser">
-                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
+                                                                <rect key="frame" x="102" y="0.0" width="200" height="37"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="195" id="QCv-DQ-GQB"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="QCv-DQ-GQB"/>
                                                                     <constraint firstAttribute="height" constant="37" id="RQg-yW-P9q"/>
                                                                 </constraints>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -370,24 +362,24 @@
                                                             <constraint firstAttribute="height" constant="37" id="vbq-xm-eha"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aTI-1S-YDP" userLabel="password">
-                                                        <rect key="frame" x="0.0" y="147" width="302" height="37"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="aTI-1S-YDP" userLabel="password">
+                                                        <rect key="frame" x="0.0" y="98" width="302" height="37"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxh-85-7yJ" userLabel="passTag">
-                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="37"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxh-85-7yJ" userLabel="passTag">
+                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="37"/>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="mAc-V8-Vhi" userLabel="inTag">
-                                                                <rect key="frame" x="107" y="0.0" width="195" height="37"/>
+                                                                <rect key="frame" x="102" y="0.0" width="200" height="37"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="195" id="rrS-oH-sny"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="rrS-oH-sny"/>
                                                                     <constraint firstAttribute="height" constant="37" id="xmZ-PA-aog"/>
                                                                 </constraints>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -402,34 +394,32 @@
                                                             <constraint firstAttribute="width" constant="302" id="b3z-mL-NCD"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxm-MC-syC" userLabel="criteriPass">
-                                                        <rect key="frame" x="0.0" y="196" width="302" height="64.333333333333314"/>
-                                                        <string key="text">    Criteria:     -   Minimum 8 characters     -   No whitespaces
-    -   Minimum one uppercase  </string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Criteria:     -   Minimum 8 characters     -   No whitespaces " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxm-MC-syC" userLabel="criteriPass">
+                                                        <rect key="frame" x="0.0" y="147" width="302" height="51.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="11"/>
                                                         <color key="textColor" red="0.1058809236" green="0.1058813706" blue="0.1058824137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FnU-pm-MAg" userLabel="ripetiPass">
-                                                        <rect key="frame" x="0.0" y="272.33333333333326" width="302" height="37"/>
+                                                        <rect key="frame" x="0.0" y="210.33333333333326" width="302" height="37"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-80-Qmc" userLabel="ripetipassTag">
-                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="37"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="88" id="HHd-Aw-mCq"/>
-                                                                    <constraint firstAttribute="height" constant="37" id="a7p-wY-j4n"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="37"/>
                                                                 <string key="text">Repeat
-Password</string>
+Password*</string>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgU-0g-tDH" userLabel="inRipetiPass">
-                                                                <rect key="frame" x="108" y="0.0" width="194" height="37"/>
+                                                                <rect key="frame" x="102" y="0.0" width="200" height="37"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="200" id="30V-Q4-v5K"/>
+                                                                    <constraint firstAttribute="height" constant="37" id="6Wp-08-CEM"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -464,6 +454,9 @@ Password</string>
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="exitSignup:" destination="MV2-Et-lPb" eventType="touchUpInside" id="Nvm-BZ-MeB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rk-4M-vTh" userLabel="submit">
                                                 <rect key="frame" x="155" y="911" width="80" height="32"/>
@@ -488,6 +481,9 @@ Password</string>
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="saveSignup:" destination="MV2-Et-lPb" eventType="touchUpInside" id="xpj-pc-3ma"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -533,11 +529,17 @@ Password</string>
                         <outlet property="giraffeBack" destination="Ay7-ok-jyr" id="k1b-Mf-ZJV"/>
                         <outlet property="gorillaBack" destination="zvU-Bg-Oge" id="fAb-y2-La1"/>
                         <outlet property="lionBack" destination="VQX-Dp-not" id="azA-rH-fhk"/>
+                        <outlet property="nameField" destination="Rqr-xn-v17" id="UC5-5l-W5i"/>
+                        <outlet property="passwordField" destination="mAc-V8-Vhi" id="uCw-8M-mZU"/>
                         <outlet property="rabbitBack" destination="bK5-Te-Wp3" id="6al-Ew-nQX"/>
+                        <outlet property="repeatPassField" destination="qgU-0g-tDH" id="HQs-Mc-4Lm"/>
                         <outlet property="tigerBack" destination="XZM-oj-CJY" id="u18-jW-0Dw"/>
+                        <outlet property="usernameField" destination="2FA-wU-yDY" id="Wle-Q1-IIX"/>
+                        <segue destination="uxa-B7-8bc" kind="unwind" identifier="goHome" unwindAction="goHomeWithSegue:" id="bbp-VA-57Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHV-O1-Zuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uxa-B7-8bc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="448" y="42"/>
         </scene>

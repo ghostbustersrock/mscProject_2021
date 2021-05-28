@@ -559,7 +559,7 @@ Password*</string>
                         <segue destination="9hk-GE-Icv" kind="relationship" relationship="viewControllers" id="cX0-d5-IB0"/>
                         <segue destination="rK9-1j-Cgd" kind="relationship" relationship="viewControllers" id="49m-7C-q2K"/>
                         <segue destination="nhM-tf-ajv" kind="relationship" relationship="viewControllers" id="k5l-pM-giH"/>
-                        <segue destination="iwz-bn-Y5L" kind="relationship" relationship="viewControllers" id="buZ-io-a7S"/>
+                        <segue destination="lMi-mw-q4J" kind="relationship" relationship="viewControllers" id="b7K-mY-bn1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXD-fA-eox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -580,37 +580,127 @@ Password*</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0T-DP-EZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877" y="-682"/>
+            <point key="canvasLocation" x="1838" y="-682"/>
         </scene>
-        <!--Help Info-->
+        <!--Help Tab-->
         <scene sceneID="iRa-JO-U1d">
             <objects>
-                <viewController id="iwz-bn-Y5L" sceneMemberID="viewController">
+                <viewController id="iwz-bn-Y5L" customClass="HelpTab" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNy-xl-Mo7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-oI-1Lp">
-                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
-                                <connections>
-                                    <segue destination="01e-a5-cwQ" kind="embed" id="Qek-Kk-R4Y"/>
-                                </connections>
-                            </containerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYw-zQ-dyA">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fN5-yZ-k11">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mental health..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYq-mA-XkA">
+                                                <rect key="frame" x="51" y="18" width="288" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpf-1H-WDD">
+                                                <rect key="frame" x="30" y="79" width="330" height="138"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">a state in which an individual realises its own abilities and can cope with stresses in life. It is fundamental to our collective and individual ability as humans to think, emote, interact with each other and enjoy life, thus its promotion, protection and restoration is of vital concern.  (World Health Organization, 2018)</string>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sK-he-teG">
+                                                <rect key="frame" x="30" y="254" width="330" height="547"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Mental health">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> is like physical health, everybody has and it has to be taken care of. This can be a positive mental health, which allows us to think, feel and react in ways we need and want within our life. Negative mental health are periods in which our thinking and feelings become difficult, or sometimes impossible, to cope with. This can be as bad or worse than physical illness. One in four people in any given year unfortunately suffer from mental health problems, ranging from depression and anxiety to more rarer and severe problems such as schizophrenia and bipolar disorder.
+
+Experiencing mental health problems can be confusing and frightening at first, as if you were “losing your mind”. Negative and unrealistic representations of mental health problems (i.e. TV shows, film, media, etc.) often reinforce such preliminary feelings and potentially stop you from seeking help, or most importantly, talking about it. 
+ Mental health problems are a common human experience, however, finding combinations of self-care, treatment and support, that works for you, will help you feel better.
+    The following video from the YouTube channel Mental Health at Work (2016) gives extra information on what mental health is.</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qs-bQ-P6m">
+                                                <rect key="frame" x="30" y="811" width="330" height="178"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="330" id="nlk-wc-REY"/>
+                                                    <constraint firstAttribute="height" constant="178" id="xEv-bb-bcS"/>
+                                                </constraints>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="B2w-zW-fDk"/>
+                                            <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="250" id="Siq-9a-oi3"/>
+                                            <constraint firstAttribute="height" constant="1300" id="ZJM-i3-jff"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fN5-yZ-k11" firstAttribute="top" secondItem="zYw-zQ-dyA" secondAttribute="top" id="4BB-c9-iY4"/>
+                                    <constraint firstItem="fN5-yZ-k11" firstAttribute="leading" secondItem="zYw-zQ-dyA" secondAttribute="leading" id="DBg-Re-dme"/>
+                                    <constraint firstAttribute="trailing" secondItem="fN5-yZ-k11" secondAttribute="trailing" id="Gnk-Vl-D5e"/>
+                                    <constraint firstAttribute="bottom" secondItem="fN5-yZ-k11" secondAttribute="bottom" id="buz-TD-wBc"/>
+                                    <constraint firstItem="fN5-yZ-k11" firstAttribute="width" secondItem="zYw-zQ-dyA" secondAttribute="width" id="snh-kA-LXe"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YT8-Yj-1EP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YT8-Yj-1EP" firstAttribute="trailing" secondItem="eK7-oI-1Lp" secondAttribute="trailing" id="A5Y-jG-Arr"/>
-                            <constraint firstItem="eK7-oI-1Lp" firstAttribute="top" secondItem="YT8-Yj-1EP" secondAttribute="top" id="RC4-yz-Jbz"/>
-                            <constraint firstItem="eK7-oI-1Lp" firstAttribute="leading" secondItem="YT8-Yj-1EP" secondAttribute="leading" id="jnX-d6-FYa"/>
-                            <constraint firstItem="YT8-Yj-1EP" firstAttribute="bottom" secondItem="eK7-oI-1Lp" secondAttribute="bottom" id="vzJ-sx-ypa"/>
+                            <constraint firstItem="zYw-zQ-dyA" firstAttribute="leading" secondItem="YT8-Yj-1EP" secondAttribute="leading" id="BaG-X8-ILZ"/>
+                            <constraint firstAttribute="bottom" secondItem="zYw-zQ-dyA" secondAttribute="bottom" id="Sw6-Yt-d8X"/>
+                            <constraint firstItem="zYw-zQ-dyA" firstAttribute="trailing" secondItem="YT8-Yj-1EP" secondAttribute="trailing" id="rAT-n6-uJg"/>
+                            <constraint firstItem="zYw-zQ-dyA" firstAttribute="top" secondItem="nNy-xl-Mo7" secondAttribute="top" id="z94-0E-g0e"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Help Info" image="help" id="NYv-sj-PFX"/>
+                    <navigationItem key="navigationItem" id="g14-i5-JS6"/>
+                    <size key="freeformSize" width="390" height="1300"/>
+                    <connections>
+                        <outlet property="videoYoutube" destination="7qs-bQ-P6m" id="uS7-cn-gFm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRW-9o-6aN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2593.8461538461538" y="-682.46445497630327"/>
+            <point key="canvasLocation" x="3447.6923076923076" y="-895.02369668246445"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ySR-HF-rKB">
+            <objects>
+                <viewController id="cNm-yP-8Bx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mbc-BC-RYF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JMk-S5-mGg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5K-iN-vCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4167" y="-901"/>
         </scene>
         <!--Activities-->
         <scene sceneID="kO2-uq-1he">
@@ -626,7 +716,7 @@ Password*</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7k-rq-i73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="-682"/>
+            <point key="canvasLocation" x="1118" y="-682"/>
         </scene>
         <!--Profile-->
         <scene sceneID="0vc-E5-BXm">
@@ -668,65 +758,24 @@ Password*</string>
             </objects>
             <point key="canvasLocation" x="389" y="-682"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="0Al-ix-dGY">
+        <!--Help Info-->
+        <scene sceneID="eGe-FN-u2V">
             <objects>
-                <viewController id="01e-a5-cwQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LAK-TO-l6S">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7c-AO-99A">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="717"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awi-cg-siN">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lable 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL0-vA-p7Y">
-                                                <rect key="frame" x="174" y="52" width="48" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wG-Ye-kny">
-                                                <rect key="frame" x="174" y="489" width="51" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="ggs-NK-ge5"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Awi-cg-siN" firstAttribute="trailing" secondItem="zRM-8e-ePB" secondAttribute="trailing" id="OWk-7C-auR"/>
-                                    <constraint firstItem="Awi-cg-siN" firstAttribute="bottom" secondItem="zRM-8e-ePB" secondAttribute="bottom" id="YTb-Wy-dOJ"/>
-                                    <constraint firstItem="Awi-cg-siN" firstAttribute="top" secondItem="zRM-8e-ePB" secondAttribute="top" id="kyo-Bm-j48"/>
-                                    <constraint firstItem="Awi-cg-siN" firstAttribute="leading" secondItem="zRM-8e-ePB" secondAttribute="leading" id="vgl-Ne-XxI"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="JeP-4d-fhV"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="zRM-8e-ePB"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="R7c-AO-99A" firstAttribute="top" secondItem="LAK-TO-l6S" secondAttribute="top" id="DBK-MD-RXq"/>
-                            <constraint firstAttribute="bottom" secondItem="R7c-AO-99A" secondAttribute="bottom" id="WYD-0h-g2h"/>
-                            <constraint firstItem="Awi-cg-siN" firstAttribute="width" secondItem="LAK-TO-l6S" secondAttribute="width" id="ar2-lU-KqK"/>
-                            <constraint firstAttribute="trailing" secondItem="R7c-AO-99A" secondAttribute="trailing" id="b0X-Dg-7La"/>
-                            <constraint firstItem="R7c-AO-99A" firstAttribute="leading" secondItem="LAK-TO-l6S" secondAttribute="leading" id="uxT-oC-nBH"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="390" height="1000"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1d-OP-U6l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lMi-mw-q4J" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Help Info" image="help" id="NYv-sj-PFX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pl5-83-sBN">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iwz-bn-Y5L" kind="relationship" relationship="rootViewController" id="FF5-fw-kg6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mjs-tk-clK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2592" y="107"/>
+            <point key="canvasLocation" x="2680" y="-895"/>
         </scene>
     </scenes>
     <resources>

@@ -587,14 +587,14 @@ Password*</string>
             <objects>
                 <viewController id="iwz-bn-Y5L" customClass="HelpTab" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNy-xl-Mo7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYw-zQ-dyA">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fN5-yZ-k11">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1500"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mental health..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYq-mA-XkA">
                                                 <rect key="frame" x="51" y="18" width="288" height="53"/>
@@ -612,7 +612,7 @@ Password*</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sK-he-teG">
-                                                <rect key="frame" x="30" y="254" width="330" height="547"/>
+                                                <rect key="frame" x="30" y="254" width="330" height="514"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Mental health">
@@ -624,11 +624,11 @@ Password*</string>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment>
-                                                        <string key="content"> is like physical health, everybody has and it has to be taken care of. This can be a positive mental health, which allows us to think, feel and react in ways we need and want within our life. Negative mental health are periods in which our thinking and feelings become difficult, or sometimes impossible, to cope with. This can be as bad or worse than physical illness. One in four people in any given year unfortunately suffer from mental health problems, ranging from depression and anxiety to more rarer and severe problems such as schizophrenia and bipolar disorder.
+                                                        <mutableString key="content"> is like physical health, everybody has it and it has to be taken care of. This can be a positive mental health, which allows us to think, feel and react in ways we need and want within our life. Negative mental health are periods in which our thinking and feelings become difficult, or sometimes impossible, to cope with. This can be as bad or worse than physical illness. One in four people in any given year unfortunately suffer from mental health problems, ranging from depression and anxiety to more rarer and severe problems such as schizophrenia and bipolar disorder.
 
 Experiencing mental health problems can be confusing and frightening at first, as if you were “losing your mind”. Negative and unrealistic representations of mental health problems (i.e. TV shows, film, media, etc.) often reinforce such preliminary feelings and potentially stop you from seeking help, or most importantly, talking about it. 
  Mental health problems are a common human experience, however, finding combinations of self-care, treatment and support, that works for you, will help you feel better.
-    The following video from the YouTube channel Mental Health at Work (2016) gives extra information on what mental health is.</string>
+  The following video from the YouTube channel Mental Health at Work (2016) gives extra information on what mental health is.</mutableString>
                                                         <attributes>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" metaFont="menu" size="14"/>
@@ -639,7 +639,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qs-bQ-P6m">
-                                                <rect key="frame" x="30" y="811" width="330" height="178"/>
+                                                <rect key="frame" x="30" y="786" width="330" height="178"/>
                                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="nlk-wc-REY"/>
@@ -650,12 +650,73 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                     <wkPreferences key="preferences"/>
                                                 </wkWebViewConfiguration>
                                             </wkWebView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-JL-FeN" userLabel="more_links">
+                                                <rect key="frame" x="30" y="1000" width="330" height="300"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You also may want to see" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTi-g0-ne2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="46"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93o-g8-UmG" userLabel="types">
+                                                        <rect key="frame" x="0.0" y="51" width="330" height="45.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                        <state key="normal" title="Types of Mental Health Problems"/>
+                                                        <connections>
+                                                            <segue destination="cNm-yP-8Bx" kind="show" id="OLX-fH-Wv3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfj-FN-LhW" userLabel="types">
+                                                        <rect key="frame" x="0.0" y="101.66666666666674" width="330" height="46"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="Causes"/>
+                                                        <connections>
+                                                            <segue destination="AV5-IP-nSf" kind="show" id="XXl-vP-v9T"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hur-fP-niJ" userLabel="types">
+                                                        <rect key="frame" x="0.0" y="152.66666666666674" width="330" height="45.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="Self-care"/>
+                                                        <connections>
+                                                            <segue destination="w24-o7-0XM" kind="show" id="FHw-Xq-BAF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaU-ca-MxU" userLabel="types">
+                                                        <rect key="frame" x="0.0" y="203.33333333333326" width="330" height="46"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="Treatment options"/>
+                                                        <connections>
+                                                            <segue destination="czH-ZG-hth" kind="show" id="8Bj-f1-E4C"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-ED-4gn" userLabel="types">
+                                                        <rect key="frame" x="0.0" y="254.33333333333323" width="330" height="45.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="Useful contacts"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="DsH-Xu-E5C"/>
+                                                    <constraint firstAttribute="width" constant="330" id="Nyy-JW-dZg"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJv-a4-hEU">
+                                                <rect key="frame" x="82" y="1372" width="227" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="D9V-JL-FeN" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="400" id="A7e-gl-2Hn"/>
                                             <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="B2w-zW-fDk"/>
-                                            <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="250" id="Siq-9a-oi3"/>
-                                            <constraint firstAttribute="height" constant="1300" id="ZJM-i3-jff"/>
+                                            <constraint firstItem="D9V-JL-FeN" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="Lbw-cd-HXV"/>
+                                            <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="125" id="Siq-9a-oi3"/>
+                                            <constraint firstAttribute="height" constant="1500" id="ZJM-i3-jff"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -663,7 +724,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                     <constraint firstItem="fN5-yZ-k11" firstAttribute="top" secondItem="zYw-zQ-dyA" secondAttribute="top" id="4BB-c9-iY4"/>
                                     <constraint firstItem="fN5-yZ-k11" firstAttribute="leading" secondItem="zYw-zQ-dyA" secondAttribute="leading" id="DBg-Re-dme"/>
                                     <constraint firstAttribute="trailing" secondItem="fN5-yZ-k11" secondAttribute="trailing" id="Gnk-Vl-D5e"/>
-                                    <constraint firstAttribute="bottom" secondItem="fN5-yZ-k11" secondAttribute="bottom" id="buz-TD-wBc"/>
+                                    <constraint firstAttribute="bottom" secondItem="fN5-yZ-k11" secondAttribute="bottom" constant="-88" id="buz-TD-wBc"/>
                                     <constraint firstItem="fN5-yZ-k11" firstAttribute="width" secondItem="zYw-zQ-dyA" secondAttribute="width" id="snh-kA-LXe"/>
                                 </constraints>
                             </scrollView>
@@ -678,29 +739,808 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g14-i5-JS6"/>
-                    <size key="freeformSize" width="390" height="1300"/>
+                    <size key="freeformSize" width="390" height="1500"/>
                     <connections>
                         <outlet property="videoYoutube" destination="7qs-bQ-P6m" id="uS7-cn-gFm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRW-9o-6aN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3447.6923076923076" y="-895.02369668246445"/>
+            <point key="canvasLocation" x="3257" y="-682"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ySR-HF-rKB">
+        <!--Self-care-->
+        <scene sceneID="AVm-MW-ECD">
             <objects>
-                <viewController id="cNm-yP-8Bx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mbc-BC-RYF">
+                <viewController id="w24-o7-0XM" customClass="SelfCare" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH5-rg-893">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JMk-S5-mGg"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN3-Es-ruY">
+                                <rect key="frame" x="30" y="118" width="330" height="401"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Mental health problems can be self-treated as well, depending on the severity. Changes in ones lifestyle or other techniques can help manage mental health problems as well as prevent their full development. These changes and techniques can work, as well as they cannot. It is important to always be aware when to seek the help of an expert (refer to the section '</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Useful contacts">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">' in the previous page). It is also important to understand that there is not instant solution from recovering or pushing away mental health problems, it is a process that takes time, especially based on the severity of the issue.  Some self-care techniques can be for example keeping a mood diary, trying peer support (talking to others), take time for yourself, look after your physical health and more.  For more self-care suggestions and tips visit</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeH-IK-B2Z">
+                                <rect key="frame" x="30" y="504" width="168" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="self-care on mind.org.uk">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="linkt_to_site:" destination="w24-o7-0XM" eventType="touchUpInside" id="rsz-0f-ZMj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnJ-4n-BJM">
+                                <rect key="frame" x="82" y="716" width="227" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qP5-hx-Jjk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Self-care" id="bRA-ex-3n4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBb-lH-Mvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540" y="11"/>
+        </scene>
+        <!--Treatment options-->
+        <scene sceneID="Aeu-fP-yjj">
+            <objects>
+                <viewController id="czH-ZG-hth" customClass="Treatments" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8pd-PO-9K0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pa4-00-2nT">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1400"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtw-Ie-97p">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1400"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6m-sQ-KJo">
+                                                <rect key="frame" x="30" y="15" width="330" height="136"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Different treatments are available to help fight against mental health problems. The NHS offers various of these, however, the two most common ones are the talking and psychiatric medication treatment. There are also available alternatives which will be talked about on this page.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Talking treatments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKz-bm-89D">
+                                                <rect key="frame" x="30" y="159" width="150" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-Er-j6U">
+                                                <rect key="frame" x="30" y="186" width="330" height="388"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Talking treatments, as the words suggest, consists in having a time and space for someone to talk about their thoughs and experiences with an expert, in order to explore any issues. This can help with many different things like dealing with specific problems, coping with memories or experiences and more. Various terms are used to describe talking treatments, like consuelling, psychotherapy, therapy, talking therapy or psycological therapy. All these terms are talking treatments.   Contacting the NHS will most likely have them offer someone the Cognitive Behavioural Therapy (CBT) talking. This is a short-term treatment aiming to identify connections between someone’s thoughts, feelings and behaviours. This is done so to help develop practical skills to help manage negative patterns which may be causing such difficulties.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication treatments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE3-Ji-cRD">
+                                                <rect key="frame" x="30" y="582" width="176" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-Ua-KVI">
+                                                <rect key="frame" x="30" y="614" width="330" height="268"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Psychiatric medication consists in being prescribed medications, not to cure mental health problems rather ease many of their symptoms. Based on the diagnosis different medications will be offerred. These can be antidepressants, antipsychotics, sleeping pills, minor tranquillisers, mood stabilisers and more.  It is vital to know that although medications can help ease negative mental health symptoms, they can also have negative side effects. Example of these can be worsening your mood, physical harm and addictive if taken in too high doses.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alternative therapies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFd-A1-JT8">
+                                                <rect key="frame" x="30" y="903" width="176" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MN-qQ-V09">
+                                                <rect key="frame" x="30" y="942" width="330" height="298"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Many other alternatives are available to help prevent or ease mental health problems. One of the most common alternatives are arts and creative therapies. These consists in using the arts (i.e. music, patining, etc.) to express and understand yourself in therapeutic way and environment. Other activities, such as yoga, can also help, mainly to manage stress but also for common symptoms of mental health problems.     For more information on treatments (specifically medical ones) click the link below to be redirected to Mind's website.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95N-Vh-nsR">
+                                                <rect key="frame" x="128" y="1257" width="135" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="More on treatments">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="treatment_link:" destination="czH-ZG-hth" eventType="touchUpInside" id="vuD-t9-HID"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-v7-Q5a">
+                                                <rect key="frame" x="82" y="1344" width="227" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1400" id="YKV-w8-7SH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jtw-Ie-97p" secondAttribute="trailing" id="Hjn-xi-YwC"/>
+                                    <constraint firstItem="jtw-Ie-97p" firstAttribute="leading" secondItem="Pa4-00-2nT" secondAttribute="leading" id="fdA-Dv-k7N"/>
+                                    <constraint firstItem="jtw-Ie-97p" firstAttribute="top" secondItem="Pa4-00-2nT" secondAttribute="top" id="hAo-EB-sik"/>
+                                    <constraint firstAttribute="bottom" secondItem="jtw-Ie-97p" secondAttribute="bottom" id="o5A-8Q-MtX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zud-c7-BU6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pa4-00-2nT" firstAttribute="top" secondItem="8pd-PO-9K0" secondAttribute="top" id="0oD-JI-3b3"/>
+                            <constraint firstItem="jtw-Ie-97p" firstAttribute="width" secondItem="8pd-PO-9K0" secondAttribute="width" id="BvK-XK-bpH"/>
+                            <constraint firstItem="Pa4-00-2nT" firstAttribute="trailing" secondItem="Zud-c7-BU6" secondAttribute="trailing" id="Qtm-Yw-hC9"/>
+                            <constraint firstItem="Pa4-00-2nT" firstAttribute="leading" secondItem="Zud-c7-BU6" secondAttribute="leading" id="d9x-V3-gIf"/>
+                            <constraint firstAttribute="bottom" secondItem="Pa4-00-2nT" secondAttribute="bottom" id="h2b-aV-MEa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Treatment options" id="Huv-bE-2t5"/>
+                    <size key="freeformSize" width="390" height="1400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgj-je-WvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3256.9230769230767" y="447.86729857819904"/>
+        </scene>
+        <!--Causes of Mental Health Problems-->
+        <scene sceneID="6mO-ee-G93">
+            <objects>
+                <viewController id="AV5-IP-nSf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NJ2-xd-qqb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-Cr-qgn">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NP0-rc-e9h">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uad-zj-pUu">
+                                                <rect key="frame" x="30" y="8" width="330" height="399"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">There are a wide range of causes that may be factors to the development of mental health problems. These can be either single causes or a combination of them, which, based on the individual, can affect them at a more deeper level.  Some known factors which potentially can cause a period of poor mental health are:  -  Social disadvantage (i.e. poverty) -  Childhood abuse, trauma. -  The loss of someone close to you. -  Unemployment or job loss. -  Bullying, domestic violence or general abuse. -  Physical causes (i.e. neurological condition). -  Homelessness. -  Heartbroken. -  Stress (i.e. univeristy or work related). -  Misuse of drugs and alcohol. -  Social isolation or loneliness. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b84-EE-p8x">
+                                                <rect key="frame" x="30" y="447" width="330" height="254"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">There are research that suggest mental health problems run in families. For example, having a parent affected by schizophrenia suggests that you yourself are more likely to develop it too. This, however, is still uncertain whether it is because of our genes or as other factors such as the environment the person grows in. Althougth research suggests that mental health problems may be influenced by genes, it is yet unsure which specific genes causes this. Researchers are still in doubt as many people who experience mental health problems do not have any parents, children or relatives with their same condition.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is family a cause of mental health problems?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI6-X8-mzp">
+                                                <rect key="frame" x="30" y="405" width="361" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is the brain's chemistry a factor?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmZ-NE-lvs">
+                                                <rect key="frame" x="30" y="722" width="361" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How common are mental health problems?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2a-w9-lhf">
+                                                <rect key="frame" x="30" y="1163" width="361" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m9-Ub-Mi7">
+                                                <rect key="frame" x="30" y="757" width="330" height="398"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Some research suggests that variations in certain brain chemicals (i.e. serotonin and dopamine) may be linked to mental health problems, however, no one understands how or why. Although there is no strong evidence supporting such hypothesis, chemical imbalance in our brains is still used by some to explain mental health problems. This is due to two main reasons:  There is a lot of evidence showing how medications can possitively treat some mental health problem symptons (NOTE: drugs do not work the same way with everyone).  Since mental health problems can feel quite persona and hard to understand, the idea of there being a distinct physical cause for difficult thoughts and feelings may make it easier for people to talk about their experiences and consequently asking for help.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPV-uc-1hO">
+                                                <rect key="frame" x="30" y="1188" width="330" height="333"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Statistics from a 2007 and 2014 research conducted in England, suggests the each year in England 1 in 4 people experiences a kind of mental health problem. While 1 in 6 people report having experienced a common mental health problem (i.e. anxiety and depression) in any given week, always in England.  It is worth noting that unfortunately many of us go through some sort of mental health problem. Some more mildly others more severely. It is important to look after ourselves and understand when such problems can be self-treated or requires help from experts. A more important thing to understand is that it is okay to not be okay and that everyone may go through such issues.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTj-l8-BEA">
+                                                <rect key="frame" x="82" y="1538" width="227" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1600" id="rML-pc-K7G"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NP0-rc-e9h" firstAttribute="leading" secondItem="ZO1-Cr-qgn" secondAttribute="leading" id="HVS-Ek-Sek"/>
+                                    <constraint firstAttribute="trailing" secondItem="NP0-rc-e9h" secondAttribute="trailing" id="JMO-RJ-IWF"/>
+                                    <constraint firstAttribute="bottom" secondItem="NP0-rc-e9h" secondAttribute="bottom" constant="-17" id="WSx-Lb-urC"/>
+                                    <constraint firstItem="NP0-rc-e9h" firstAttribute="top" secondItem="ZO1-Cr-qgn" secondAttribute="top" constant="17" id="aJn-ea-7YY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ap4-dj-SxU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NP0-rc-e9h" firstAttribute="width" secondItem="NJ2-xd-qqb" secondAttribute="width" id="IW7-5z-bBe"/>
+                            <constraint firstItem="ZO1-Cr-qgn" firstAttribute="leading" secondItem="Ap4-dj-SxU" secondAttribute="leading" id="T1J-Qp-hd6"/>
+                            <constraint firstItem="ZO1-Cr-qgn" firstAttribute="trailing" secondItem="Ap4-dj-SxU" secondAttribute="trailing" id="eU7-IY-s5O"/>
+                            <constraint firstItem="ZO1-Cr-qgn" firstAttribute="top" secondItem="NJ2-xd-qqb" secondAttribute="top" id="oJm-nc-Lub"/>
+                            <constraint firstAttribute="bottom" secondItem="ZO1-Cr-qgn" secondAttribute="bottom" id="ybo-qT-Zaq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Causes of Mental Health Problems" id="6SW-Lr-d05"/>
+                    <size key="freeformSize" width="390" height="1600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRB-hw-9Gb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4067.6923076923076" y="-472.03791469194312"/>
+        </scene>
+        <!--Mental Health Problems-->
+        <scene sceneID="ySR-HF-rKB">
+            <objects>
+                <viewController id="cNm-yP-8Bx" customClass="HealthProblems" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mbc-BC-RYF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffI-aK-zpu">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wD-fx-GbB">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1300"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Wbr-ZO-LDM" userLabel="list_problems">
+                                                <rect key="frame" x="30" y="91" width="330" height="1100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJq-kM-ZPX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="52.333333333333336"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Anger">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="anger:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="lam-EJ-E13"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZl-wE-azY">
+                                                        <rect key="frame" x="0.0" y="52.333333333333343" width="330" height="52.333333333333343"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Anxiety and panic attacks">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="anxietyPanic:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="Yu8-xu-NfZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GpQ-aR-LIW">
+                                                        <rect key="frame" x="0.0" y="104.66666666666664" width="330" height="52.333333333333329"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Bipolar disorder">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="bipolar:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="t3Y-yQ-Tt1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CZz-wB-GqF">
+                                                        <rect key="frame" x="0.0" y="157" width="330" height="52.666666666666657"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Depression">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="depression:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="SLK-BJ-NTT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHH-8N-B9p">
+                                                        <rect key="frame" x="0.0" y="209.66666666666669" width="330" height="52.333333333333314"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Dissociation and dissociative disorders">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ddDisorder:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="enb-eb-rph"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcb-SQ-UdP">
+                                                        <rect key="frame" x="0.0" y="262" width="330" height="52.333333333333314"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Drugs - recreational drugs and alcohol">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="drugs:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="rhM-3e-c57"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-1r-HRN">
+                                                        <rect key="frame" x="0.0" y="314.33333333333331" width="330" height="52.333333333333314"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Eating problems">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="eatingIssue:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="fUM-Ea-Vb7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUp-wz-YRy">
+                                                        <rect key="frame" x="0.0" y="366.66666666666669" width="330" height="52.333333333333314"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Hearing voices">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="hearingVoices:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="mZh-5i-lUY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-lP-UYK">
+                                                        <rect key="frame" x="0.0" y="419" width="330" height="52.333333333333314"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Loneliness">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="loneliness:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="AXP-dh-hQr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UjG-5Y-aws">
+                                                        <rect key="frame" x="0.0" y="471.33333333333337" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obsessive compulsive disorder">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ocDisorder:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="P7M-YC-BMP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnI-x8-nwj">
+                                                        <rect key="frame" x="0.0" y="523.66666666666663" width="330" height="52.666666666666629"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Panic attacks">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="panicAttacks:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="oYC-tB-DBu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oCi-58-f8W">
+                                                        <rect key="frame" x="0.0" y="576.33333333333337" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Paranoia">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="paranoia:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="POw-mF-rCf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krh-rI-Xir">
+                                                        <rect key="frame" x="0.0" y="628.66666666666663" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Personality disorders">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="personalityDisorder:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="14z-2m-8HF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxu-p3-bEV">
+                                                        <rect key="frame" x="0.0" y="681" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Phobias">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="phobias:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="2n8-ZC-jvc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKH-jy-33b">
+                                                        <rect key="frame" x="0.0" y="733.33333333333337" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Post-traumatic stress disorder (PTSD)">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ptsd:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="Bbt-Eb-hWB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J5y-Ho-Rwd">
+                                                        <rect key="frame" x="0.0" y="785.66666666666663" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Schizophrenia">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="schizophrenia:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="EyU-9W-flJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-Y0-015">
+                                                        <rect key="frame" x="0.0" y="838" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Self-harm">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selfHarm:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="X41-Km-dXp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgY-bX-TxD">
+                                                        <rect key="frame" x="0.0" y="890.33333333333337" width="330" height="52.666666666666629"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Sleeping problems">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="sleepProblems:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="ZIG-KM-qFa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84Q-iB-3Ch">
+                                                        <rect key="frame" x="0.0" y="943" width="330" height="52.333333333333371"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Stress">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="stress:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="Dhr-Jh-3Up"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWK-d5-QSB">
+                                                        <rect key="frame" x="0.0" y="995.33333333333326" width="330" height="52.333333333333258"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Suicidal feelings">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="suicidalFeelings:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="zP2-gI-dhl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9m-bT-imP">
+                                                        <rect key="frame" x="0.0" y="1047.6666666666667" width="330" height="52.333333333333258"/>
+                                                        <state key="normal" title="Anger">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Trauma">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="trauma:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="f1D-SA-TxB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1100" id="Oju-Wu-vBb"/>
+                                                    <constraint firstAttribute="width" constant="330" id="vx1-Hn-HjF"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2V-Vn-OT5">
+                                                <rect key="frame" x="30" y="21" width="330" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Below is a list of some of the possible mental health problems people may experience during their lives (click one for its definition).</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lns-W2-el5">
+                                                <rect key="frame" x="38.666666666666657" y="1220" width="69" height="30"/>
+                                                <state key="normal" title="Click me">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Click here">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.13996574279999999" green="0.50102853780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="completeList:" destination="cNm-yP-8Bx" eventType="touchUpInside" id="Ed3-Li-kZJ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIz-vG-7Oa">
+                                                <rect key="frame" x="111.33333333333333" y="1226" width="243.66666666666669" height="18"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="for a complete list from ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" metaFont="system" size="15"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="mind.org.uk">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" metaFont="system" size="15"/>
+                                                            <font key="NSOriginalFont" metaFont="system" size="15"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPL-Km-eq8">
+                                                <rect key="frame" x="81.666666666666686" y="1264.6666666666667" width="227" height="17"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="lns-W2-el5" firstAttribute="centerX" secondItem="5wD-fx-GbB" secondAttribute="centerX" constant="-122" id="8iH-0I-gpZ"/>
+                                            <constraint firstItem="sIz-vG-7Oa" firstAttribute="centerY" secondItem="5wD-fx-GbB" secondAttribute="centerY" constant="585" id="DEM-EX-5z7"/>
+                                            <constraint firstAttribute="height" constant="1300" id="Egp-hy-fAz"/>
+                                            <constraint firstItem="Wbr-ZO-LDM" firstAttribute="centerX" secondItem="5wD-fx-GbB" secondAttribute="centerX" id="PQ1-Ju-LUe"/>
+                                            <constraint firstItem="lns-W2-el5" firstAttribute="centerY" secondItem="5wD-fx-GbB" secondAttribute="centerY" constant="585" id="RYq-yj-OLW"/>
+                                            <constraint firstItem="Wbr-ZO-LDM" firstAttribute="centerY" secondItem="5wD-fx-GbB" secondAttribute="centerY" constant="-9" id="XYL-fi-RwW"/>
+                                            <constraint firstItem="kPL-Km-eq8" firstAttribute="centerY" secondItem="5wD-fx-GbB" secondAttribute="centerY" constant="623" id="cGY-wd-Jyl"/>
+                                            <constraint firstItem="sIz-vG-7Oa" firstAttribute="centerX" secondItem="5wD-fx-GbB" secondAttribute="centerX" constant="38" id="owd-2Y-9gh"/>
+                                            <constraint firstItem="kPL-Km-eq8" firstAttribute="centerX" secondItem="5wD-fx-GbB" secondAttribute="centerX" id="twd-lF-MIj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5wD-fx-GbB" secondAttribute="trailing" id="1bc-eW-L8M"/>
+                                    <constraint firstAttribute="bottom" secondItem="5wD-fx-GbB" secondAttribute="bottom" id="AvM-bx-Yfw"/>
+                                    <constraint firstItem="5wD-fx-GbB" firstAttribute="leading" secondItem="ffI-aK-zpu" secondAttribute="leading" id="BNm-tF-15g"/>
+                                    <constraint firstItem="5wD-fx-GbB" firstAttribute="top" secondItem="ffI-aK-zpu" secondAttribute="top" id="o4l-Hv-LDJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JMk-S5-mGg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffI-aK-zpu" firstAttribute="leading" secondItem="JMk-S5-mGg" secondAttribute="leading" id="7aw-v0-MoP"/>
+                            <constraint firstItem="ffI-aK-zpu" firstAttribute="top" secondItem="Mbc-BC-RYF" secondAttribute="top" id="hGz-ZL-yQI"/>
+                            <constraint firstItem="ffI-aK-zpu" firstAttribute="trailing" secondItem="JMk-S5-mGg" secondAttribute="trailing" id="mKi-fI-itP"/>
+                            <constraint firstAttribute="bottom" secondItem="ffI-aK-zpu" secondAttribute="bottom" id="n39-0E-vEV"/>
+                            <constraint firstItem="5wD-fx-GbB" firstAttribute="width" secondItem="Mbc-BC-RYF" secondAttribute="width" id="nzA-zl-Vvn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mental Health Problems" id="7f4-Zk-0Cs"/>
+                    <size key="freeformSize" width="390" height="1300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5K-iN-vCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4167" y="-901"/>
+            <point key="canvasLocation" x="3955" y="-1553"/>
         </scene>
         <!--Activities-->
         <scene sceneID="kO2-uq-1he">
@@ -775,7 +1615,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjs-tk-clK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2680" y="-895"/>
+            <point key="canvasLocation" x="2540" y="-682"/>
         </scene>
     </scenes>
     <resources>
@@ -796,6 +1636,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
         <image name="tiger" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

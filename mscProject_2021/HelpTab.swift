@@ -11,7 +11,6 @@ import WebKit
 class HelpTab: UIViewController {
     
     @IBOutlet var videoYoutube: WKWebView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         playVideo(videoURL: "G0zJGDokyWQ")

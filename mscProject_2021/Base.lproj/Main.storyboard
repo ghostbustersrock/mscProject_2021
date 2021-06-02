@@ -624,11 +624,11 @@ Password*</string>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment>
-                                                        <mutableString key="content"> is like physical health, everybody has it and it has to be taken care of. This can be a positive mental health, which allows us to think, feel and react in ways we need and want within our life. Negative mental health are periods in which our thinking and feelings become difficult, or sometimes impossible, to cope with. This can be as bad or worse than physical illness. One in four people in any given year unfortunately suffer from mental health problems, ranging from depression and anxiety to more rarer and severe problems such as schizophrenia and bipolar disorder.
+                                                        <string key="content"> is like physical health, everybody has it and it has to be taken care of. This can be a positive mental health, which allows us to think, feel and react in ways we need and want within our life. Negative mental health are periods in which our thinking and feelings become difficult, or sometimes impossible, to cope with. This can be as bad or worse than physical illness. One in four people in any given year unfortunately suffer from mental health problems, ranging from depression and anxiety to more rarer and severe problems such as schizophrenia and bipolar disorder.
 
 Experiencing mental health problems can be confusing and frightening at first, as if you were “losing your mind”. Negative and unrealistic representations of mental health problems (i.e. TV shows, film, media, etc.) often reinforce such preliminary feelings and potentially stop you from seeking help, or most importantly, talking about it. 
  Mental health problems are a common human experience, however, finding combinations of self-care, treatment and support, that works for you, will help you feel better.
-  The following video from the YouTube channel Mental Health at Work (2016) gives extra information on what mental health is.</mutableString>
+  The following video from the YouTube channel Mental Health at Work (2016) gives extra information on what mental health is.</string>
                                                         <attributes>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" metaFont="menu" size="14"/>
@@ -695,6 +695,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                         <rect key="frame" x="0.0" y="254.33333333333323" width="330" height="45.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <state key="normal" title="Useful contacts"/>
+                                                        <connections>
+                                                            <segue destination="PfZ-Q4-wab" kind="show" id="jyg-RI-XTR"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -703,9 +706,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJv-a4-hEU">
-                                                <rect key="frame" x="82" y="1372" width="227" height="17"/>
+                                                <rect key="frame" x="75" y="1372" width="241" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -761,7 +764,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Mental health problems can be self-treated as well, depending on the severity. Changes in ones lifestyle or other techniques can help manage mental health problems as well as prevent their full development. These changes and techniques can work, as well as they cannot. It is important to always be aware when to seek the help of an expert (refer to the section '</mutableString>
+                                        <string key="content">Mental health problems can be self-treated as well, depending on the severity. Changes in ones lifestyle or other techniques can help manage mental health problems as well as prevent their full development. These changes and techniques can work, as well as they cannot. It is important to always be aware when to seek the help of an expert (refer to the section '</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="15"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -775,7 +778,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">' in the previous page). It is also important to understand that there is not instant solution from recovering or pushing away mental health problems, it is a process that takes time, especially based on the severity of the issue.  Some self-care techniques can be for example keeping a mood diary, trying peer support (talking to others), take time for yourself, look after your physical health and more.  For more self-care suggestions and tips visit</mutableString>
+                                        <string key="content">' in the previous page). It is also important to understand that there is not instant solution from recovering or pushing away mental health problems, it is a process that takes time, especially based on the severity of the issue.  Some self-care techniques can be for example keeping a mood diary, trying peer support (talking to others), take time for yourself, look after your physical health and more.  For more self-care suggestions and tips visit</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="15"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -802,9 +805,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnJ-4n-BJM">
-                                <rect key="frame" x="82" y="716" width="227" height="17"/>
+                                <rect key="frame" x="75" y="716" width="241" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -850,7 +853,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-Er-j6U">
                                                 <rect key="frame" x="30" y="186" width="330" height="388"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <mutableString key="text">Talking treatments, as the words suggest, consists in having a time and space for someone to talk about their thoughs and experiences with an expert, in order to explore any issues. This can help with many different things like dealing with specific problems, coping with memories or experiences and more. Various terms are used to describe talking treatments, like consuelling, psychotherapy, therapy, talking therapy or psycological therapy. All these terms are talking treatments.   Contacting the NHS will most likely have them offer someone the Cognitive Behavioural Therapy (CBT) talking. This is a short-term treatment aiming to identify connections between someone’s thoughts, feelings and behaviours. This is done so to help develop practical skills to help manage negative patterns which may be causing such difficulties.</mutableString>
+                                                <string key="text">Talking treatments, as the words suggest, consists in having a time and space for someone to talk about their thoughs and experiences with an expert, in order to explore any issues. This can help with many different things like dealing with specific problems, coping with memories or experiences and more. Various terms are used to describe talking treatments, like consuelling, psychotherapy, therapy, talking therapy or psycological therapy. All these terms are talking treatments.   Contacting the NHS will most likely have them offer someone the Cognitive Behavioural Therapy (CBT) talking. This is a short-term treatment aiming to identify connections between someone’s thoughts, feelings and behaviours. This is done so to help develop practical skills to help manage negative patterns which may be causing such difficulties.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -865,7 +868,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-Ua-KVI">
                                                 <rect key="frame" x="30" y="614" width="330" height="268"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <mutableString key="text">Psychiatric medication consists in being prescribed medications, not to cure mental health problems rather ease many of their symptoms. Based on the diagnosis different medications will be offerred. These can be antidepressants, antipsychotics, sleeping pills, minor tranquillisers, mood stabilisers and more.  It is vital to know that although medications can help ease negative mental health symptoms, they can also have negative side effects. Example of these can be worsening your mood, physical harm and addictive if taken in too high doses.</mutableString>
+                                                <string key="text">Psychiatric medication consists in being prescribed medications, not to cure mental health problems rather ease many of their symptoms. Based on the diagnosis different medications will be offerred. These can be antidepressants, antipsychotics, sleeping pills, minor tranquillisers, mood stabilisers and more.  It is vital to know that although medications can help ease negative mental health symptoms, they can also have negative side effects. Example of these can be worsening your mood, physical harm and addictive if taken in too high doses.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -880,7 +883,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MN-qQ-V09">
                                                 <rect key="frame" x="30" y="942" width="330" height="298"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <mutableString key="text">Many other alternatives are available to help prevent or ease mental health problems. One of the most common alternatives are arts and creative therapies. These consists in using the arts (i.e. music, patining, etc.) to express and understand yourself in therapeutic way and environment. Other activities, such as yoga, can also help, mainly to manage stress but also for common symptoms of mental health problems.     For more information on treatments (specifically medical ones) click the link below to be redirected to Mind's website.</mutableString>
+                                                <string key="text">Many other alternatives are available to help prevent or ease mental health problems. One of the most common alternatives are arts and creative therapies. These consists in using the arts (i.e. music, patining, etc.) to express and understand yourself in therapeutic way and environment. Other activities, such as yoga, can also help, mainly to manage stress but also for common symptoms of mental health problems.     For more information on treatments (specifically medical ones) click the link below to be redirected to Mind's website.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -904,9 +907,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-v7-Q5a">
-                                                <rect key="frame" x="82" y="1344" width="227" height="17"/>
+                                                <rect key="frame" x="75" y="1344" width="241" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1010,9 +1013,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTj-l8-BEA">
-                                                <rect key="frame" x="82" y="1538" width="227" height="17"/>
+                                                <rect key="frame" x="75" y="1538" width="241" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1046,7 +1049,632 @@ Experiencing mental health problems can be confusing and frightening at first, a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRB-hw-9Gb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4067.6923076923076" y="-472.03791469194312"/>
+            <point key="canvasLocation" x="3954" y="-473"/>
+        </scene>
+        <!--Useful contacts-->
+        <scene sceneID="mJj-UM-Seu">
+            <objects>
+                <viewController id="PfZ-Q4-wab" customClass="UsefulContacts" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EX0-ov-WJs">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRU-uE-7Ek">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1500"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-sP-R6P">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-pN-Zqn">
+                                                <rect key="frame" x="74.666666666666671" y="1331" width="240.66666666666663" height="18"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-YX-332" userLabel="More_contacts">
+                                                <rect key="frame" x="41.333333333333343" y="1256" width="307.33333333333326" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more useful contacts click the link below." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmE-cP-hBH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="307.33333333333331" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofw-Wg-wuT">
+                                                        <rect key="frame" x="0.0" y="18" width="307.33333333333331" height="30"/>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="More contacts">
+                                                                    <attributes>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="moreContacts:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="7fc-8U-5sQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="YVb-F3-cws" userLabel="Contacts">
+                                                <rect key="frame" x="30" y="114" width="330" height="1082"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fGb-8M-hRt" userLabel="Anxiety_uk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="132"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anxiety UK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYf-Cc-6dB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k8o-EE-tTX" userLabel="Phone">
+                                                                <rect key="frame" x="0.0" y="24" width="170.33333333333334" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93A-Gy-Sqf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                                                        <state key="normal">
+                                                                            <attributedString key="attributedTitle">
+                                                                                <fragment content="03444 775 774">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="anxietyPhone:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="Y67-8f-5fM"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(helpline)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVu-Je-vfH">
+                                                                        <rect key="frame" x="106" y="0.0" width="64.333333333333314" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TYz-Wb-oGs" userLabel="Text">
+                                                                <rect key="frame" x="0.0" y="54" width="218" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Xa-5b-Nrj">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                                                        <state key="normal">
+                                                                            <attributedString key="attributedTitle">
+                                                                                <fragment content="07537 416 905">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="anxietyText:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="tei-DI-yxo"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(text)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMJ-gO-DyU">
+                                                                        <rect key="frame" x="113" y="0.0" width="105" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOZ-AJ-20W">
+                                                                <rect key="frame" x="0.0" y="84" width="113" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="anxietyuk.org.uk">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="anxietySite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="kBd-mH-pKH"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For anxiety related issues." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK9-tW-MRz">
+                                                                <rect key="frame" x="0.0" y="114" width="178.66666666666666" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jRE-Nh-3sa" userLabel="Beat">
+                                                        <rect key="frame" x="0.0" y="162" width="330" height="162"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLr-Gh-i76">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-rn-K8O" userLabel="adultline">
+                                                                <rect key="frame" x="0.0" y="24" width="212.66666666666666" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFh-Ib-Lg5">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                                                        <state key="normal">
+                                                                            <attributedString key="attributedTitle">
+                                                                                <fragment content="0808 801 0677">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="beatHelpline:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="GwU-U9-TCy"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(adult helpline)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCr-wD-vGy">
+                                                                        <rect key="frame" x="110" y="0.0" width="102.66666666666669" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dd2-Qf-wTT" userLabel="youthline">
+                                                                <rect key="frame" x="0.0" y="54" width="212" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOp-3N-jVf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                        <state key="normal">
+                                                                            <attributedString key="attributedTitle">
+                                                                                <fragment content="0808 801 0711">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="beatYouth:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="MkV-oy-Ka2"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(youthline)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIa-2Y-Bia">
+                                                                        <rect key="frame" x="110" y="0.0" width="102" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3ag-dm-M9L" userLabel="studentline">
+                                                                <rect key="frame" x="0.0" y="84" width="215" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTZ-mF-nwN">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                                                        <state key="normal">
+                                                                            <attributedString key="attributedTitle">
+                                                                                <fragment content="07537 416 905">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="beatStudent:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="UJ7-zT-94K"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(studentline)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-go-2x9">
+                                                                        <rect key="frame" x="110" y="0.0" width="105" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hN-fE-cWL">
+                                                                <rect key="frame" x="0.0" y="114" width="185" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="beateatingdisorders.org.uk">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="beatSite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="z8h-vB-gg8"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For eating disorders related issues." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-uf-Dds">
+                                                                <rect key="frame" x="0.0" y="144" width="240" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="VKR-en-kqw" userLabel="Carers">
+                                                        <rect key="frame" x="0.0" y="354" width="330" height="116"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carers UK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-Wi-hcL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-p0-4zh">
+                                                                <rect key="frame" x="0.0" y="20" width="330" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="0808 808 7777">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.00063352775696068342" green="0.42252744496264538" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="carersPhone:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="pQk-FT-HOv"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VT-Gf-rnV">
+                                                                <rect key="frame" x="0.0" y="46" width="330" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="advice@carersuk.org">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="carersEmail:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="xk8-R1-6nk"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZk-hx-gk0">
+                                                                <rect key="frame" x="0.0" y="72" width="330" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="carersuk.org">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="carersSite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="K34-mj-Oyh"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advice and support for anyone providing care." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTx-T3-1gt">
+                                                                <rect key="frame" x="0.0" y="98" width="330" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-hh-DWt" userLabel="Hearing_voices">
+                                                        <rect key="frame" x="0.0" y="500" width="330" height="72"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearing Voices Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-za-Elk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QsT-Ln-1lt">
+                                                                <rect key="frame" x="0.0" y="24" width="330" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="hearing-voices.org">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="hvnSite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="buS-bF-JwZ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support for people who hear voices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsL-Vd-vnD">
+                                                                <rect key="frame" x="0.0" y="54" width="330" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-7" translatesAutoresizingMaskIntoConstraints="NO" id="CBw-oX-xAX" userLabel="MindOut">
+                                                        <rect key="frame" x="0.0" y="602" width="330" height="94"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MindOut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEu-Rt-vkJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="36"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glv-Xm-hGW">
+                                                                <rect key="frame" x="0.0" y="29" width="330" height="36"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="mindout.org.uk">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="mindSite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="RiZ-6Y-F1x"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support for LGBTQ+ people with mental health issues." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr1-eQ-zpW">
+                                                                <rect key="frame" x="0.0" y="58" width="330" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="HP4-Uc-gis" userLabel="Movember">
+                                                        <rect key="frame" x="0.0" y="726" width="330" height="108"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movember" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNf-mm-EYe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o45-RU-62A">
+                                                                <rect key="frame" x="0.0" y="26" width="330" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="info.uk@movember.com">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="movemberEmail:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="Uuw-YL-Ya7"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O32-Tn-uam">
+                                                                <rect key="frame" x="0.0" y="52" width="330" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="uk.movember.com">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="movemberSite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="KVK-8f-CnD"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support for men with mental health issues." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLU-gC-qrU">
+                                                                <rect key="frame" x="0.0" y="78" width="330" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="b3Y-gO-7CN" userLabel="NHS">
+                                                        <rect key="frame" x="0.0" y="864" width="330" height="74"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NHS UK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9po-6e-7G1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-FO-YHG">
+                                                                <rect key="frame" x="0.0" y="25" width="330" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="nhs.uk">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="nhsSite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="DlN-wl-t3S"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information on health problems and treatments." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXQ-fB-goE">
+                                                                <rect key="frame" x="0.0" y="56" width="330" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7M1-wE-td1" userLabel="Samaritans">
+                                                        <rect key="frame" x="0.0" y="968" width="330" height="114"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samaritans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-iz-d25">
+                                                                <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bVK-1P-sZV" userLabel="adultline">
+                                                                <rect key="frame" x="0.0" y="24" width="142.33333333333334" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CaX-Gt-rfJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                        <state key="normal">
+                                                                            <attributedString key="attributedTitle">
+                                                                                <fragment content="116 123">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" red="0.0" green="0.45480538605458909" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="samaritansPhone:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="86c-0X-00O"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(free phone)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHD-pa-ZBq">
+                                                                        <rect key="frame" x="56.999999999999993" y="0.0" width="85.333333333333314" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sQ1-U9-33B">
+                                                                <rect key="frame" x="0.0" y="54" width="128" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="jo@samaritans.org">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.040193875073132213" green="0.4897354819199794" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="samaritansEmail:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="Bwu-WO-cpj"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiu-TZ-fDJ">
+                                                                <rect key="frame" x="0.0" y="84" width="102" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="samaritans.org">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.1421844065" green="0.5218208432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="samaritansSite:" destination="PfZ-Q4-wab" eventType="touchUpInside" id="Ccg-RL-lYW"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="330" id="oUn-FT-3wH"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rs-ch-bAz">
+                                                <rect key="frame" x="30" y="12" width="330" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Within this page are available contacts to reach out to in case needed, for both mental health problems support or advice on what to do if you feel you are mentally unwell.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="UvL-YX-332" firstAttribute="centerX" secondItem="W7S-sP-R6P" secondAttribute="centerX" id="3Bt-AA-4qc"/>
+                                            <constraint firstItem="YVb-F3-cws" firstAttribute="centerX" secondItem="W7S-sP-R6P" secondAttribute="centerX" id="9Wb-pL-JhK"/>
+                                            <constraint firstItem="UvL-YX-332" firstAttribute="centerY" secondItem="W7S-sP-R6P" secondAttribute="centerY" constant="530" id="GnY-C9-aWt"/>
+                                            <constraint firstItem="VWH-pN-Zqn" firstAttribute="centerY" secondItem="W7S-sP-R6P" secondAttribute="centerY" constant="590" id="IKg-0N-yrF"/>
+                                            <constraint firstItem="VWH-pN-Zqn" firstAttribute="centerX" secondItem="W7S-sP-R6P" secondAttribute="centerX" id="fEt-D5-C5s"/>
+                                            <constraint firstAttribute="height" constant="1500" id="jh1-AU-xBB"/>
+                                            <constraint firstItem="YVb-F3-cws" firstAttribute="centerY" secondItem="W7S-sP-R6P" secondAttribute="centerY" constant="-95" id="ps6-b4-eoR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="W7S-sP-R6P" firstAttribute="leading" secondItem="wRU-uE-7Ek" secondAttribute="leading" id="2Yd-eO-6jc"/>
+                                    <constraint firstAttribute="bottom" secondItem="W7S-sP-R6P" secondAttribute="bottom" id="5Jh-Nw-J1P"/>
+                                    <constraint firstItem="W7S-sP-R6P" firstAttribute="top" secondItem="wRU-uE-7Ek" secondAttribute="top" id="9u8-ZD-Shm"/>
+                                    <constraint firstAttribute="trailing" secondItem="W7S-sP-R6P" secondAttribute="trailing" id="wyz-7a-jg9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w2I-Hn-NIV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wRU-uE-7Ek" firstAttribute="top" secondItem="EX0-ov-WJs" secondAttribute="top" id="3YK-dx-KoT"/>
+                            <constraint firstAttribute="bottom" secondItem="wRU-uE-7Ek" secondAttribute="bottom" id="Hzi-hi-Nye"/>
+                            <constraint firstItem="W7S-sP-R6P" firstAttribute="width" secondItem="EX0-ov-WJs" secondAttribute="width" id="OPp-H8-BRG"/>
+                            <constraint firstItem="wRU-uE-7Ek" firstAttribute="leading" secondItem="w2I-Hn-NIV" secondAttribute="leading" id="V5q-EC-Ebu"/>
+                            <constraint firstItem="wRU-uE-7Ek" firstAttribute="trailing" secondItem="w2I-Hn-NIV" secondAttribute="trailing" id="zfE-lr-GXN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Useful contacts" id="CoO-Tz-Zm6"/>
+                    <size key="freeformSize" width="390" height="1500"/>
+                    <connections>
+                        <outletCollection property="phone_email_text" destination="93A-Gy-Sqf" collectionClass="NSMutableArray" id="f2t-az-aRf"/>
+                        <outletCollection property="phone_email_text" destination="2Xa-5b-Nrj" collectionClass="NSMutableArray" id="gdl-2N-4OG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrr-W5-lqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4626.1538461538457" y="-6.3981042654028437"/>
         </scene>
         <!--Mental Health Problems-->
         <scene sceneID="ySR-HF-rKB">
@@ -1497,8 +2125,8 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPL-Km-eq8">
-                                                <rect key="frame" x="81.666666666666686" y="1264.6666666666667" width="227" height="17"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <rect key="frame" x="74.666666666666671" y="1264" width="240.66666666666663" height="18"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

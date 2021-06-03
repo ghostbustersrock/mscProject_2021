@@ -12,6 +12,18 @@ import MessageUI // To open the text message and email composition emails.
 // This class contains useful functions (i.e. to make calls) used in various other classes.
 class UsefulFunctions: UIViewController, MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
     
+    // Function to display an alert pop-up with a title and message.
+    func displayAlert(displayTitle: String, msg: String) {
+        let defAction = UIAlertController(title: displayTitle, message: msg, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .cancel) {
+            alertAction in
+        }
+        
+        defAction.addAction(okAction)
+        self.present(defAction, animated: true, completion: nil)
+    }
+    
     func openSite(siteName: String) {
         UIApplication.shared.open(URL(string: siteName)! as URL, options: [:], completionHandler: nil)
     }
@@ -47,7 +59,7 @@ class UsefulFunctions: UIViewController, MFMessageComposeViewControllerDelegate,
     
     // To tell the delegate that the user finished composing the text message.
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        // Nothing
+        // Do nothing
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

@@ -5,11 +5,22 @@
 //  Created by Luca Santarelli on 27/05/21.
 //
 
+//import Charts
 import UIKit
+import RealmSwift
 
 class ProfileTab: UIViewController {
 
     @IBOutlet var profilePic: UIImageView!
+    
+    @IBAction func createGraph(_ sender: Any) {
+        
+    }
+    
+    @IBAction func updateGraph(_ sender: Any) {
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

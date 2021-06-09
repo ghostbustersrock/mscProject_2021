@@ -539,6 +539,7 @@ Password*</string>
                         <outlet property="tigerBack" destination="XZM-oj-CJY" id="u18-jW-0Dw"/>
                         <outlet property="usernameField" destination="2FA-wU-yDY" id="Wle-Q1-IIX"/>
                         <segue destination="uxa-B7-8bc" kind="unwind" identifier="goHome" unwindAction="goHomeWithSegue:" id="bbp-VA-57Z"/>
+                        <segue destination="uxa-B7-8bc" kind="unwind" identifier="savedInfoGoHome" unwindAction="goHomeWithSegue:" id="bfG-Bu-srm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHV-O1-Zuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2292,24 +2293,32 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear" translatesAutoresizingMaskIntoConstraints="NO" id="bjK-xl-pNA">
-                                <rect key="frame" x="135" y="92" width="120" height="120"/>
+                                <rect key="frame" x="145" y="102" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="XAJ-R0-sbA"/>
-                                    <constraint firstAttribute="width" constant="120" id="b3O-eC-uAR"/>
+                                    <constraint firstAttribute="height" constant="100" id="XAJ-R0-sbA"/>
+                                    <constraint firstAttribute="width" constant="100" id="b3O-eC-uAR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlC-j3-0DQ">
-                                <rect key="frame" x="166.66666666666666" y="227" width="57" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mid-Sl-oxr">
+                                <rect key="frame" x="150" y="650" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create graph"/>
+                                <connections>
+                                    <action selector="createGraph:" destination="9hk-GE-Icv" eventType="touchUpInside" id="BBW-vw-d0k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zo-iZ-rrd">
+                                <rect key="frame" x="148" y="702" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update graph"/>
+                                <connections>
+                                    <action selector="updateGraph:" destination="9hk-GE-Icv" eventType="touchUpInside" id="h7P-mC-8J2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EGD-GK-C2o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FlC-j3-0DQ" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-180" id="7w8-on-D7A"/>
-                            <constraint firstItem="FlC-j3-0DQ" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="cZ8-7s-0cJ"/>
                             <constraint firstItem="bjK-xl-pNA" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="chN-Uk-fOQ"/>
                             <constraint firstItem="bjK-xl-pNA" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-270" id="x48-xK-Rx1"/>
                         </constraints>

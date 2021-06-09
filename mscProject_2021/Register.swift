@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 var pressedArray:[String: Bool] = ["bear":false, "cat":false, "dog":false, "frog":false, "giraffe":false, "gorilla":false, "lion":false, "rabbit":false, "tiger":false]
 
@@ -15,12 +16,13 @@ var profile:String = "N/A"
 
 class Register: UIViewController {
     
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    // CHECK IF WE CAN PUT OUTLETS IN AN ARRAY!!!!
     @IBOutlet var tigerBack: UIButton!
     @IBOutlet var rabbitBack: UIButton!
     @IBOutlet var lionBack: UIButton!
@@ -79,8 +81,57 @@ class Register: UIViewController {
         else if passwordField.text != repeatPassField.text {
             fieldsAlert(title: "No Match!", msg: "The reinputted password doesn't match your initial one.")
         }
+//        else if realm.objects(User.self).filter("username == %@", usernameField.text!).first?.username == usernameField.text {
+//            fieldsAlert(title: "Warning!", msg: "The chosen username has already been taken. Please choose a different one.")
+//        }
+        
         else {
-            print("Wohoo everything's correct!!!")
+            print("This is the username to save \(usernameField.text!)!")
+            // Check if username has been taken or not before saving everything!
+            if realm.objects(User.self).filter("username == %@", usernameField.text!).first?.username != usernameField.text { // No same username has been found so save info.
+                let newUser = User()
+                while true {
+                    let randomNumber = Int.random(in: 1...100)
+                    let data = realm.objects(User.self).filter("identifier == %@", randomNumber).first
+                    if (data == nil) { // No user with same ID was found.
+                        newUser.identifier = randomNumber
+                        break
+                    }
+                }
+                newUser.profilePic = profile
+                newUser.name = nameField.text
+                newUser.username = usernameField.text
+                newUser.password = passwordField.text
+                // MARK: Add initial mood values when decided which to use!!!
+                realm.beginWrite()
+                realm.add(newUser)
+                try! realm.commitWrite()
+                print(Realm.Configuration.defaultConfiguration.fileURL!)
+                
+                // Make an alert saying everything was saved and then do an unwind segue to the homepage.
+                let alertView = UIAlertController(title: "Success!", message: "You have successfully registered!", preferredStyle: .actionSheet)
+
+                let goHomeAction = UIAlertAction (title: "Go home", style: .default) { alertAction in
+                    // Just for sercurity purposes remove all values from the outlets and variables used, whose values need to be saved.
+                    profile = "N/A"
+                    self.nameField.text = ""
+                    self.usernameField.text = ""
+                    self.passwordField.text = ""
+                    self.repeatPassField.text = ""
+                    for (k,_) in pressedArray {
+                        pressedArray[k] = false
+                    }
+                    
+                    // Return to the homepage once "Go home" has been pressed.
+                    self.performSegue(withIdentifier: "savedInfoGoHome", sender: self)
+                }
+
+                alertView.addAction(goHomeAction)
+                self.present(alertView, animated: true, completion: nil)
+            }
+            else { // If someone with the same username has been found then create alert.
+                fieldsAlert(title: "Warning!", msg: "The chosen username has already been taken. Please choose a different one.")
+            }
         }
     }
     

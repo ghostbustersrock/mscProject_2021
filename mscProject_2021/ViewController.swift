@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         else {
             
             // MARK: Pass identifier!!!
+            // need to pass the ID of the user loging in, so to order display all of its information!!!
             
             errorLabel.text = ""
             self.performSegue(withIdentifier: "successfulLogin", sender: self)

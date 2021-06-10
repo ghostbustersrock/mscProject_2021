@@ -318,7 +318,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-kc-7Zl" userLabel="fillDetails">
-                                                <rect key="frame" x="44" y="556.33333333333337" width="302" height="247.33333333333337"/>
+                                                <rect key="frame" x="44" y="525.33333333333337" width="302" height="309.33333333333337"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Ro-AOk" userLabel="Name">
                                                         <rect key="frame" x="0.0" y="0.0" width="302" height="37"/>
@@ -456,6 +456,16 @@ Password*</string>
                                                             <constraint firstAttribute="height" constant="37" id="DLM-Gb-W1p"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkC-ry-4t9">
+                                                        <rect key="frame" x="0.0" y="259.33333333333326" width="302" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="302" id="1eR-j5-Qdo"/>
+                                                            <constraint firstAttribute="height" constant="50" id="8pZ-lc-u5B"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up, it's easy!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1S-A8-joz">
@@ -481,7 +491,7 @@ Password*</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rk-4M-vTh" userLabel="submit">
-                                                <rect key="frame" x="155" y="864" width="80" height="32"/>
+                                                <rect key="frame" x="155" y="844" width="80" height="32"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="Lkf-bf-0BZ"/>
@@ -520,7 +530,7 @@ Password*</string>
                                             <constraint firstItem="c23-qX-GlQ" firstAttribute="centerX" secondItem="R3V-fP-c6m" secondAttribute="centerX" id="Y2o-Yr-ulh"/>
                                             <constraint firstItem="X6z-h1-VJf" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="-470" id="cPD-LP-c25"/>
                                             <constraint firstItem="cxa-kc-7Zl" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="180" id="eln-pu-595"/>
-                                            <constraint firstItem="3Rk-4M-vTh" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="380" id="zt9-13-adS"/>
+                                            <constraint firstItem="3Rk-4M-vTh" firstAttribute="centerY" secondItem="R3V-fP-c6m" secondAttribute="centerY" constant="360" id="zt9-13-adS"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -547,6 +557,7 @@ Password*</string>
                         <outlet property="bearBack" destination="LAP-MT-ds6" id="CqD-ZO-382"/>
                         <outlet property="catBack" destination="cB4-qm-jyJ" id="UDM-VP-qGQ"/>
                         <outlet property="dogBack" destination="B4f-eF-A2s" id="ohd-Om-uvn"/>
+                        <outlet property="errorMsg" destination="SkC-ry-4t9" id="D2E-sX-8iI"/>
                         <outlet property="frogBack" destination="pdh-6i-McN" id="fTD-UY-vss"/>
                         <outlet property="giraffeBack" destination="Ay7-ok-jyr" id="k1b-Mf-ZJV"/>
                         <outlet property="gorillaBack" destination="zvU-Bg-Oge" id="fAb-y2-La1"/>

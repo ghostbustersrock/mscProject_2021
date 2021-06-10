@@ -20,7 +20,6 @@ class Register: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBOutlet var tigerBack: UIButton!
@@ -36,6 +35,7 @@ class Register: UIViewController {
     @IBOutlet var usernameField: UITextField!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var repeatPassField: UITextField!
+    @IBOutlet var errorMsg: UILabel!
     
     func fieldsAlert(title:String = "Missing Field!", msg: String) -> Void {
         
@@ -49,37 +49,46 @@ class Register: UIViewController {
     
     func missingField() -> Void {
         if !pressedArray.values.contains(true) {
-            fieldsAlert(title: "Missing Profile Picture!" , msg: "Please select a picutre as your profile picture.")
+            fieldsAlert(title: "Missing Profile Picture!" , msg: "Please select an icon as your profile picture.")
         }
         else if nameField.text!.isEmpty {
-            fieldsAlert(msg: "Please enter your name.")
+            errorMsg.text = "Enter a name"
+            borderName()
         }
         else if usernameField.text!.isEmpty {
-            fieldsAlert(msg: "Please enter a username.")
+            errorMsg.text = "Enter a username"
+            borderUsername()
         }
         else if passwordField.text!.isEmpty {
-            fieldsAlert(msg: "Please enter a password.")
+            errorMsg.text = "Enter a password"
+            borderPassword()
         }
         else  if repeatPassField.text!.isEmpty {
-            fieldsAlert(msg: "Please re-enter your password.")
+            errorMsg.text = "Enter your password again"
+            borderRepeatPass()
         }
         else {
+            resetBorders()
             return
         }
     }
     
     func errorCriteria() -> Void {
         if nameField.text?.hasWhitespacesNewlines() == true || nameField.text!.hasDigits() == true {
-            fieldsAlert(title: "Invalid Name!", msg: "Your name contains invalid characters (i.e. whitespaces or numbers).")
+            errorMsg.text = "Name contains whitespaces or numbers"
+            borderName()
         }
         else if usernameField.text?.hasWhitespacesNewlines() == true || usernameField.text!.hasDigits() == true {
-            fieldsAlert(title: "Invalid Username!", msg: "Your username contains invalid characters (i.e. whitespaces or numbers).")
+            errorMsg.text = "Username contains whitespaces or numbers"
+            borderUsername()
         }
         else if passwordField.text!.count < 8 || passwordField.text?.hasWhitespacesNewlines() == true {
-            fieldsAlert(title: "Invalid Password!", msg: "Your password doesn't meet the required criteria.")
+            errorMsg.text = "Password doesn't match criteria"
+            borderPassword()
         }
         else if passwordField.text != repeatPassField.text {
-            fieldsAlert(title: "No Match!", msg: "The reinputted password doesn't match your initial one.")
+            errorMsg.text = "The repeated password doesn't match your initial one"
+            borderRepeatPassWrong()
         }
         else {
             // Check if username has been taken or not before saving everything!
@@ -97,7 +106,7 @@ class Register: UIViewController {
                 newUser.name = nameField.text
                 newUser.username = usernameField.text
                 newUser.password = passwordField.text
-                // MARK: Add initial mood values when decided which to use!!!
+                // MARK: Add initial mood values when decided which and how many to use!!!
                 realm.beginWrite()
                 realm.add(newUser)
                 try! realm.commitWrite()
@@ -116,7 +125,7 @@ class Register: UIViewController {
                     for (k,_) in pressedArray {
                         pressedArray[k] = false
                     }
-                    
+                    self.resetBorders() // Resetting the borders of the UItexFields.
                     // Return to the homepage once "Go home" has been pressed.
                     self.performSegue(withIdentifier: "savedInfoGoHome", sender: self)
                 }
@@ -125,7 +134,8 @@ class Register: UIViewController {
                 self.present(alertView, animated: true, completion: nil)
             }
             else { // If someone with the same username has been found then create alert.
-                fieldsAlert(title: "Warning!", msg: "The chosen username has already been taken. Please choose a different one.")
+                errorMsg.text = "That username isn't available. Choose another one."
+                borderUsername()
             }
         }
     }
@@ -149,7 +159,6 @@ class Register: UIViewController {
         if nameField.text!.isEmpty && usernameField.text!.isEmpty && passwordField.text!.isEmpty && repeatPassField.text!.isEmpty && !pressedArray.values.contains(true) {
             
             self.performSegue(withIdentifier: "goHome", sender: self)
-            
         }
         else {
             let alertView = UIAlertController(title: "Warning!", message: "Are you sure you want to exit the sign-up page? Exiting will lose all entered fields.", preferredStyle: .actionSheet)
@@ -157,6 +166,8 @@ class Register: UIViewController {
             let exitAction = UIAlertAction (title: "Yes", style: .destructive ) { alertAction in
 
                 profile = "N/A"
+                self.errorMsg.text = ""
+                self.resetBorders()
                 for (key,_) in pressedArray {
                     pressedArray[key] = false
                 }
@@ -186,7 +197,6 @@ class Register: UIViewController {
     @IBAction func bearFunc(_ sender: Any) {
         
         if pressedArray["bear"] == false {
-            
             profile = "bear"
             pressedArray["bear"] = true
             animalPressed(name: "bear")
@@ -200,7 +210,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.green
             frogBack.backgroundColor = UIColor.white
             lionBack.backgroundColor = UIColor.white
-            
         }
         else {
             bearBack.backgroundColor = UIColor.white
@@ -213,7 +222,6 @@ class Register: UIViewController {
     @IBAction func catFunc(_ sender: Any) {
         
         if pressedArray["cat"] == false {
-            
             profile = "cat"
             pressedArray["cat"] = true
             animalPressed(name: "cat")
@@ -238,7 +246,6 @@ class Register: UIViewController {
     @IBAction func dogFunc(_ sender: Any) {
 
         if pressedArray["dog"] == false {
-            
             profile = "dog"
             pressedArray["dog"] = true
             animalPressed(name: "dog")
@@ -252,7 +259,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.white
             frogBack.backgroundColor = UIColor.white
             lionBack.backgroundColor = UIColor.white
-
         }
         else {
             dogBack.backgroundColor = UIColor.white
@@ -264,7 +270,6 @@ class Register: UIViewController {
     @IBAction func frogFunc(_ sender: Any) {
 
         if pressedArray["frog"] == false {
-            
             profile = "frog"
             pressedArray["frog"] = true
             animalPressed(name: "frog")
@@ -278,7 +283,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.white
             frogBack.backgroundColor = UIColor.green
             lionBack.backgroundColor = UIColor.white
-            
         }
         else {
             frogBack.backgroundColor = UIColor.white
@@ -290,7 +294,6 @@ class Register: UIViewController {
     @IBAction func giraffeFunc(_ sender: Any) {
 
         if pressedArray["giraffe"] == false {
-            
             profile = "giraffe"
             pressedArray["giraffe"] = true
             animalPressed(name: "giraffe")
@@ -304,7 +307,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.white
             frogBack.backgroundColor = UIColor.white
             lionBack.backgroundColor = UIColor.white
-            
         }
         else {
             giraffeBack.backgroundColor = UIColor.white
@@ -317,7 +319,6 @@ class Register: UIViewController {
     @IBAction func gorillaFunc(_ sender: Any) {
 
         if pressedArray["gorilla"] == false {
-            
             profile = "gorilla"
             pressedArray["gorilla"] = true
             animalPressed(name: "gorilla")
@@ -331,7 +332,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.white
             frogBack.backgroundColor = UIColor.white
             lionBack.backgroundColor = UIColor.white
-            
         }
         else {
             gorillaBack.backgroundColor = UIColor.white
@@ -343,7 +343,6 @@ class Register: UIViewController {
     @IBAction func lionFunc(_ sender: Any) {
 
         if pressedArray["lion"] == false {
-            
             profile = "lion"
             pressedArray["lion"] = true
             animalPressed(name: "lion")
@@ -357,7 +356,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.white
             frogBack.backgroundColor = UIColor.white
             lionBack.backgroundColor = UIColor.green
-            
         }
         else {
             lionBack.backgroundColor = UIColor.white
@@ -370,7 +368,6 @@ class Register: UIViewController {
     @IBAction func rabbitFunc(_ sender: Any) {
 
         if pressedArray["rabbit"] == false {
-            
             profile = "rabbit"
             pressedArray["rabbit"] = true
             animalPressed(name: "rabbit")
@@ -384,7 +381,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.white
             frogBack.backgroundColor = UIColor.white
             lionBack.backgroundColor = UIColor.white
-            
         }
         else {
             rabbitBack.backgroundColor = UIColor.white
@@ -397,7 +393,6 @@ class Register: UIViewController {
     @IBAction func tigerFunc(_ sender: Any) {
 
         if pressedArray["tiger"] == false {
-            
             profile = "tiger"
             pressedArray["tiger"] = true
             animalPressed(name: "tiger")
@@ -411,7 +406,6 @@ class Register: UIViewController {
             bearBack.backgroundColor = UIColor.white
             frogBack.backgroundColor = UIColor.white
             lionBack.backgroundColor = UIColor.white
-            
         }
         else {
             tigerBack.backgroundColor = UIColor.white
@@ -419,6 +413,73 @@ class Register: UIViewController {
             profile = "N/A"
         }
     }
+    
+    func borderName() {
+        nameField.layer.borderColor = UIColor.red.cgColor
+        nameField.layer.borderWidth = 1
+        usernameField.layer.borderColor = UIColor.clear.cgColor
+        usernameField.layer.borderWidth = 0
+        passwordField.layer.borderColor = UIColor.clear.cgColor
+        passwordField.layer.borderWidth = 0
+        repeatPassField.layer.borderColor = UIColor.clear.cgColor
+        repeatPassField.layer.borderWidth = 0
+    }
+    
+    func borderUsername() {
+        nameField.layer.borderColor = UIColor.clear.cgColor
+        nameField.layer.borderWidth = 0
+        usernameField.layer.borderColor = UIColor.red.cgColor
+        usernameField.layer.borderWidth = 1
+        passwordField.layer.borderColor = UIColor.clear.cgColor
+        passwordField.layer.borderWidth = 0
+        repeatPassField.layer.borderColor = UIColor.clear.cgColor
+        repeatPassField.layer.borderWidth = 0
+    }
+    
+    func borderPassword() {
+        nameField.layer.borderColor = UIColor.clear.cgColor
+        nameField.layer.borderWidth = 0
+        usernameField.layer.borderColor = UIColor.clear.cgColor
+        usernameField.layer.borderWidth = 0
+        passwordField.layer.borderColor = UIColor.red.cgColor
+        passwordField.layer.borderWidth = 1
+        repeatPassField.layer.borderColor = UIColor.clear.cgColor
+        repeatPassField.layer.borderWidth = 0
+    }
+    
+    func borderRepeatPass() {
+        nameField.layer.borderColor = UIColor.clear.cgColor
+        nameField.layer.borderWidth = 0
+        usernameField.layer.borderColor = UIColor.clear.cgColor
+        usernameField.layer.borderWidth = 0
+        passwordField.layer.borderColor = UIColor.clear.cgColor
+        passwordField.layer.borderWidth = 0
+        repeatPassField.layer.borderColor = UIColor.red.cgColor
+        repeatPassField.layer.borderWidth = 1
+    }
+    
+    func borderRepeatPassWrong() {
+        nameField.layer.borderColor = UIColor.clear.cgColor
+        nameField.layer.borderWidth = 0
+        usernameField.layer.borderColor = UIColor.clear.cgColor
+        usernameField.layer.borderWidth = 0
+        passwordField.layer.borderColor = UIColor.red.cgColor
+        passwordField.layer.borderWidth = 1
+        repeatPassField.layer.borderColor = UIColor.red.cgColor
+        repeatPassField.layer.borderWidth = 1
+    }
+    
+    func resetBorders() {
+        nameField.layer.borderColor = UIColor.clear.cgColor
+        nameField.layer.borderWidth = 0
+        usernameField.layer.borderColor = UIColor.clear.cgColor
+        usernameField.layer.borderWidth = 0
+        passwordField.layer.borderColor = UIColor.clear.cgColor
+        passwordField.layer.borderWidth = 0
+        repeatPassField.layer.borderColor = UIColor.clear.cgColor
+        repeatPassField.layer.borderWidth = 0
+    }
+    
 }
 
 // Extension created by me to check if a string contains whitespaces, newlines and decimal digits.

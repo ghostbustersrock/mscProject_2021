@@ -114,7 +114,6 @@ class PasswordForgotten: UIViewController {
         if usernameField.text!.isEmpty && newPass.text!.isEmpty && repeatNewPass.text!.isEmpty {
             
             self.performSegue(withIdentifier: "exitReset", sender: self)
-            
         }
         else {
             let alertView = UIAlertController(title: "Warning!", message: "Are you sure you want to exit the page? Exiting will lose all entered fields.", preferredStyle: .actionSheet)

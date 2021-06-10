@@ -81,12 +81,7 @@ class Register: UIViewController {
         else if passwordField.text != repeatPassField.text {
             fieldsAlert(title: "No Match!", msg: "The reinputted password doesn't match your initial one.")
         }
-//        else if realm.objects(User.self).filter("username == %@", usernameField.text!).first?.username == usernameField.text {
-//            fieldsAlert(title: "Warning!", msg: "The chosen username has already been taken. Please choose a different one.")
-//        }
-        
         else {
-            print("This is the username to save \(usernameField.text!)!")
             // Check if username has been taken or not before saving everything!
             if realm.objects(User.self).filter("username == %@", usernameField.text!).first?.username != usernameField.text { // No same username has been found so save info.
                 let newUser = User()

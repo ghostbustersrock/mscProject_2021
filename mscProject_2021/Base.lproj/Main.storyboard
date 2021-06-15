@@ -13,6 +13,71 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Initial Qs Home-->
+        <scene sceneID="8nA-el-GCa">
+            <objects>
+                <viewController id="RUU-Iy-Jwm" customClass="InitialQsHome" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ue6-vL-VMi">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krc-SN-bDw" userLabel="submit">
+                                <rect key="frame" x="155" y="556" width="80" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Nvh-iq-YMJ"/>
+                                    <constraint firstAttribute="height" constant="32" id="orQ-KS-R4c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <state key="normal" title="Start"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startQuestions:" destination="RUU-Iy-Jwm" eventType="touchUpInside" id="B0u-Jb-sgg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMN-4p-Bps">
+                                <rect key="frame" x="30" y="192" width="330" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="f2E-W4-2D5"/>
+                                    <constraint firstAttribute="height" constant="300" id="tx7-Ra-PBj"/>
+                                </constraints>
+                                <string key="text">Hello *insert name*! Welcome to *insert app name*. Before accessing your profile you will need to answer some questions to initially assess your mood. Don't worry it will only take a moment of your time. Thank you and again... welcome to *insert app name*</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-ew-hrg">
+                                <rect key="frame" x="172" y="658" width="46" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="F4u-sQ-Kjf" kind="unwind" unwindAction="goHomeWithSegue:" id="riJ-Le-OvV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Q9-wJ-FUL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JMN-4p-Bps" firstAttribute="centerY" secondItem="ue6-vL-VMi" secondAttribute="centerY" constant="-80" id="A1X-IU-OuV"/>
+                            <constraint firstItem="krc-SN-bDw" firstAttribute="centerY" secondItem="ue6-vL-VMi" secondAttribute="centerY" constant="150" id="Sbd-cn-42B"/>
+                            <constraint firstItem="JMN-4p-Bps" firstAttribute="centerX" secondItem="ue6-vL-VMi" secondAttribute="centerX" id="eSE-bb-uTb"/>
+                            <constraint firstItem="krc-SN-bDw" firstAttribute="centerX" secondItem="ue6-vL-VMi" secondAttribute="centerX" id="ufN-cD-8Tl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="presentationText" destination="JMN-4p-Bps" id="Hsf-z6-074"/>
+                        <segue destination="TEi-6C-haB" kind="presentation" identifier="startQs" modalPresentationStyle="fullScreen" id="nQv-sq-vLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4v-Sa-Zch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="F4u-sQ-Kjf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1811" y="-682"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="sZP-aW-sVN">
             <objects>
@@ -77,24 +142,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7w1-MD-a2x" userLabel="Other_Stack">
                                 <rect key="frame" x="127" y="522.66666666666663" width="136" height="58.666666666666629"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow1-VK-iBc" userLabel="pass_dimenticata">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="29.333333333333332"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Password Forgotten">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.1123935059" green="0.45580279829999998" blue="0.98436647649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="15" name="CircularStd-Book"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <segue destination="lF8-Qx-nE8" kind="presentation" modalPresentationStyle="fullScreen" id="0Fz-fv-6Hj"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXT-dY-cii" userLabel="Registrati">
-                                        <rect key="frame" x="0.0" y="29.333333333333371" width="136" height="29.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="29.333333333333332"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Sign up">
@@ -108,6 +157,22 @@
                                         </state>
                                         <connections>
                                             <segue destination="MV2-Et-lPb" kind="presentation" modalPresentationStyle="fullScreen" id="01P-Nz-WqA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow1-VK-iBc" userLabel="pass_dimenticata">
+                                        <rect key="frame" x="0.0" y="29.333333333333371" width="136" height="29.333333333333329"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Password Forgotten">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.1123935059" green="0.45580279829999998" blue="0.98436647649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="15" name="CircularStd-Book"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="lF8-Qx-nE8" kind="presentation" modalPresentationStyle="fullScreen" id="0Fz-fv-6Hj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -158,11 +223,12 @@
                         <outlet property="passwordInput" destination="mGn-DL-mN4" id="kld-wX-Tyw"/>
                         <outlet property="usernameInput" destination="Fck-bz-Mci" id="c8a-qm-xTK"/>
                         <segue destination="3qh-q7-XL2" kind="presentation" identifier="successfulLogin" modalPresentationStyle="fullScreen" id="x1R-pV-LBf"/>
+                        <segue destination="RUU-Iy-Jwm" kind="presentation" identifier="initialQs" modalPresentationStyle="fullScreen" id="EQ2-gI-ar4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNz-eu-CGe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="42"/>
+            <point key="canvasLocation" x="-318" y="11"/>
         </scene>
         <!--Register-->
         <scene sceneID="cfv-hQ-dXd">
@@ -575,7 +641,114 @@ Password*</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHV-O1-Zuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="uxa-B7-8bc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="509" y="97"/>
+            <point key="canvasLocation" x="388" y="29"/>
+        </scene>
+        <!--Initial Questions-->
+        <scene sceneID="KvW-5X-JD9">
+            <objects>
+                <viewController id="TEi-6C-haB" customClass="InitialQuestions" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5e9-Lj-1I4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8g9-K4-1iu" userLabel="submit">
+                                <rect key="frame" x="155" y="606" width="80" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ZMP-0w-i0R"/>
+                                    <constraint firstAttribute="height" constant="32" id="d8d-eb-0Gd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonFunc:" destination="TEi-6C-haB" eventType="touchUpInside" id="fyE-tC-1mm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1 of 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ8-z0-sBg">
+                                <rect key="frame" x="134" y="81.666666666666671" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-gh-Hng">
+                                <rect key="frame" x="30" y="252" width="330" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="m0C-2v-dFS"/>
+                                    <constraint firstAttribute="height" constant="300" id="vtg-Ne-a4o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tBW-rv-IcJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Vx-gh-Hng" firstAttribute="centerX" secondItem="5e9-Lj-1I4" secondAttribute="centerX" id="5fe-aH-oyD"/>
+                            <constraint firstItem="EZ8-z0-sBg" firstAttribute="centerX" secondItem="5e9-Lj-1I4" secondAttribute="centerX" id="Emd-xF-afn"/>
+                            <constraint firstItem="0Vx-gh-Hng" firstAttribute="centerY" secondItem="5e9-Lj-1I4" secondAttribute="centerY" constant="-20" id="WcP-v5-HvA"/>
+                            <constraint firstItem="8g9-K4-1iu" firstAttribute="centerY" secondItem="5e9-Lj-1I4" secondAttribute="centerY" constant="200" id="bmj-H1-Fyl"/>
+                            <constraint firstItem="8g9-K4-1iu" firstAttribute="centerX" secondItem="5e9-Lj-1I4" secondAttribute="centerX" id="ioj-X3-Lza"/>
+                            <constraint firstItem="EZ8-z0-sBg" firstAttribute="centerY" secondItem="5e9-Lj-1I4" secondAttribute="centerY" constant="-330" id="jL2-2M-OKg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="8g9-K4-1iu" id="Fpi-vX-7Os"/>
+                        <outlet property="question" destination="0Vx-gh-Hng" id="hEP-sD-q6Y"/>
+                        <outlet property="questionNumber" destination="EZ8-z0-sBg" id="tq6-EW-pR5"/>
+                        <segue destination="Mbe-R0-fMf" kind="presentation" identifier="qsFinished" modalPresentationStyle="fullScreen" id="Sdo-gS-mTd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUJ-Sh-el7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1812" y="11"/>
+        </scene>
+        <!--Questions Finished-->
+        <scene sceneID="mFo-sP-Vni">
+            <objects>
+                <viewController id="Mbe-R0-fMf" customClass="QuestionsFinished" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="opa-4R-IIu">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksi-yc-WdY" userLabel="submit">
+                                <rect key="frame" x="155" y="606" width="80" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="nyh-23-VaD"/>
+                                    <constraint firstAttribute="width" constant="80" id="zm4-mJ-YX5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <state key="normal" title="Profile"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToProfile:" destination="Mbe-R0-fMf" eventType="touchUpInside" id="Rnm-oC-J9a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IAQ-fo-PaS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ksi-yc-WdY" firstAttribute="centerX" secondItem="opa-4R-IIu" secondAttribute="centerX" id="b9C-hG-0cx"/>
+                            <constraint firstItem="Ksi-yc-WdY" firstAttribute="centerY" secondItem="opa-4R-IIu" secondAttribute="centerY" constant="200" id="c3Q-IO-0D2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="3qh-q7-XL2" kind="presentation" identifier="accessProfile" modalPresentationStyle="fullScreen" id="a7b-XE-ds4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hU5-9U-j9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1812" y="714"/>
         </scene>
         <!--Password Forgotten-->
         <scene sceneID="7c3-D4-H36">
@@ -1068,7 +1241,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnJ-4n-BJM">
-                                <rect key="frame" x="74.666666666666686" y="723" width="241" height="18"/>
+                                <rect key="frame" x="74.666666666666686" y="703" width="241" height="18"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
@@ -1081,7 +1254,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                             <constraint firstItem="FeH-IK-B2Z" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="89" id="FuU-BZ-9eP"/>
                             <constraint firstItem="FeH-IK-B2Z" firstAttribute="centerX" secondItem="dH5-rg-893" secondAttribute="centerX" constant="-82" id="OYk-AM-RFa"/>
                             <constraint firstItem="gN3-Es-ruY" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="-110" id="OrV-gR-men"/>
-                            <constraint firstItem="AnJ-4n-BJM" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="310" id="WJc-YH-wep"/>
+                            <constraint firstItem="AnJ-4n-BJM" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="290" id="WJc-YH-wep"/>
                             <constraint firstItem="gN3-Es-ruY" firstAttribute="centerX" secondItem="dH5-rg-893" secondAttribute="centerX" id="kY7-DW-Dkh"/>
                         </constraints>
                     </view>
@@ -2559,6 +2732,28 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                     <action selector="updateGraph:" destination="9hk-GE-Icv" eventType="touchUpInside" id="h7P-mC-8J2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-Bn-60D">
+                                <rect key="frame" x="174" y="240" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-Ze-Gf2">
+                                <rect key="frame" x="174" y="281" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-nA-xL4">
+                                <rect key="frame" x="162" y="593" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LOG OUT"/>
+                                <connections>
+                                    <segue destination="RqZ-Ig-apH" kind="unwind" unwindAction="goHomeWithSegue:" id="g1h-KD-SnG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EGD-GK-C2o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2570,9 +2765,12 @@ Experiencing mental health problems can be confusing and frightening at first, a
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="9nn-iC-iUi"/>
                     <connections>
                         <outlet property="profilePic" destination="bjK-xl-pNA" id="caa-dp-5rf"/>
+                        <outlet property="profileUsernameDisplay" destination="B4I-Ze-Gf2" id="gAW-9Q-R41"/>
+                        <outlet property="profilename" destination="uAJ-Bn-60D" id="UWw-d6-2H0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxK-Z0-aT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RqZ-Ig-apH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="389" y="-682"/>
         </scene>
@@ -2596,6 +2794,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
             <point key="canvasLocation" x="2540" y="-682"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="x1R-pV-LBf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="activity" width="33.333332061767578" height="33.333332061767578"/>
         <image name="bear" width="32" height="32"/>

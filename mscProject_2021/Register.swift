@@ -106,13 +106,15 @@ class Register: UIViewController {
                 newUser.name = nameField.text
                 newUser.username = usernameField.text
                 newUser.password = passwordField.text
+                newUser.initialQuestionnaire = false
                 // MARK: Add initial mood values when decided which and how many to use!!!
                 realm.beginWrite()
                 realm.add(newUser)
                 try! realm.commitWrite()
                 print(Realm.Configuration.defaultConfiguration.fileURL!)
+                resetBorders()
+                errorMsg.text = ""
                 
-                // Make an alert saying everything was saved and then do an unwind segue to the homepage.
                 let alertView = UIAlertController(title: "Success!", message: "You have successfully registered!", preferredStyle: .actionSheet)
 
                 let goHomeAction = UIAlertAction (title: "Go home", style: .default) { alertAction in
@@ -217,7 +219,6 @@ class Register: UIViewController {
             profile = "N/A"
         }
     }
-    
     
     @IBAction func catFunc(_ sender: Any) {
         
@@ -479,7 +480,6 @@ class Register: UIViewController {
         repeatPassField.layer.borderColor = UIColor.clear.cgColor
         repeatPassField.layer.borderWidth = 0
     }
-    
 }
 
 // Extension created by me to check if a string contains whitespaces, newlines and decimal digits.

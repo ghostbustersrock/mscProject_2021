@@ -135,6 +135,11 @@ class PasswordForgotten: UIViewController {
         }
     }
     
+    // This function is called to hide the keyboard whenever we touch the screen, after it appears.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

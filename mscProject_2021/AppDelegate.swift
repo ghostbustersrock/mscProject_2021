@@ -10,10 +10,15 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //---------------------------------------------------------------------------
+        /* Title: Keyboard manager to avoid keyboard from hiding UI content, built in Swift
+        Author: Iftekhar Qurashi (hackiftekhar)
+        Date: 2020
+        Code version: Latest commit 20 Oct. 2020
+        Availability: https://github.com/hackiftekhar/IQKeyboardManager.git */
+        IQKeyboardManager.shared.enable = true
+        //---------------------------------------------------------------------------
         return true
     }
 

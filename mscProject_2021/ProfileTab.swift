@@ -11,7 +11,14 @@ import RealmSwift
 
 class ProfileTab: UIViewController {
 
+    var profileID: Int? // Where to store the ID of the person signed in.
+    var profileImage: String? // Where to store the image of the person signed in.
+    var profileName: String?
+    var profileUsername: String?
+    
     @IBOutlet var profilePic: UIImageView!
+    @IBOutlet var profilename: UILabel!
+    @IBOutlet var profileUsernameDisplay: UILabel!
     
     @IBAction func createGraph(_ sender: Any) {
         
@@ -24,6 +31,9 @@ class ProfileTab: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profilename.text = profileName
+        profileUsernameDisplay.text = profileUsername
+        profilePic.image = UIImage(named: profileImage!)
         profilePic.roundedImage()
         // Do any additional setup after loading the view.
     }

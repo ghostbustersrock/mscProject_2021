@@ -14,9 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var usernameInput: UITextField!
     @IBOutlet var passwordInput: UITextField!
-    
     @IBOutlet var errorLabel: UILabel!
-    
     
     @IBAction func loginButton(_ sender: Any) {
         
@@ -44,18 +42,8 @@ class ViewController: UIViewController {
             }
         }
         else {
-            
-            // MARK: Pass identifier!!!
-            // need to pass the ID of the user loging in, so to order display all of its information!!!
-            
             errorLabel.text = ""
-            
-            if realm.objects(User.self).filter("username == %@", usernameInput.text!).first?.initialQuestionnaire == false {
-                self.performSegue(withIdentifier: "initialQs", sender: self)
-            }
-            else {
-                self.performSegue(withIdentifier: "successfulLogin", sender: self)
-            }
+            self.performSegue(withIdentifier: "successfulLogin", sender: self)
         }
     }
     
@@ -77,13 +65,6 @@ class ViewController: UIViewController {
             destinationVC.profileImage = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.profilePic
             destinationVC.profileName = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.name
             destinationVC.profileUsername = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.username
-            usernameInput.text! = ""
-            passwordInput.text! = ""
-        }
-        else if segue.identifier == "initialQs" {
-            // Do something
-            let receiverVC = segue.destination as! InitialQsHome
-            receiverVC.profileID = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.identifier
             usernameInput.text! = ""
             passwordInput.text! = ""
         }

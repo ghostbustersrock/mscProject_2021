@@ -31,11 +31,15 @@ class ProfileTab: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Passing the ID of the logged in user to the 'Questionnaires' tab-bar. This is necessary so to save the result of the questionnaires for the relative logged in user.
+        let navigationController = self.tabBarController!.viewControllers![3] as! UINavigationController
+        let destination = navigationController.topViewController as! TabBarPHQ
+        destination.profileID = profileID!
+        
         profilename.text = profileName
         profileUsernameDisplay.text = profileUsername
         profilePic.image = UIImage(named: profileImage!)
         profilePic.roundedImage()
-        // Do any additional setup after loading the view.
     }
 }
 

@@ -2653,25 +2653,25 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 <rect key="frame" x="30" y="262" width="330" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The PHQ-9 is a 9 question test for diagnosing, monitoring and measuring the severity of depression." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-ha-NGa">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="98"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="97.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTE: this questionnaire is not designed to complete without any input from your healthcare professional." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgK-ke-MWI">
-                                        <rect key="frame" x="0.0" y="118" width="330" height="55"/>
+                                        <rect key="frame" x="0.0" y="117.33333333333331" width="330" height="55"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31D-Cw-9cM">
-                                        <rect key="frame" x="0.0" y="193" width="330" height="27"/>
+                                        <rect key="frame" x="0.0" y="192.33333333333331" width="330" height="27.666666666666657"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Click me for more information">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.37505145651749405" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="12"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         <integer key="NSUnderline" value="1"/>
                                                     </attributes>
@@ -2875,6 +2875,154 @@ you have been moving around a lot more than usual </string>
             </objects>
             <point key="canvasLocation" x="1532" y="-1368"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="c1N-Il-GMO">
+            <objects>
+                <viewController id="yVN-rv-KJI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5J8-Fm-kCR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AhV-XG-ZIv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQZ-yQ-86V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2135" y="-1368"/>
+        </scene>
+        <!--Emotion Questionnaire-->
+        <scene sceneID="CGD-Gv-Zir">
+            <objects>
+                <viewController id="hiE-rJ-sFR" customClass="EmotionQuestionnaire" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KXg-kx-szY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8do-dr-VcK">
+                                <rect key="frame" x="30" y="59" width="330" height="392"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eV-8a-ar8">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="GPR-VQ-RrZ"/>
+                                            <constraint firstAttribute="width" constant="330" id="PKY-8D-0CG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="IBq-Ra-1ih" userLabel="inputText">
+                                        <rect key="frame" x="0.0" y="180" width="330" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="tintColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="330" id="Ba0-wT-JGg"/>
+                                            <constraint firstAttribute="height" constant="150" id="wOd-xb-Keg"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.086273245509999999" green="0.086273662749999994" blue="0.086274556820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPG-g4-O6O" userLabel="next">
+                                        <rect key="frame" x="0.0" y="360" width="330" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Noa-4n-rTY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                        <state key="normal" title="NEXT">
+                                            <color key="titleColor" red="0.1058809236" green="0.1058813706" blue="0.1058824137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonFunc:" destination="hiE-rJ-sFR" eventType="touchUpInside" id="ccB-pG-u6q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3si-AK-dfi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8do-dr-VcK" firstAttribute="centerY" secondItem="KXg-kx-szY" secondAttribute="centerY" constant="-140" id="h0b-Dc-0i6"/>
+                            <constraint firstItem="8do-dr-VcK" firstAttribute="centerX" secondItem="KXg-kx-szY" secondAttribute="centerX" id="jud-N3-lZX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayQuestion" destination="5eV-8a-ar8" id="NcW-5C-3DB"/>
+                        <outlet property="inputText" destination="IBq-Ra-1ih" id="3ng-go-50g"/>
+                        <outlet property="nextButton" destination="vPG-g4-O6O" id="TtM-tf-HFL"/>
+                        <segue destination="yVN-rv-KJI" kind="presentation" id="4lK-iE-WjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRo-Zf-wcM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1418" y="-1368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KiT-ev-6UL">
+            <objects>
+                <viewController id="OXH-kc-K9j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YU6-a1-Pom">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-Yd-UOr">
+                                <rect key="frame" x="30" y="272" width="330" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="CbU-i0-v0w"/>
+                                    <constraint firstAttribute="height" constant="200" id="L4I-F5-SkZ"/>
+                                </constraints>
+                                <string key="text">You will be asked to answers a few questions. For each question please provide an honest response. *INSERT APP NAME* will then calculate for each the emotion detected and its relative sentiment analysis score.</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHu-5x-WA8" userLabel="submit">
+                                <rect key="frame" x="155" y="506" width="80" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Mvo-cP-SX8"/>
+                                    <constraint firstAttribute="width" constant="80" id="ZVA-1g-Dd4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.1058809236" green="0.1058813706" blue="0.1058824137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oaq-yi-4Fy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yHu-5x-WA8" firstAttribute="centerX" secondItem="YU6-a1-Pom" secondAttribute="centerX" id="25l-J0-GBa"/>
+                            <constraint firstItem="a4b-Yd-UOr" firstAttribute="centerX" secondItem="YU6-a1-Pom" secondAttribute="centerX" id="E3g-dQ-gCT"/>
+                            <constraint firstItem="a4b-Yd-UOr" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="-50" id="a9U-Pp-ICI"/>
+                            <constraint firstItem="yHu-5x-WA8" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="100" id="kG2-AE-hmh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KBA-Lu-UgQ"/>
+                    <connections>
+                        <segue destination="hiE-rJ-sFR" kind="presentation" id="K3C-ZQ-oOW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxj-w4-KP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="-1368"/>
+        </scene>
         <!--Tab BarPHQ-->
         <scene sceneID="wk9-6r-E70">
             <objects>
@@ -2904,7 +3052,7 @@ you have been moving around a lot more than usual </string>
                                             <constraint firstAttribute="height" constant="100" id="ybw-xq-kQy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                        <state key="normal" title="Mood Questionnaire">
+                                        <state key="normal" title="Emotions Questionnaires">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -2912,6 +3060,9 @@ you have been moving around a lot more than usual </string>
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="OXH-kc-K9j" kind="show" id="4zc-c0-DlD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egI-0o-APs">
                                         <rect key="frame" x="0.0" y="140" width="330" height="100"/>

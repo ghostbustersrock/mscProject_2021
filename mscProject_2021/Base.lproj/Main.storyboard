@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPz-rP-uc2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPz-rP-uc2">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -2842,6 +2842,14 @@ you have been moving around a lot more than usual </string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.compact.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3as-Hq-3Yl">
+                                <rect key="frame" x="170" y="7" width="50" height="36"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="B9M-C2-j98"/>
+                                    <constraint firstAttribute="height" constant="50" id="WNQ-i4-SlW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="unQ-Ca-EZF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2855,7 +2863,9 @@ you have been moving around a lot more than usual </string>
                             <constraint firstItem="tyZ-Wa-nFi" firstAttribute="centerX" secondItem="AkU-AH-rPG" secondAttribute="centerX" id="clt-dd-wgw"/>
                             <constraint firstItem="F7g-ZG-91E" firstAttribute="centerX" secondItem="AkU-AH-rPG" secondAttribute="centerX" id="eGL-EP-Nyg"/>
                             <constraint firstItem="tyZ-Wa-nFi" firstAttribute="centerY" secondItem="AkU-AH-rPG" secondAttribute="centerY" constant="-340" id="etC-eb-tQl"/>
+                            <constraint firstItem="3as-Hq-3Yl" firstAttribute="centerY" secondItem="AkU-AH-rPG" secondAttribute="centerY" constant="-370" id="uMl-oB-lbH"/>
                             <constraint firstItem="Vic-jZ-7QX" firstAttribute="centerY" secondItem="AkU-AH-rPG" secondAttribute="centerY" constant="-100" id="uw0-e8-m35"/>
+                            <constraint firstItem="3as-Hq-3Yl" firstAttribute="centerX" secondItem="AkU-AH-rPG" secondAttribute="centerX" id="ztB-YK-pLS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qUC-3m-uJi"/>
@@ -2875,18 +2885,30 @@ you have been moving around a lot more than usual </string>
             </objects>
             <point key="canvasLocation" x="1532" y="-1368"/>
         </scene>
-        <!--View Controller-->
+        <!--Result Emotion Analysis-->
         <scene sceneID="c1N-Il-GMO">
             <objects>
-                <viewController id="yVN-rv-KJI" sceneMemberID="viewController">
+                <viewController id="yVN-rv-KJI" customClass="ResultEmotionAnalysis" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5J8-Fm-kCR">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMH-Ro-eEh">
+                                <rect key="frame" x="172" y="708" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="exitButton:" destination="yVN-rv-KJI" eventType="touchUpInside" id="Kv6-w1-ncH"/>
+                                    <segue destination="HVm-PW-umb" kind="unwind" unwindAction="homeAnalysisWithSegue:" id="xBN-WR-Y5t"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AhV-XG-ZIv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQZ-yQ-86V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HVm-PW-umb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2135" y="-1368"/>
         </scene>
@@ -2949,10 +2971,20 @@ you have been moving around a lot more than usual </string>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.compact.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j3R-x1-01T">
+                                <rect key="frame" x="170" y="17" width="50" height="36"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bs9-2I-jUX"/>
+                                    <constraint firstAttribute="height" constant="50" id="ohc-sO-Bv7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3si-AK-dfi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="j3R-x1-01T" firstAttribute="centerY" secondItem="KXg-kx-szY" secondAttribute="centerY" constant="-360" id="Lfp-7I-Dm0"/>
+                            <constraint firstItem="j3R-x1-01T" firstAttribute="centerX" secondItem="KXg-kx-szY" secondAttribute="centerX" id="cAH-iE-Qa0"/>
                             <constraint firstItem="8do-dr-VcK" firstAttribute="centerY" secondItem="KXg-kx-szY" secondAttribute="centerY" constant="-140" id="h0b-Dc-0i6"/>
                             <constraint firstItem="8do-dr-VcK" firstAttribute="centerX" secondItem="KXg-kx-szY" secondAttribute="centerX" id="jud-N3-lZX"/>
                         </constraints>
@@ -2961,17 +2993,17 @@ you have been moving around a lot more than usual </string>
                         <outlet property="displayQuestion" destination="5eV-8a-ar8" id="NcW-5C-3DB"/>
                         <outlet property="inputText" destination="IBq-Ra-1ih" id="3ng-go-50g"/>
                         <outlet property="nextButton" destination="vPG-g4-O6O" id="TtM-tf-HFL"/>
-                        <segue destination="yVN-rv-KJI" kind="presentation" id="4lK-iE-WjC"/>
+                        <segue destination="yVN-rv-KJI" kind="presentation" identifier="endAnalysis" modalPresentationStyle="overFullScreen" id="4lK-iE-WjC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRo-Zf-wcM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1418" y="-1368"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Questionnaire Analysis-->
         <scene sceneID="KiT-ev-6UL">
             <objects>
-                <viewController id="OXH-kc-K9j" sceneMemberID="viewController">
+                <viewController id="OXH-kc-K9j" customClass="HomeQuestionnaireAnalysis" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YU6-a1-Pom">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3003,6 +3035,9 @@ you have been moving around a lot more than usual </string>
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButton:" destination="OXH-kc-K9j" eventType="touchUpInside" id="aNO-pG-NOR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oaq-yi-4Fy"/>
@@ -3016,7 +3051,7 @@ you have been moving around a lot more than usual </string>
                     </view>
                     <navigationItem key="navigationItem" id="KBA-Lu-UgQ"/>
                     <connections>
-                        <segue destination="hiE-rJ-sFR" kind="presentation" id="K3C-ZQ-oOW"/>
+                        <segue destination="hiE-rJ-sFR" kind="presentation" identifier="startAnalysisQ" id="K3C-ZQ-oOW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxj-w4-KP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3114,6 +3149,7 @@ you have been moving around a lot more than usual </string>
         <image name="bear" width="32" height="32"/>
         <image name="cat" width="32" height="32"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.compact.down" catalog="system" width="128" height="43"/>
         <image name="dog" width="33.333332061767578" height="33.333332061767578"/>
         <image name="frog" width="33.333332061767578" height="33.333332061767578"/>
         <image name="giraffe" width="32" height="32"/>

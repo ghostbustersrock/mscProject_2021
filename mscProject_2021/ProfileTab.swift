@@ -20,11 +20,11 @@ class ProfileTab: UIViewController {
     @IBOutlet var profilename: UILabel!
     @IBOutlet var profileUsernameDisplay: UILabel!
     
-    @IBAction func createGraph(_ sender: Any) {
+    @IBAction func previousPHQ(_ sender: Any) {
         
     }
     
-    @IBAction func updateGraph(_ sender: Any) {
+    @IBAction func nextPHQ(_ sender: Any) {
         
     }
     

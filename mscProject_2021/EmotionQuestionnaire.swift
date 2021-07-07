@@ -16,15 +16,30 @@ class EmotionQuestionnaire: UIViewController {
     var questionNumber:Int = 0
     
     @IBOutlet var displayQuestion:UILabel!
-    @IBOutlet var inputText:UITextField!
+    @IBOutlet var inputText: UITextView!
     @IBOutlet var nextButton:UIButton!
     
 //    function called to identify and return the emotion dected using my trained model, and the score of the text using Apple's NLP framework.
     func modelsAnalysis(textToAnalyse: String) -> (myModelRes: String, appleModelRes: Double) {
-        let emotionModel = TrainedModel()
+        
+        // Creating an instance of the three emotion detecting models I created.
+        let model1 = TrainedModel1()
+        let model2 = TrainedModel2()
+        let model3 = TrainedModel3()
+        
         do {
-            // Emotion calculatd using my trained model.
-            let emotionModelPrediction = try emotionModel.prediction(text: textToAnalyse)
+            // Predicting the text's emotion using all three models.
+            let model1Pred = try model1.prediction(text: textToAnalyse)
+            let model2Pred = try model2.prediction(text: textToAnalyse)
+            let model3Pred = try model3.prediction(text: textToAnalyse)
+            
+            // MARK: Debug purposes
+            // Printing each model's results.
+            print("##########################")
+            print("KAGGLE 1 RESULT: \(model1Pred.label)")
+            print("KAGGLE 2 RESULT: \(model2Pred.label)")
+            print("KAGGLE 3 RESULT: \(model3Pred.label)")
+            print("##########################")
             
             // Score of input text's emotion using Apple's NLP framework.
             let tagger = NLTagger(tagSchemes: [.sentimentScore])
@@ -33,20 +48,24 @@ class EmotionQuestionnaire: UIViewController {
             let appleScore = Double(sentimentAnalysis?.rawValue ?? "0") ?? 0
             
             // Return both results
-            return (emotionModelPrediction.label, appleScore)
+            return ("prova", appleScore)
             
         } catch  {
             print("OH NO AN ERROR OCCURED!!!")
         }
-        
         return ("FAILURE", 0.0)
     }
     
     @IBAction func buttonFunc(_ sender: Any) {
         
         if inputText.text == "" {
-            // MARK: ALERT NOT TEXT!!!
-            print("NO TEXT HAS BEEN INPUTTED!!!")
+            // Alert displayed if 'next' is pressed with not inputted text.
+            let alertView = UIAlertController(title: "Warning", message: "Please input text before pressing the 'next' button. Thank you!", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "Ok", style: .cancel) {
+                alertAction in
+            }
+            alertView.addAction(okayAction)
+            self.present(alertView, animated: true, completion: nil)
         }
         else {
             let textToAnalyse = inputText.text!

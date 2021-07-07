@@ -106,8 +106,7 @@ class Register: UIViewController {
                 newUser.name = nameField.text
                 newUser.username = usernameField.text
                 newUser.password = passwordField.text
-                newUser.initialQuestionnaire = false
-                // MARK: Add initial mood values when decided which and how many to use!!!
+                
                 realm.beginWrite()
                 realm.add(newUser)
                 try! realm.commitWrite()

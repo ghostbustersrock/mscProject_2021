@@ -75,7 +75,6 @@ class PasswordForgotten: UIViewController {
                 repeatNewPass.layer.borderWidth = 1
             }
             else {
-                // MARK: Update database!!!
                 errorMsg.text = "SUCCESS!!!"
                 usernameField.layer.borderColor = UIColor.clear.cgColor
                 usernameField.layer.borderWidth = 0
@@ -88,7 +87,7 @@ class PasswordForgotten: UIViewController {
                 let alertView = UIAlertController(title: "Success!", message: "\(usernameField.text!) you have successfully changed your password", preferredStyle: .actionSheet)
 
                 let goHomeAction = UIAlertAction (title: "Go home", style: .default) { alertAction in
-                    
+                    // MARK: Updating database!!!
                     let data = self.realm.objects(User.self).filter("username == %@", self.usernameField.text!).first
                     
                     try! self.realm.write {

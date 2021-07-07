@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PHQquestionnaire: UIViewController {
-
-    var profileID:Int? //The profile ID of the user taking the PHQ-9 test.
     
+    var profileID:Int? //The profile ID of the user taking the PHQ-9 test.
     var questionHeader:Int = 0
     var atQuestion:Int = 0
     var pressedButton:Int = 0
@@ -87,7 +87,31 @@ class PHQquestionnaire: UIViewController {
             totalScore += points
             phqResult()
             
-            //MARK: SAVE PHQ SCORE ON REALM!!!
+            //MARK: SAVING PHQ SCORES
+            let realm = try! Realm()
+            let phqResults = PhqTestResults()
+            
+            if realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first?.identifier == profileID {
+                // Same user has been found so store new info.
+                
+                let data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
+                
+                try! realm.write {
+                    data?.scoreResPHQ.append(totalScore)
+                    data?.severityResPHQ.append(depressionSeverity)
+                    data?.treatmentResPHQ.append(depressionTreatment)
+                }
+            }
+            else {
+                phqResults.identifier = profileID!
+                phqResults.scoreResPHQ.append(totalScore)
+                phqResults.severityResPHQ.append(depressionSeverity)
+                phqResults.treatmentResPHQ.append(depressionTreatment)
+                realm.beginWrite()
+                realm.add(phqResults)
+                try! realm.commitWrite()
+            }
+            
             
             let alertView = UIAlertController(title: "Done!", message: "You have completed the PHQ-9 questionnaire with a score of \(totalScore)/27. From the PHQ-9 assessment table, your score suggests your depression severity to be \(depressionSeverity). The proposed treatment is the following: \(depressionTreatment)", preferredStyle: .actionSheet)
 

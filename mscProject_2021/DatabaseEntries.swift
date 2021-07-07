@@ -9,11 +9,26 @@ import Foundation
 import UIKit
 import RealmSwift
 
+// To store sign-up information of registered user.
 class User: Object {
     @objc dynamic var identifier:Int = 0
     @objc dynamic var profilePic:String? = nil
     @objc dynamic var name:String? = nil
     @objc dynamic var username:String? = nil
     @objc dynamic var password:String? = nil
-    @objc dynamic var initialQuestionnaire:Bool = false
 }
+
+
+// To store results of the PHQ-9 test.
+class PhqTestResults: Object {
+    @objc dynamic var identifier:Int = 0 // To store user ID.
+    var scoreResPHQ = List<Int>()
+    var severityResPHQ = List<String>()
+    var treatmentResPHQ = List<String>()
+}
+
+
+// To store results of the emotion analysis assessment.
+//class EmotionAnalysisResults: Object {
+//
+//}

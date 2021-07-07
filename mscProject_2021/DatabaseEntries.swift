@@ -24,7 +24,6 @@ class PhqTestResults: Object {
     @objc dynamic var identifier:Int = 0 // To store user ID.
     var scoreResPHQ = List<Int>()
     var severityResPHQ = List<String>()
-    var treatmentResPHQ = List<String>()
 }
 
 

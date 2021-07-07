@@ -2534,6 +2534,13 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-Ze-Gf2">
+                                <rect key="frame" x="174" y="199" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-nA-xL4">
                                 <rect key="frame" x="280" y="188" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2543,7 +2550,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27/27" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1l-uk-Wmr">
-                                <rect key="frame" x="120" y="547" width="150" height="50"/>
+                                <rect key="frame" x="120" y="587" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="7wm-vy-StM"/>
                                     <constraint firstAttribute="height" constant="50" id="81T-wn-uIY"/>
@@ -2553,7 +2560,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="RfO-mL-YFK">
-                                <rect key="frame" x="30" y="612" width="330" height="80"/>
+                                <rect key="frame" x="30" y="632" width="330" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwL-uh-VL9">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="40"/>
@@ -2561,15 +2568,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treatment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqh-1H-vu6">
-                                        <rect key="frame" x="0.0" y="40" width="330" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Mhw-lc-yMI"/>
+                                    <constraint firstAttribute="height" constant="40" id="Mhw-lc-yMI"/>
                                     <constraint firstAttribute="width" constant="330" id="Sk7-fj-Gn7"/>
                                 </constraints>
                             </stackView>
@@ -2584,6 +2585,14 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Older Results"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="previousPHQ:" destination="9hk-GE-Icv" eventType="touchUpInside" id="Fme-XI-L1W"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLx-F2-gD2">
                                         <rect key="frame" x="160" y="0.0" width="120" height="33"/>
@@ -2593,16 +2602,26 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Newer results"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextPHQ:" destination="9hk-GE-Icv" eventType="touchUpInside" id="sOD-b7-W16"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="rPd-ag-cgp"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-Ze-Gf2">
-                                <rect key="frame" x="174" y="199" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newest Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXF-M9-P8N">
+                                <rect key="frame" x="120" y="562" width="150" height="20.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="YNj-Hf-098"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2612,19 +2631,24 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         <constraints>
                             <constraint firstItem="l1l-uk-Wmr" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="0sa-jJ-Tbk"/>
                             <constraint firstItem="RfO-mL-YFK" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="0vT-c6-i0O"/>
+                            <constraint firstItem="TXF-M9-P8N" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="150" id="FAj-Nt-ZhY"/>
+                            <constraint firstItem="TXF-M9-P8N" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="cKg-ef-pRO"/>
                             <constraint firstItem="bjK-xl-pNA" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="chN-Uk-fOQ"/>
                             <constraint firstItem="RfO-mL-YFK" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="230" id="dfc-4D-USY"/>
                             <constraint firstItem="weU-Nh-6EM" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="gak-62-wGJ"/>
-                            <constraint firstItem="l1l-uk-Wmr" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="150" id="kxV-QK-1Za"/>
+                            <constraint firstItem="l1l-uk-Wmr" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="190" id="kxV-QK-1Za"/>
                             <constraint firstItem="weU-Nh-6EM" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="300" id="mzd-bb-uHT"/>
                             <constraint firstItem="bjK-xl-pNA" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-310" id="x48-xK-Rx1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="9nn-iC-iUi"/>
                     <connections>
+                        <outlet property="displayScoreText" destination="l1l-uk-Wmr" id="v9d-6i-4zx"/>
+                        <outlet property="numberOfScore" destination="TXF-M9-P8N" id="pO4-7A-fAb"/>
                         <outlet property="profilePic" destination="bjK-xl-pNA" id="caa-dp-5rf"/>
                         <outlet property="profileUsernameDisplay" destination="B4I-Ze-Gf2" id="gAW-9Q-R41"/>
                         <outlet property="profilename" destination="uAJ-Bn-60D" id="UWw-d6-2H0"/>
+                        <outlet property="severityText" destination="ZwL-uh-VL9" id="QxX-9H-7WH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxK-Z0-aT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

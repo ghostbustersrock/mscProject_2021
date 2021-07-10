@@ -20,7 +20,7 @@ class ProfileTab: UIViewController {
     
     var data:PhqTestResults? // To save the information retrieved from the lists from the PHQ test results Realm class.
     var numberOfElements: Int = 0 // To save the size of the lists of the PHQ test results Realm class.
-    var maxIndex: Int?
+    var maxIndex: Int = 0
     
     @IBOutlet var severityText: UILabel!
     @IBOutlet var displayScoreText: UILabel!
@@ -61,7 +61,7 @@ class ProfileTab: UIViewController {
     
     @IBAction func nextPHQ(_ sender: Any) {
         numberOfElements += 1
-        if numberOfElements > maxIndex! {
+        if numberOfElements > maxIndex {
             numberOfElements -= 1
             displayAlert(title: "No more results", msg: "You have reached the newest result from your PHQ-9 tests.")
         }
@@ -79,12 +79,10 @@ class ProfileTab: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    // Function called everytime the profile tab bar is clicked to refresh the page in order for new content to appear.
+    override func viewWillAppear(_ animated: Bool) {
         // Retrieving information from the user signed in.
         data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
-        print(data!.scoreResPHQ.count)
         // If the user already as data to display, then display it.
         if data != nil {
             numberOfElements = data!.scoreResPHQ.count-1
@@ -95,13 +93,19 @@ class ProfileTab: UIViewController {
             severityText.text = "Severity: \((data?.severityResPHQ[numberOfElements])!)"
         }
         else { // Otherwise display nothing.
+            maxIndex = 0
             numberOfScore.text = "No results"
             displayScoreText.text = "N/A"
-            severityText.text = "N/A"
+            severityText.text = "Severity: N/A"
         }
+    }
+    
+    // Function called to execute code only once when the view is presented the first time.
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         // Passing the ID of the logged in user to the 'Questionnaires' tab-bar. This is necessary so to save the result of the questionnaires for the relative logged in user.
-        let navigationController = self.tabBarController!.viewControllers![3] as! UINavigationController
+        let navigationController = self.tabBarController!.viewControllers![2] as! UINavigationController
         let destination = navigationController.topViewController as! TabBarPHQ
         destination.profileID = profileID!
         

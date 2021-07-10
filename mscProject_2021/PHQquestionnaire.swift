@@ -99,14 +99,12 @@ class PHQquestionnaire: UIViewController {
                 try! realm.write {
                     data?.scoreResPHQ.append(totalScore)
                     data?.severityResPHQ.append(depressionSeverity)
-                    data?.treatmentResPHQ.append(depressionTreatment)
                 }
             }
             else {
                 phqResults.identifier = profileID!
                 phqResults.scoreResPHQ.append(totalScore)
                 phqResults.severityResPHQ.append(depressionSeverity)
-                phqResults.treatmentResPHQ.append(depressionTreatment)
                 realm.beginWrite()
                 realm.add(phqResults)
                 try! realm.commitWrite()

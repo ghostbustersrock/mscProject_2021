@@ -63,7 +63,6 @@ class ViewController: UIViewController {
             let destinationVC = receiverVC.viewControllers![0] as! ProfileTab
             destinationVC.profileID = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.identifier
             destinationVC.profileImage = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.profilePic
-            destinationVC.profileName = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.name
             destinationVC.profileUsername = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.username
             usernameInput.text! = ""
             passwordInput.text! = ""

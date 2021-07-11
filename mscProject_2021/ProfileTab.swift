@@ -5,9 +5,9 @@
 //  Created by Luca Santarelli on 27/05/21.
 //
 
-//import Charts
 import UIKit
 import RealmSwift
+//import Charts
 
 class ProfileTab: UIViewController {
     
@@ -15,7 +15,6 @@ class ProfileTab: UIViewController {
 
     var profileID: Int? // Where to store the ID of the person signed in.
     var profileImage: String? // Where to store the image of the person signed in.
-    var profileName: String?
     var profileUsername: String?
     
     var data:PhqTestResults? // To save the information retrieved from the lists from the PHQ test results Realm class.
@@ -26,8 +25,23 @@ class ProfileTab: UIViewController {
     @IBOutlet var displayScoreText: UILabel!
     @IBOutlet var numberOfScore: UILabel!
     @IBOutlet var profilePic: UIImageView!
-    @IBOutlet var profilename: UILabel!
     @IBOutlet var profileUsernameDisplay: UILabel!
+    
+    @IBAction func logOutButton(_ sender: Any) {
+        let alertView = UIAlertController(title: "Log out?", message: "Are you sure you want to log out of your profile?", preferredStyle: .alert)
+        
+        let yesLogOut = UIAlertAction(title: "Yes", style: .destructive) { alertAction in
+            self.performSegue(withIdentifier: "logOut", sender: self)
+        }
+        let noLogOut = UIAlertAction(title: "No", style: .cancel) { alertAction in
+            
+        }
+        
+        alertView.addAction(yesLogOut)
+        alertView.addAction(noLogOut)
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
     
     func displayAlert(title: String, msg: String) {
         let alertView = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -109,8 +123,7 @@ class ProfileTab: UIViewController {
         let destination = navigationController.topViewController as! TabBarPHQ
         destination.profileID = profileID!
         
-        profilename.text = profileName
-        profileUsernameDisplay.text = profileUsername
+        profileUsernameDisplay.text = "Welcome back \(String(describing: profileUsername!))"
         profilePic.image = UIImage(named: profileImage!)
         profilePic.roundedImage()
     }

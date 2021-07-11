@@ -12,6 +12,8 @@ import CoreML
 // This class is for the emotion analysis questionnaire itself where my trained model and Apple's NLP framework are applied to calculate the results from the user's input.
 class EmotionQuestionnaire: UIViewController {
     
+    let questionsToDisplay:[String] = ["Describe how you are feeling and what is on your mind.", "Describe how you have been feeling in the past two weeks.", "Describe how something new recently made you feel.", "Describe how you are feeling mentally and physically.", "What are your thoughts telling you about yourself?"]
+    
     var atQuestion:Int = 0
     var questionNumber:Int = 0
     
@@ -20,7 +22,7 @@ class EmotionQuestionnaire: UIViewController {
     @IBOutlet var nextButton:UIButton!
     
 //    function called to identify and return the emotion dected using my trained model, and the score of the text using Apple's NLP framework.
-    func modelsAnalysis(textToAnalyse: String) -> (myModelRes: String, appleModelRes: Double) {
+    func modelsAnalysis(textToAnalyse: String) -> (modRes1: String, modRes2: String, modRes3: String, appleModelRes: Double) {
         
         // Creating an instance of the three emotion detecting models I created.
         let model1 = TrainedModel1()
@@ -33,14 +35,6 @@ class EmotionQuestionnaire: UIViewController {
             let model2Pred = try model2.prediction(text: textToAnalyse)
             let model3Pred = try model3.prediction(text: textToAnalyse)
             
-            // MARK: Debug purposes
-            // Printing each model's results.
-            print("##########################")
-            print("KAGGLE 1 RESULT: \(model1Pred.label)")
-            print("KAGGLE 2 RESULT: \(model2Pred.label)")
-            print("KAGGLE 3 RESULT: \(model3Pred.label)")
-            print("##########################")
-            
             // Score of input text's emotion using Apple's NLP framework.
             let tagger = NLTagger(tagSchemes: [.sentimentScore])
             tagger.string = textToAnalyse
@@ -48,12 +42,20 @@ class EmotionQuestionnaire: UIViewController {
             let appleScore = Double(sentimentAnalysis?.rawValue ?? "0") ?? 0
             
             // Return both results
-            return ("prova", appleScore)
+            return (model1Pred.label, model2Pred.label, model3Pred.label, appleScore)
             
         } catch  {
-            print("OH NO AN ERROR OCCURED!!!")
+            // If an error occurs during the emotion sentiment analysis, print an alert with the error and exit the questionnaire.
+            let alertView = UIAlertController(title: "Error!", message: "The following error occured: \(error). Please exit the questionnaire.", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Exit", style: .default) {
+                alertAction in
+                
+                self.performSegue(withIdentifier: "errorExitQs", sender: self)
+            }
+            alertView.addAction(alertAction)
+            self.present(alertView, animated: true, completion: nil)
         }
-        return ("FAILURE", 0.0)
+        return ("FAILUARE", "FAILUARE", "FAILUARE", 0.0)
     }
     
     @IBAction func buttonFunc(_ sender: Any) {
@@ -74,15 +76,20 @@ class EmotionQuestionnaire: UIViewController {
             questionNumber += 1
             
             let modelResults = modelsAnalysis(textToAnalyse: textToAnalyse)
-            print("My model result: \(modelResults.myModelRes)")
+            print("##########################")
+            // Printing each model's results.
+            print("Model 1 results: \(modelResults.modRes1)")
+            print("Model 2 results: \(modelResults.modRes2)")
+            print("Model 3 results: \(modelResults.modRes3)")
             print("Apple model result: \(modelResults.appleModelRes)")
+            print("##########################")
             
             if atQuestion == 4 {
-                displayQuestion.text = "Question \(questionNumber)"
+                displayQuestion.text = "Question \(questionNumber+1): \(questionsToDisplay[questionNumber])"
                 nextButton.setTitle("FINISH", for: .normal)
             }
             else if atQuestion < 5 {
-                displayQuestion.text = "Question \(questionNumber)"
+                displayQuestion.text = "Question \(questionNumber+1): \(questionsToDisplay[questionNumber])"
             }
             else {
                 self.performSegue(withIdentifier: "endAnalysis", sender: self)
@@ -92,8 +99,7 @@ class EmotionQuestionnaire: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionNumber = 1
-        displayQuestion.text = "Question \(questionNumber)"
+        displayQuestion.text = "Question \(questionNumber+1): \(questionsToDisplay[questionNumber])"
     }
 }
 

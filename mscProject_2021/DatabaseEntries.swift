@@ -13,7 +13,6 @@ import RealmSwift
 class User: Object {
     @objc dynamic var identifier:Int = 0
     @objc dynamic var profilePic:String? = nil
-    @objc dynamic var name:String? = nil
     @objc dynamic var username:String? = nil
     @objc dynamic var password:String? = nil
 }

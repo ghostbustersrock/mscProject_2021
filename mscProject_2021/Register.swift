@@ -12,8 +12,6 @@ var pressedArray:[String: Bool] = ["bear":false, "cat":false, "dog":false, "frog
 
 var profile:String = "N/A"
 
-//var emptyOrNote:[Bool] = [false, false, false, false, false, false]
-
 class Register: UIViewController {
     
     let realm = try! Realm()
@@ -31,7 +29,6 @@ class Register: UIViewController {
     @IBOutlet var dogBack: UIButton!
     @IBOutlet var catBack: UIButton!
     @IBOutlet var bearBack: UIButton!
-    @IBOutlet var nameField: UITextField!
     @IBOutlet var usernameField: UITextField!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var repeatPassField: UITextField!
@@ -50,10 +47,6 @@ class Register: UIViewController {
     func missingField() -> Void {
         if !pressedArray.values.contains(true) {
             fieldsAlert(title: "Missing Profile Picture!" , msg: "Please select an icon as your profile picture.")
-        }
-        else if nameField.text!.isEmpty {
-            errorMsg.text = "Enter a name"
-            borderName()
         }
         else if usernameField.text!.isEmpty {
             errorMsg.text = "Enter a username"
@@ -74,11 +67,7 @@ class Register: UIViewController {
     }
     
     func errorCriteria() -> Void {
-        if nameField.text?.hasWhitespacesNewlines() == true || nameField.text!.hasDigits() == true {
-            errorMsg.text = "Name contains whitespaces or numbers"
-            borderName()
-        }
-        else if usernameField.text?.hasWhitespacesNewlines() == true || usernameField.text!.hasDigits() == true {
+        if usernameField.text?.hasWhitespacesNewlines() == true || usernameField.text!.hasDigits() == true {
             errorMsg.text = "Username contains whitespaces or numbers"
             borderUsername()
         }
@@ -103,7 +92,6 @@ class Register: UIViewController {
                     }
                 }
                 newUser.profilePic = profile
-                newUser.name = nameField.text
                 newUser.username = usernameField.text
                 newUser.password = passwordField.text
                 
@@ -119,7 +107,6 @@ class Register: UIViewController {
                 let goHomeAction = UIAlertAction (title: "Go home", style: .default) { alertAction in
                     // Just for sercurity purposes remove all values from the outlets and variables used, whose values need to be saved.
                     profile = "N/A"
-                    self.nameField.text = ""
                     self.usernameField.text = ""
                     self.passwordField.text = ""
                     self.repeatPassField.text = ""
@@ -144,12 +131,12 @@ class Register: UIViewController {
     @IBAction func saveSignup(_ sender: Any) {
         
         // If a field is empty make an alert pop up.
-        if nameField.text!.isEmpty || usernameField.text!.isEmpty || passwordField.text!.isEmpty || repeatPassField.text!.isEmpty || !pressedArray.values.contains(true) {
+        if usernameField.text!.isEmpty || passwordField.text!.isEmpty || repeatPassField.text!.isEmpty || !pressedArray.values.contains(true) {
             
             missingField()
         }
         // Check, before saving everything, if the fields meet their required criteria.
-        else if !nameField.text!.isEmpty && !usernameField.text!.isEmpty && !passwordField.text!.isEmpty && !repeatPassField.text!.isEmpty && pressedArray.values.contains(true) {
+        else if !usernameField.text!.isEmpty && !passwordField.text!.isEmpty && !repeatPassField.text!.isEmpty && pressedArray.values.contains(true) {
             
             errorCriteria()
         }
@@ -157,7 +144,7 @@ class Register: UIViewController {
     
     @IBAction func exitSignup(_ sender: Any) {
         
-        if nameField.text!.isEmpty && usernameField.text!.isEmpty && passwordField.text!.isEmpty && repeatPassField.text!.isEmpty && !pressedArray.values.contains(true) {
+        if usernameField.text!.isEmpty && passwordField.text!.isEmpty && repeatPassField.text!.isEmpty && !pressedArray.values.contains(true) {
             
             self.performSegue(withIdentifier: "goHome", sender: self)
         }
@@ -415,8 +402,6 @@ class Register: UIViewController {
     }
     
     func borderName() {
-        nameField.layer.borderColor = UIColor.red.cgColor
-        nameField.layer.borderWidth = 1
         usernameField.layer.borderColor = UIColor.clear.cgColor
         usernameField.layer.borderWidth = 0
         passwordField.layer.borderColor = UIColor.clear.cgColor
@@ -426,8 +411,6 @@ class Register: UIViewController {
     }
     
     func borderUsername() {
-        nameField.layer.borderColor = UIColor.clear.cgColor
-        nameField.layer.borderWidth = 0
         usernameField.layer.borderColor = UIColor.red.cgColor
         usernameField.layer.borderWidth = 1
         passwordField.layer.borderColor = UIColor.clear.cgColor
@@ -437,8 +420,6 @@ class Register: UIViewController {
     }
     
     func borderPassword() {
-        nameField.layer.borderColor = UIColor.clear.cgColor
-        nameField.layer.borderWidth = 0
         usernameField.layer.borderColor = UIColor.clear.cgColor
         usernameField.layer.borderWidth = 0
         passwordField.layer.borderColor = UIColor.red.cgColor
@@ -448,8 +429,6 @@ class Register: UIViewController {
     }
     
     func borderRepeatPass() {
-        nameField.layer.borderColor = UIColor.clear.cgColor
-        nameField.layer.borderWidth = 0
         usernameField.layer.borderColor = UIColor.clear.cgColor
         usernameField.layer.borderWidth = 0
         passwordField.layer.borderColor = UIColor.clear.cgColor
@@ -459,8 +438,6 @@ class Register: UIViewController {
     }
     
     func borderRepeatPassWrong() {
-        nameField.layer.borderColor = UIColor.clear.cgColor
-        nameField.layer.borderWidth = 0
         usernameField.layer.borderColor = UIColor.clear.cgColor
         usernameField.layer.borderWidth = 0
         passwordField.layer.borderColor = UIColor.red.cgColor
@@ -470,8 +447,6 @@ class Register: UIViewController {
     }
     
     func resetBorders() {
-        nameField.layer.borderColor = UIColor.clear.cgColor
-        nameField.layer.borderWidth = 0
         usernameField.layer.borderColor = UIColor.clear.cgColor
         usernameField.layer.borderWidth = 0
         passwordField.layer.borderColor = UIColor.clear.cgColor

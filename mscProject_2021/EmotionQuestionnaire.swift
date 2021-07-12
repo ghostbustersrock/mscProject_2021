@@ -8,9 +8,15 @@
 import UIKit
 import NaturalLanguage // For Apple's sentiment analysis score retrieval.
 import CoreML
+import RealmSwift
 
+
+// MARK: EmotionQuestionnaire class
 // This class is for the emotion analysis questionnaire itself where my trained model and Apple's NLP framework are applied to calculate the results from the user's input.
 class EmotionQuestionnaire: UIViewController {
+    
+    // Where to store the ID of the logged in user passed from the HomeQuestionnaireAnalysis view controller.
+    var profileID:Int?
     
     // Array and variable to store all the emotions and sentiment text scores found for each question.
     var emotionsQsDetected:[String] = []
@@ -52,6 +58,7 @@ class EmotionQuestionnaire: UIViewController {
             emotionsQsDetected.append(model3Pred.label)
             qsSentimentScores.append(appleScore)
             
+            // For DEBUGGING purposes!!!
             print("##########################")
             // Printing each model's results.
             print("Date test taken: \(Date())")
@@ -113,6 +120,7 @@ class EmotionQuestionnaire: UIViewController {
             receiverVC.emotionsDetected = emotionsQsDetected
             receiverVC.sentimentsDetected = qsSentimentScores
             receiverVC.currenDate = Date()
+            receiverVC.profileID = profileID
             
             // Removing all elements just to be safe once the values have been passed.
             emotionsQsDetected.removeAll()
@@ -127,8 +135,12 @@ class EmotionQuestionnaire: UIViewController {
 }
 
 
+// MARK: ResultEmotionAnalysis class
 // This class is used for the UI to display the results of the emotion analysis.
 class ResultEmotionAnalysis: UIViewController {
+    
+    // Where to store the ID of the logged in user passed from the HomeQuestionnaireAnalysis view controller.
+    var profileID:Int?
     
     var emotionsDetected:[String]?
     var sentimentsDetected:[Double]?
@@ -160,7 +172,7 @@ class ResultEmotionAnalysis: UIViewController {
     }
     
     func calculatePercentages() {
-        
+        // Average of all the sentiment text scores.
         let averageSentiments = ((sentimentsDetected?.reduce(0, +))!)/5
         
         print(averageSentiments)
@@ -171,15 +183,45 @@ class ResultEmotionAnalysis: UIViewController {
         
         print(percentagesEmotions)
         
-        var printPercentages:String = ""
+        // These two arrays are used to store the information of the emotions detected and their calculated percentages, seperately on two differnt arrays.
+        var emotions:[String] = []
+        var calculatedPercent:[Double] = []
         
-        // Convert total count into percentages
+        // Convert total count of emotions into percentages
         for (key, _) in percentagesEmotions {
             let percentage = (percentagesEmotions[key]! * 100)/15
             // Rounding to two decimal places.
-            percentagesEmotions[key] = round(100*percentage)/100
+            // Storing the dictionary's key and percent values separately on two different arrays for realm.
+            calculatedPercent.append(round(100*percentage)/100) //percents.
+            emotions.append(key) //keys.
         }
-        print(percentagesEmotions)
+        
+        //Function called to save information for the graph on Realm.
+        saveInfoForGraph(emotionDetected: emotions, percentEmotion: calculatedPercent, sentimentAverage: averageSentiments)
+    }
+    
+    func saveInfoForGraph(emotionDetected: [String], percentEmotion: [Double], sentimentAverage: Double) {
+        let realm = try! Realm()
+        
+        // Storing new items in Realm properties.
+        // ##########################################
+        let emotionResults = EmotionAnalysisResults()
+        emotionResults.identifier = profileID!
+        
+        for x in emotionDetected {
+            emotionResults.emotionsDetected.append(x)
+        }
+        for x in percentEmotion {
+            emotionResults.emotionsPercentage.append(x)
+        }
+        
+        emotionResults.sentimentAverage = sentimentAverage
+        emotionResults.currentDate = currenDate
+        // ##########################################
+        
+        realm.beginWrite()
+        realm.add(emotionResults)
+        try! realm.commitWrite()
     }
     
     @IBAction func exitButton(_ sender: Any) {
@@ -188,8 +230,13 @@ class ResultEmotionAnalysis: UIViewController {
 }
 
 
+// MARK: HomeQuestionnaireAnalysis class
 // This class is used for the home of the emotion analysis test, where information and the start button are presented to the user.
 class HomeQuestionnaireAnalysis: UIViewController {
+    
+    // Where to store the ID of the logged in user passed from the TabBarPHQ view controller.
+    var profileID:Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -201,4 +248,12 @@ class HomeQuestionnaireAnalysis: UIViewController {
     @IBAction func homeAnalysis(segue: UIStoryboardSegue) {
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startAnalysisQ" {
+            let receiverVC = segue.destination as! EmotionQuestionnaire
+            receiverVC.profileID = profileID
+        }
+    }
+    
 }

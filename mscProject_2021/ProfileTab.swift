@@ -21,8 +21,11 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     var numberOfElements: Int = 0 // To save the size of the lists of the PHQ test results Realm class.
     var maxIndex: Int = 0
     
+    var emotionsData:EmotionAnalysisResults? // To save the information retrieved from the lists from the Emotion test results Realm class.
+    var numberOfElementsEmotion:Int = 0
+    var maxIndexEmotion:Int = 0
     
-    @IBOutlet var pieChart: PieChartView!
+    @IBOutlet var pieChart: PieChartView! // Outlet to work on the graph view.
     var sampleData1 = PieChartDataEntry(value: 0)
     var sampleData2 = PieChartDataEntry(value: 1)
     var sampleData3 = PieChartDataEntry(value: 2)
@@ -117,7 +120,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         }
         else { // Otherwise display nothing.
             maxIndex = 0
-            numberOfScore.text = "No results"
+            numberOfScore.text = "No new PHQ-9 results"
             displayScoreText.text = "N/A"
             severityText.text = "Severity: N/A"
         }
@@ -125,32 +128,79 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         
         pieChart.centerText = "Emotion analysis\nresults"
         pieChart.legend.enabled = false
-        customizeChart(dataPoints: players, values: goals)
+        customizeChart()
     }
     
     // Creating an instanceo of the pie chart class to create a pie chart.
     let players = ["Luca", "Arseniy", "Estefano"]
     let goals = [10, 13, 5]
     
-    func customizeChart(dataPoints: [String], values: [Int]) {
-        var dataEntries:[ChartDataEntry] = []
-        for i in 0..<dataPoints.count {
-            let dataEntry = PieChartDataEntry(value: Double(values[i]), label: dataPoints[i], data: dataPoints[i] as AnyObject)
+    
+    
+    
+    
+    // To show the graph with updated information!!!
+    func customizeChart() {
+        
+        // Returns first object based on the supplied ID.
+        emotionsData = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!).first
+        // If the user already has data to display, then display it.
+        if emotionsData != nil {
             
-            dataEntries.append(dataEntry)
+            // Prints everything in ascending order based on the sorted method done on the "currentDate" column (aka the timestamp).
+            print(realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!).sorted(byKeyPath: "currentDate", ascending: true))
+            
+            let dataEmotions = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!).sorted(byKeyPath: "currentDate", ascending: true)
+            
+            numberOfElementsEmotion = emotionsData!.emotionsDetected.count-1
+            maxIndexEmotion = emotionsData!.emotionsDetected.count-1
+            //MARK: PLOT GRAPH!!!
+            var dataEntries:[ChartDataEntry] = []
+            for i in 0..<dataEmotions[0].emotionsDetected.count {
+                let dataEntry = PieChartDataEntry(value: dataEmotions[0].emotionsPercentage[i], label: dataEmotions[0].emotionsDetected[i], data: dataEmotions[0].emotionsDetected[i] as AnyObject)
+                
+                dataEntries.append(dataEntry)
+            }
+            
+            let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
+            pieChartDataSet.colors = ChartColorTemplates.colorful()
+            
+            let pieChartData = PieChartData(dataSet: pieChartDataSet)
+            pieChart.data = pieChartData
+        }
+        else { // Otherwise display nothing.
+            
+            print("NOTING")
+//            maxIndex = 0
+//            numberOfScore.text = "No results"
+//            displayScoreText.text = "N/A"
+//            severityText.text = "Severity: N/A"
         }
         
-        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-        pieChartDataSet.colors = ChartColorTemplates.colorful()
+//        var dataEntries:[ChartDataEntry] = []
+//        for i in 0..<dataPoints.count {
+//            let dataEntry = PieChartDataEntry(value: Double(values[i]), label: dataPoints[i], data: dataPoints[i] as AnyObject)
+//
+//            dataEntries.append(dataEntry)
+//        }
         
-        let pieChartData = PieChartData(dataSet: pieChartDataSet)
-        let format = NumberFormatter()
-        format.numberStyle = .none
-        let formatter = DefaultValueFormatter(formatter: format)
-        pieChartData.setValueFormatter(formatter)
+//        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
+//        pieChartDataSet.colors = ChartColorTemplates.colorful()
+//
+//        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+//        let format = NumberFormatter()
+//        format.numberStyle = .none
+//        let formatter = DefaultValueFormatter(formatter: format)
+//        pieChartData.setValueFormatter(formatter)
+//
+//        pieChart.data = pieChartData
         
-        pieChart.data = pieChartData
     }
+    
+    
+    
+    
+    
     
     // Function called to execute code only once when the view is presented the first time.
     override func viewDidLoad() {

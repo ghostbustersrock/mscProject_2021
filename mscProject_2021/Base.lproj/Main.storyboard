@@ -3508,7 +3508,7 @@ you have been moving around a lot more than usual </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="OXH-kc-K9j" kind="show" id="4zc-c0-DlD"/>
+                                            <action selector="emotionTest:" destination="TJK-mt-rbQ" eventType="touchUpInside" id="R2a-zs-CGV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egI-0o-APs">
@@ -3549,6 +3549,7 @@ you have been moving around a lot more than usual </string>
                     <navigationItem key="navigationItem" id="qzb-i2-7e0"/>
                     <connections>
                         <segue destination="ZEj-0W-o44" kind="show" identifier="toPHQtest" id="GRt-Pk-nqs"/>
+                        <segue destination="OXH-kc-K9j" kind="show" identifier="toEMOTIONtest" id="Evc-3L-q8s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6U-29-RxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

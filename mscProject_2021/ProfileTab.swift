@@ -7,9 +7,9 @@
 
 import UIKit
 import RealmSwift
-//import Charts
+import Charts // Class to create graphs.
 
-class ProfileTab: UIViewController {
+class ProfileTab: UIViewController, ChartViewDelegate {
     
     let realm = try! Realm()
 
@@ -20,6 +20,15 @@ class ProfileTab: UIViewController {
     var data:PhqTestResults? // To save the information retrieved from the lists from the PHQ test results Realm class.
     var numberOfElements: Int = 0 // To save the size of the lists of the PHQ test results Realm class.
     var maxIndex: Int = 0
+    
+    
+    @IBOutlet var pieChart: PieChartView!
+    var sampleData1 = PieChartDataEntry(value: 0)
+    var sampleData2 = PieChartDataEntry(value: 1)
+    var sampleData3 = PieChartDataEntry(value: 2)
+    var dataSet = [PieChartDataEntry]()
+    
+    
     
     @IBOutlet var severityText: UILabel!
     @IBOutlet var displayScoreText: UILabel!
@@ -112,6 +121,35 @@ class ProfileTab: UIViewController {
             displayScoreText.text = "N/A"
             severityText.text = "Severity: N/A"
         }
+        
+        
+        pieChart.centerText = "Emotion analysis\nresults"
+        pieChart.legend.enabled = false
+        customizeChart(dataPoints: players, values: goals)
+    }
+    
+    // Creating an instanceo of the pie chart class to create a pie chart.
+    let players = ["Luca", "Arseniy", "Estefano"]
+    let goals = [10, 13, 5]
+    
+    func customizeChart(dataPoints: [String], values: [Int]) {
+        var dataEntries:[ChartDataEntry] = []
+        for i in 0..<dataPoints.count {
+            let dataEntry = PieChartDataEntry(value: Double(values[i]), label: dataPoints[i], data: dataPoints[i] as AnyObject)
+            
+            dataEntries.append(dataEntry)
+        }
+        
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
+        pieChartDataSet.colors = ChartColorTemplates.colorful()
+        
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        pieChartData.setValueFormatter(formatter)
+        
+        pieChart.data = pieChartData
     }
     
     // Function called to execute code only once when the view is presented the first time.

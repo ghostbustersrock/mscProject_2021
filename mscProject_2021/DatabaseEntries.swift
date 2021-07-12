@@ -27,6 +27,10 @@ class PhqTestResults: Object {
 
 
 // To store results of the emotion analysis assessment.
-//class EmotionAnalysisResults: Object {
-//
-//}
+class EmotionAnalysisResults: Object {
+    @objc dynamic var identifier:Int = 0 // To store user ID.
+    var emotionsPercentage = List<Double>()
+    var emotionsTotal = List<String>()
+    var sentimentAverage = List<Double>()
+    @objc dynamic var currentDate:Date?
+}

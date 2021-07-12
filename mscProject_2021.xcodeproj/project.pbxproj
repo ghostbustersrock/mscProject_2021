@@ -45,6 +45,7 @@
 		6C6789D62676774100F1DE53 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6789BF2676774100F1DE53 /* IQKeyboardManager+UITextFieldViewNotification.swift */; };
 		6C812585265D4402006058DA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C812584265D4402006058DA /* Register.swift */; };
 		6CA54B2A2663BEEC00BA92A1 /* HealthProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA54B292663BEEC00BA92A1 /* HealthProblems.swift */; };
+		6CAEE985269C81DF0037F0B6 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 6CAEE984269C81DF0037F0B6 /* Charts */; };
 		6CC9ADF326600D0200AA745E /* ProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9ADF226600D0200AA745E /* ProfileTab.swift */; };
 		6CD460042695FCB900AC6EB4 /* TrainedModel3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6CD460012695FCB900AC6EB4 /* TrainedModel3.mlmodel */; };
 		6CD460052695FCBA00AC6EB4 /* TrainedModel1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6CD460022695FCB900AC6EB4 /* TrainedModel1.mlmodel */; };
@@ -54,6 +55,19 @@
 		6CF150FD2692268B00EF936A /* EmotionQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF150FC2692268B00EF936A /* EmotionQuestionnaire.swift */; };
 		6CFCCF0526711EEB000B2273 /* DatabaseEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCCF0426711EEB000B2273 /* DatabaseEntries.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C918892269C7F2C007BC3FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6C05FC532661A20A00E2A5B0 /* HelpTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTab.swift; sourceTree = "<group>"; };
@@ -111,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C3325DE266FD6F400C67FA9 /* RealmSwift in Frameworks */,
+				6CAEE985269C81DF0037F0B6 /* Charts in Frameworks */,
 				6C3325DC266FD6F400C67FA9 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +138,7 @@
 			children = (
 				6C612DEC265AB6AD00CD27E5 /* mscProject_2021 */,
 				6C612DEB265AB6AD00CD27E5 /* Products */,
+				6CAEE983269C81DF0037F0B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +243,13 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		6CAEE983269C81DF0037F0B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +260,7 @@
 				6C612DE6265AB6AD00CD27E5 /* Sources */,
 				6C612DE7265AB6AD00CD27E5 /* Frameworks */,
 				6C612DE8265AB6AD00CD27E5 /* Resources */,
+				6C918892269C7F2C007BC3FF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +270,7 @@
 			packageProductDependencies = (
 				6C3325DB266FD6F400C67FA9 /* Realm */,
 				6C3325DD266FD6F400C67FA9 /* RealmSwift */,
+				6CAEE984269C81DF0037F0B6 /* Charts */,
 			);
 			productName = mscProject_2021;
 			productReference = 6C612DEA265AB6AD00CD27E5 /* mscProject_2021.app */;
@@ -276,6 +301,7 @@
 			mainGroup = 6C612DE1265AB6AD00CD27E5;
 			packageReferences = (
 				6C3325DA266FD6F400C67FA9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				6C91888C269C7F2B007BC3FF /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 6C612DEB265AB6AD00CD27E5 /* Products */;
 			projectDirPath = "";
@@ -556,6 +582,14 @@
 				minimumVersion = 10.7.6;
 			};
 		};
+		6C91888C269C7F2B007BC3FF /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -568,6 +602,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C3325DA266FD6F400C67FA9 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		6CAEE984269C81DF0037F0B6 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C91888C269C7F2B007BC3FF /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

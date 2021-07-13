@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -3469,7 +3470,7 @@ you have been moving around a lot more than usual </string>
             </objects>
             <point key="canvasLocation" x="-1418" y="-1368"/>
         </scene>
-        <!--Emotiona analysis-->
+        <!--Emotion analysis-->
         <scene sceneID="KiT-ev-6UL">
             <objects>
                 <viewController id="OXH-kc-K9j" customClass="HomeQuestionnaireAnalysis" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
@@ -3478,7 +3479,7 @@ you have been moving around a lot more than usual </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHu-5x-WA8" userLabel="submit">
-                                <rect key="frame" x="155" y="606" width="80" height="32"/>
+                                <rect key="frame" x="155" y="646" width="80" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Mvo-cP-SX8"/>
@@ -3497,27 +3498,27 @@ you have been moving around a lot more than usual </string>
                                     <action selector="startButton:" destination="OXH-kc-K9j" eventType="touchUpInside" id="aNO-pG-NOR"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Nb-s8-9rF">
-                                <rect key="frame" x="30" y="197" width="330" height="350"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Nb-s8-9rF">
+                                <rect key="frame" x="30" y="147" width="330" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-Yd-UOr">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="168"/>
-                                        <string key="text">You will be asked to answer a few questions. For each question please provide an honest response. The app will then identify, for each, three emotions, possibly detected from the text, and its relative sentiment analysis score.</string>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="303.66666666666669"/>
+                                        <string key="text">You will be asked to answer a few questions. For each question please provide an honest response. The app will then identify, for each, three emotions, possibly detected from the text, and its relative sentiment analysis score. The detectable emotions are: sadness, anger, joy, fear, happy, worry, hate, relief and boredom. The sentiment score has a range of -1 to +1; -1 being a very negative sentiment detected and +1 a very positive one.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-Ko-LXX">
-                                        <rect key="frame" x="0.0" y="188" width="330" height="162"/>
+                                        <rect key="frame" x="0.0" y="311.66666666666669" width="330" height="138.33333333333331"/>
                                         <string key="text">NOTE: this questionnaire is not designed to substitute any healthcare professional. The application's results may not be completely correct as the implementation of this project was not supervised by any healthcare professionals. If you feel you have any serious mental disorders or issues please get in touch with your personal doctor to seek help. Thank you.</string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="Q8Z-84-faQ"/>
-                                    <constraint firstAttribute="height" constant="350" id="biS-eD-tdu"/>
+                                    <constraint firstAttribute="height" constant="450" id="biS-eD-tdu"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -3527,10 +3528,10 @@ you have been moving around a lot more than usual </string>
                             <constraint firstItem="yHu-5x-WA8" firstAttribute="centerX" secondItem="YU6-a1-Pom" secondAttribute="centerX" id="25l-J0-GBa"/>
                             <constraint firstItem="8Nb-s8-9rF" firstAttribute="centerX" secondItem="YU6-a1-Pom" secondAttribute="centerX" id="VLj-AY-tfx"/>
                             <constraint firstItem="8Nb-s8-9rF" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="-50" id="k4N-BX-XAN"/>
-                            <constraint firstItem="yHu-5x-WA8" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="200" id="kG2-AE-hmh"/>
+                            <constraint firstItem="yHu-5x-WA8" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="240" id="kG2-AE-hmh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Emotiona analysis" id="KBA-Lu-UgQ"/>
+                    <navigationItem key="navigationItem" title="Emotion analysis" id="KBA-Lu-UgQ"/>
                     <connections>
                         <segue destination="hiE-rJ-sFR" kind="presentation" identifier="startAnalysisQ" id="K3C-ZQ-oOW"/>
                     </connections>

@@ -116,7 +116,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         }
         else { // Otherwise display nothing.
             maxIndex = 0
-            numberOfScore.text = "No new PHQ-9 results"
+            numberOfScore.text = "No PHQ-9 test taken yet"
             displayScoreText.text = "N/A"
             severityText.text = "Severity: N/A"
         }
@@ -158,7 +158,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             sentimentAveScoreLabel.text = "Sentiment average score: \(emotionsData[totalElementsEmotion].sentimentAverage)"
         }
         else { // Otherwise display nothing.
-            pieChart.noDataText = "No new emotion analysis results recorded."
+            pieChart.noDataText = "No emotion analysis test taken yet"
             sentimentAveScoreLabel.text = "Sentiment average score: N/A"
         }
     }
@@ -177,7 +177,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         }
         
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-        pieChartDataSet.colors = ChartColorTemplates.joyful()
+        pieChartDataSet.colors = ChartColorTemplates.colorful()
         
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         pieChart.data = pieChartData

@@ -2490,7 +2490,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1O-0r-gpS">
-                                <rect key="frame" x="30" y="47" width="330" height="150"/>
+                                <rect key="frame" x="30" y="57" width="330" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="90M-uV-ZR2"/>
                                     <constraint firstAttribute="height" constant="150" id="OJL-JD-qem"/>
@@ -2680,7 +2680,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="P1O-0r-gpS" firstAttribute="centerX" secondItem="IKB-G8-Fxm" secondAttribute="centerX" id="P0p-UE-HfP"/>
-                            <constraint firstItem="P1O-0r-gpS" firstAttribute="centerY" secondItem="IKB-G8-Fxm" secondAttribute="centerY" constant="-300" id="Pz8-ac-5EG"/>
+                            <constraint firstItem="P1O-0r-gpS" firstAttribute="centerY" secondItem="IKB-G8-Fxm" secondAttribute="centerY" constant="-290" id="Pz8-ac-5EG"/>
                             <constraint firstItem="IdW-WR-O2M" firstAttribute="centerY" secondItem="IKB-G8-Fxm" secondAttribute="centerY" constant="50" id="U0f-tm-7O0"/>
                             <constraint firstItem="IdW-WR-O2M" firstAttribute="centerX" secondItem="IKB-G8-Fxm" secondAttribute="centerX" id="wG0-di-dmo"/>
                         </constraints>
@@ -2759,6 +2759,48 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-sT-4ra">
+                                <rect key="frame" x="55" y="525.66666666666663" width="280" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpI-ea-yz4">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="33"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="YHC-qg-mgk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Older Results"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="olderEmotionsButton:" destination="9hk-GE-Icv" eventType="touchUpInside" id="D51-iZ-JQ6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVC-Ex-UXM">
+                                        <rect key="frame" x="160" y="0.0" width="120" height="33"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="pSp-1l-PSu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Newer results"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="newerEmotionsButton:" destination="9hk-GE-Icv" eventType="touchUpInside" id="dbn-lf-16a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Ryj-Dl-f2i"/>
+                                </constraints>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="weU-Nh-6EM">
                                 <rect key="frame" x="55" y="700.66666666666663" width="280" height="33"/>
                                 <subviews>
@@ -2802,22 +2844,32 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newest Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXF-M9-P8N">
-                                <rect key="frame" x="120" y="587" width="150" height="20.333333333333371"/>
+                                <rect key="frame" x="30" y="592" width="330" height="20.333333333333371"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="YNj-Hf-098"/>
+                                    <constraint firstAttribute="width" constant="330" id="YNj-Hf-098"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttn-jG-1aX" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="55" y="232" width="280" height="280"/>
+                                <rect key="frame" x="55" y="222" width="280" height="280"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="0vU-Qd-NsA"/>
                                     <constraint firstAttribute="height" constant="280" id="G5Q-xK-Qw3"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sentiment average score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWv-2K-Efl">
+                                <rect key="frame" x="30" y="492" width="330" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="2am-7V-TWi"/>
+                                    <constraint firstAttribute="width" constant="330" id="QEZ-uT-pJl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EGD-GK-C2o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2827,16 +2879,20 @@ Experiencing mental health problems can be confusing and frightening at first, a
                             <constraint firstItem="ZwL-uh-VL9" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="B4H-eV-GYV"/>
                             <constraint firstItem="B4I-Ze-Gf2" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-250" id="Bxk-9T-IXh"/>
                             <constraint firstItem="Ttn-jG-1aX" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="Cb9-Nx-8Am"/>
-                            <constraint firstItem="TXF-M9-P8N" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="175" id="FAj-Nt-ZhY"/>
-                            <constraint firstItem="Ttn-jG-1aX" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-50" id="MN6-hx-IQ7"/>
+                            <constraint firstItem="tWv-2K-Efl" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="ElC-VP-LKa"/>
+                            <constraint firstItem="TXF-M9-P8N" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="180" id="FAj-Nt-ZhY"/>
+                            <constraint firstItem="Ttn-jG-1aX" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-60" id="MN6-hx-IQ7"/>
                             <constraint firstItem="Akw-nA-xL4" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-220" id="RjV-hV-EMj"/>
                             <constraint firstItem="TXF-M9-P8N" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="cKg-ef-pRO"/>
                             <constraint firstItem="bjK-xl-pNA" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="chN-Uk-fOQ"/>
+                            <constraint firstItem="4sd-sT-4ra" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="120" id="fcE-hx-di5"/>
                             <constraint firstItem="weU-Nh-6EM" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="gak-62-wGJ"/>
                             <constraint firstItem="Akw-nA-xL4" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="jBB-y0-mhI"/>
                             <constraint firstItem="l1l-uk-Wmr" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="210" id="kxV-QK-1Za"/>
                             <constraint firstItem="weU-Nh-6EM" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="295" id="mzd-bb-uHT"/>
+                            <constraint firstItem="tWv-2K-Efl" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="80" id="ofG-Tz-R9K"/>
                             <constraint firstItem="bjK-xl-pNA" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="-320" id="x48-xK-Rx1"/>
+                            <constraint firstItem="4sd-sT-4ra" firstAttribute="centerX" secondItem="nUp-Yt-oj7" secondAttribute="centerX" id="y3g-Xv-X71"/>
                             <constraint firstItem="ZwL-uh-VL9" firstAttribute="centerY" secondItem="nUp-Yt-oj7" secondAttribute="centerY" constant="245" id="yAP-e8-Vqk"/>
                         </constraints>
                     </view>
@@ -2847,6 +2903,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         <outlet property="pieChart" destination="Ttn-jG-1aX" id="S94-yd-uSi"/>
                         <outlet property="profilePic" destination="bjK-xl-pNA" id="caa-dp-5rf"/>
                         <outlet property="profileUsernameDisplay" destination="B4I-Ze-Gf2" id="gAW-9Q-R41"/>
+                        <outlet property="sentimentAveScoreLabel" destination="tWv-2K-Efl" id="XDY-Th-5vi"/>
                         <outlet property="severityText" destination="ZwL-uh-VL9" id="QxX-9H-7WH"/>
                         <segue destination="RqZ-Ig-apH" kind="unwind" identifier="logOut" unwindAction="goHomeWithSegue:" id="uvf-Ht-M3s"/>
                     </connections>
@@ -3292,7 +3349,7 @@ you have been moving around a lot more than usual </string>
                                     <constraint firstAttribute="width" constant="330" id="A2W-xz-LGQ"/>
                                     <constraint firstAttribute="height" constant="150" id="zAR-H4-z7v"/>
                                 </constraints>
-                                <string key="text">The emotion's information will be displayed in percentages on the pie chart on the profile, while the sentiment scores will be shown as an average.</string>
+                                <string key="text">The emotion's information will be displayed in percentages on the pie chart on the profile, while the sentiment scores will be shown as an average. The profile's pie chart will always display the newly taken tests.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3412,7 +3469,7 @@ you have been moving around a lot more than usual </string>
             </objects>
             <point key="canvasLocation" x="-1418" y="-1368"/>
         </scene>
-        <!--Home Questionnaire Analysis-->
+        <!--Emotiona analysis-->
         <scene sceneID="KiT-ev-6UL">
             <objects>
                 <viewController id="OXH-kc-K9j" customClass="HomeQuestionnaireAnalysis" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
@@ -3420,19 +3477,8 @@ you have been moving around a lot more than usual </string>
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-Yd-UOr">
-                                <rect key="frame" x="30" y="272" width="330" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="330" id="CbU-i0-v0w"/>
-                                    <constraint firstAttribute="height" constant="200" id="L4I-F5-SkZ"/>
-                                </constraints>
-                                <string key="text">You will be asked to answers a few questions. For each question please provide an honest response. *INSERT APP NAME* will then calculate for each the emotion detected and its relative sentiment analysis score.</string>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHu-5x-WA8" userLabel="submit">
-                                <rect key="frame" x="155" y="506" width="80" height="32"/>
+                                <rect key="frame" x="155" y="606" width="80" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Mvo-cP-SX8"/>
@@ -3451,17 +3497,40 @@ you have been moving around a lot more than usual </string>
                                     <action selector="startButton:" destination="OXH-kc-K9j" eventType="touchUpInside" id="aNO-pG-NOR"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Nb-s8-9rF">
+                                <rect key="frame" x="30" y="197" width="330" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-Yd-UOr">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="168"/>
+                                        <string key="text">You will be asked to answer a few questions. For each question please provide an honest response. The app will then identify, for each, three emotions, possibly detected from the text, and its relative sentiment analysis score.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-Ko-LXX">
+                                        <rect key="frame" x="0.0" y="188" width="330" height="162"/>
+                                        <string key="text">NOTE: this questionnaire is not designed to substitute any healthcare professional. The application's results may not be completely correct as the implementation of this project was not supervised by any healthcare professionals. If you feel you have any serious mental disorders or issues please get in touch with your personal doctor to seek help. Thank you.</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="Q8Z-84-faQ"/>
+                                    <constraint firstAttribute="height" constant="350" id="biS-eD-tdu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oaq-yi-4Fy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yHu-5x-WA8" firstAttribute="centerX" secondItem="YU6-a1-Pom" secondAttribute="centerX" id="25l-J0-GBa"/>
-                            <constraint firstItem="a4b-Yd-UOr" firstAttribute="centerX" secondItem="YU6-a1-Pom" secondAttribute="centerX" id="E3g-dQ-gCT"/>
-                            <constraint firstItem="a4b-Yd-UOr" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="-50" id="a9U-Pp-ICI"/>
-                            <constraint firstItem="yHu-5x-WA8" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="100" id="kG2-AE-hmh"/>
+                            <constraint firstItem="8Nb-s8-9rF" firstAttribute="centerX" secondItem="YU6-a1-Pom" secondAttribute="centerX" id="VLj-AY-tfx"/>
+                            <constraint firstItem="8Nb-s8-9rF" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="-50" id="k4N-BX-XAN"/>
+                            <constraint firstItem="yHu-5x-WA8" firstAttribute="centerY" secondItem="YU6-a1-Pom" secondAttribute="centerY" constant="200" id="kG2-AE-hmh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KBA-Lu-UgQ"/>
+                    <navigationItem key="navigationItem" title="Emotiona analysis" id="KBA-Lu-UgQ"/>
                     <connections>
                         <segue destination="hiE-rJ-sFR" kind="presentation" identifier="startAnalysisQ" id="K3C-ZQ-oOW"/>
                     </connections>

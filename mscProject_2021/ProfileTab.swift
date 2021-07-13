@@ -21,18 +21,12 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     var numberOfElements: Int = 0 // To save the size of the lists of the PHQ test results Realm class.
     var maxIndex: Int = 0
     
-    var emotionsData:EmotionAnalysisResults? // To save the information retrieved from the lists from the Emotion test results Realm class.
-    var numberOfElementsEmotion:Int = 0
+    //var emotionsData:EmotionAnalysisResults? // To save the information retrieved from the lists from the Emotion test results Realm class.
+    var totalElementsEmotion:Int = 0
     var maxIndexEmotion:Int = 0
     
     @IBOutlet var pieChart: PieChartView! // Outlet to work on the graph view.
-    var sampleData1 = PieChartDataEntry(value: 0)
-    var sampleData2 = PieChartDataEntry(value: 1)
-    var sampleData3 = PieChartDataEntry(value: 2)
-    var dataSet = [PieChartDataEntry]()
-    
-    
-    
+    @IBOutlet var sentimentAveScoreLabel: UILabel!
     @IBOutlet var severityText: UILabel!
     @IBOutlet var displayScoreText: UILabel!
     @IBOutlet var numberOfScore: UILabel!
@@ -46,7 +40,6 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             self.performSegue(withIdentifier: "logOut", sender: self)
         }
         let noLogOut = UIAlertAction(title: "No", style: .cancel) { alertAction in
-            
         }
         
         alertView.addAction(yesLogOut)
@@ -72,16 +65,14 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             displayAlert(title: "No more results", msg: "You have reached the oldest result from your PHQ-9 tests.")
         }
         else {
-            let data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
-            
+            // Function to display results of PHQ-9 test.
+            displayPHQresults(numberElementsPHQ: numberOfElements)
             if numberOfElements == 0 {
-                numberOfScore.text = "Oldest Results"
+                numberOfScore.text = "Oldest PHQ-9 test results"
             }
             else {
                 numberOfScore.text = ""
             }
-            displayScoreText.text = "\((data?.scoreResPHQ[numberOfElements])!)/27"
-            severityText.text = "Severity: \((data?.severityResPHQ[numberOfElements])!)"
         }
     }
     
@@ -92,17 +83,22 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             displayAlert(title: "No more results", msg: "You have reached the newest result from your PHQ-9 tests.")
         }
         else {
-            let data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
-            
+            // Function to display results of PHQ-9 test.
+            displayPHQresults(numberElementsPHQ: numberOfElements)
             if numberOfElements == maxIndex {
-                numberOfScore.text = "Newest Results"
+                numberOfScore.text = "Newest PHQ-9 test results"
             }
             else {
                 numberOfScore.text = ""
             }
-            displayScoreText.text = "\((data?.scoreResPHQ[numberOfElements])!)/27"
-            severityText.text = "Severity: \((data?.severityResPHQ[numberOfElements])!)"
         }
+    }
+    
+    // Function to display results of PHQ-9 test.
+    func displayPHQresults(numberElementsPHQ: Int) {
+        let data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
+        displayScoreText.text = "\((data?.scoreResPHQ[numberElementsPHQ])!)/27"
+        severityText.text = "Severity: \((data?.severityResPHQ[numberElementsPHQ])!)"
     }
     
     // Function called everytime the profile tab bar is clicked to refresh the page in order for new content to appear.
@@ -125,82 +121,112 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             severityText.text = "Severity: N/A"
         }
         
-        
-        pieChart.centerText = "Emotion analysis\nresults"
-        pieChart.legend.enabled = false
+        // Function called to initially display the graph with the most up to date info.
         customizeChart()
     }
     
-    // Creating an instanceo of the pie chart class to create a pie chart.
-    let players = ["Luca", "Arseniy", "Estefano"]
-    let goals = [10, 13, 5]
-    
-    
-    
-    
-    
-    // To show the graph with updated information!!!
+    // To display the graph of the most up to date information.
     func customizeChart() {
         
-        // Returns first object based on the supplied ID.
-        emotionsData = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!).first
+        // Returns all the objects based on the supplied ID.
+        let emotionsData = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!)
+        
         // If the user already has data to display, then display it.
-        if emotionsData != nil {
+        if emotionsData.count > 0 {
             
-            // Prints everything in ascending order based on the sorted method done on the "currentDate" column (aka the timestamp).
-            print(realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!).sorted(byKeyPath: "currentDate", ascending: true))
+            totalElementsEmotion = emotionsData.count-1
+            maxIndexEmotion = emotionsData.count-1
             
-            let dataEmotions = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!).sorted(byKeyPath: "currentDate", ascending: true)
-            
-            numberOfElementsEmotion = emotionsData!.emotionsDetected.count-1
-            maxIndexEmotion = emotionsData!.emotionsDetected.count-1
             //MARK: PLOT GRAPH!!!
             var dataEntries:[ChartDataEntry] = []
-            for i in 0..<dataEmotions[0].emotionsDetected.count {
-                let dataEntry = PieChartDataEntry(value: dataEmotions[0].emotionsPercentage[i], label: dataEmotions[0].emotionsDetected[i], data: dataEmotions[0].emotionsDetected[i] as AnyObject)
-                
+            // Plotting the
+            for i in 0..<emotionsData[maxIndexEmotion].emotionsDetected.count {
+                let dataEntry = PieChartDataEntry(value: emotionsData[maxIndexEmotion].emotionsPercentage[i], label: emotionsData[maxIndexEmotion].emotionsDetected[i], data: emotionsData[maxIndexEmotion].emotionsDetected[i] as AnyObject)
+
                 dataEntries.append(dataEntry)
             }
-            
+
             let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
             pieChartDataSet.colors = ChartColorTemplates.colorful()
-            
+
             let pieChartData = PieChartData(dataSet: pieChartDataSet)
             pieChart.data = pieChartData
+            pieChart.legend.enabled = false
+            
+            pieChart.centerText = "Newest\nemotion analysis\nresults"
+            
+            sentimentAveScoreLabel.text = "Sentiment average score: \(emotionsData[totalElementsEmotion].sentimentAverage)"
         }
         else { // Otherwise display nothing.
+            pieChart.noDataText = "No new emotion analysis results recorded."
+            sentimentAveScoreLabel.text = "Sentiment average score: N/A"
+        }
+    }
+    
+    
+    func displayGraph(totalElementsEmotionFunc: Int) {
+        let emotionsData = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!)
+        var dataEntries:[ChartDataEntry] = []
+        // Plotting the
+        
+        // emotionsData[totalElementsEmotion].emotionsDetected List<String>
+        for i in 0..<emotionsData[totalElementsEmotionFunc].emotionsDetected.count {
+            let dataEntry = PieChartDataEntry(value: emotionsData[totalElementsEmotionFunc].emotionsPercentage[i], label: emotionsData[totalElementsEmotionFunc].emotionsDetected[i], data: emotionsData[totalElementsEmotionFunc].emotionsDetected[i] as AnyObject)
             
-            print("NOTING")
-//            maxIndex = 0
-//            numberOfScore.text = "No results"
-//            displayScoreText.text = "N/A"
-//            severityText.text = "Severity: N/A"
+            dataEntries.append(dataEntry)
         }
         
-//        var dataEntries:[ChartDataEntry] = []
-//        for i in 0..<dataPoints.count {
-//            let dataEntry = PieChartDataEntry(value: Double(values[i]), label: dataPoints[i], data: dataPoints[i] as AnyObject)
-//
-//            dataEntries.append(dataEntry)
-//        }
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
+        pieChartDataSet.colors = ChartColorTemplates.joyful()
         
-//        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-//        pieChartDataSet.colors = ChartColorTemplates.colorful()
-//
-//        let pieChartData = PieChartData(dataSet: pieChartDataSet)
-//        let format = NumberFormatter()
-//        format.numberStyle = .none
-//        let formatter = DefaultValueFormatter(formatter: format)
-//        pieChartData.setValueFormatter(formatter)
-//
-//        pieChart.data = pieChartData
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        pieChart.data = pieChartData
         
+        sentimentAveScoreLabel.text = "Sentiment average score: \(emotionsData[totalElementsEmotion].sentimentAverage)"
+        pieChart.legend.enabled = false
     }
     
     
     
+    @IBAction func newerEmotionsButton(_ sender: Any) {
+        totalElementsEmotion += 1
+        if totalElementsEmotion > maxIndexEmotion {
+            totalElementsEmotion -= 1
+            displayAlert(title: "No more results", msg: "You have reached the newest result from your emotionAnalysis tests.")
+        }
+        else {
+            // Call function to display graph's data.
+            displayGraph(totalElementsEmotionFunc: totalElementsEmotion)
+            
+            if totalElementsEmotion == maxIndexEmotion {
+                pieChart.centerText = "Newest\nemotion analysis\nresults"
+            }
+            else {
+                pieChart.centerText = "Emotion analysis\nresults"
+            }
+//            sentimentAveScoreLabel.text = "Sentiment average score: \(emotionsData[totalElementsEmotion].sentimentAverage)"
+        }
+    }
     
-    
+    @IBAction func olderEmotionsButton(_ sender: Any) {
+        totalElementsEmotion -= 1
+        if totalElementsEmotion < 0 {
+            totalElementsEmotion += 1
+            displayAlert(title: "No more results", msg: "You have reached the oldest result from your emotion analysis tests.")
+        }
+        else {
+            // Call function to display graph's data.
+            displayGraph(totalElementsEmotionFunc: totalElementsEmotion)
+            
+            if totalElementsEmotion == 0 {
+                pieChart.centerText = "Oldest\nemotion analysis\nresults"
+            }
+            else {
+                pieChart.centerText = "Emotion analysis\nresults"
+            }
+        }
+    }
+
     
     // Function called to execute code only once when the view is presented the first time.
     override func viewDidLoad() {
@@ -213,10 +239,10 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         
         profileUsernameDisplay.text = "Welcome back \(String(describing: profileUsername!))"
         profilePic.image = UIImage(named: profileImage!)
-        profilePic.roundedImage()
     }
 }
 
+// Extension to use in case we want to display the proile images rounded.
 extension UIImageView {
     func roundedImage() {
         self.layer.cornerRadius = self.frame.size.width / 2

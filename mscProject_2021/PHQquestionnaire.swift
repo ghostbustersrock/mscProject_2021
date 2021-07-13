@@ -111,7 +111,7 @@ class PHQquestionnaire: UIViewController {
             }
             
             
-            let alertView = UIAlertController(title: "Done!", message: "You have completed the PHQ-9 questionnaire with a score of \(totalScore)/27. From the PHQ-9 assessment table, your score suggests your depression severity to be \(depressionSeverity). The proposed treatment is the following: \(depressionTreatment)", preferredStyle: .actionSheet)
+            let alertView = UIAlertController(title: "Done!", message: "You have completed the PHQ-9 questionnaire with a score of \(totalScore)/27. From the PHQ-9 assessment table, your score suggests your depression severity to be \(depressionSeverity). The proposed treatment is the following: \(depressionTreatment). The results will be displayed on your profile underneath the pie chart. The newest scores will always be shown first.", preferredStyle: .actionSheet)
 
             let goHomeAction = UIAlertAction (title: "Exit Test", style: .default) { alertAction in
                 // Just for sercurity purposes remove all values from the outlets and variables used, whose values need to be saved.

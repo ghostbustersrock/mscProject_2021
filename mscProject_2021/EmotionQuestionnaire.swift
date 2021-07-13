@@ -61,7 +61,6 @@ class EmotionQuestionnaire: UIViewController {
             // For DEBUGGING purposes!!!
             print("##########################")
             // Printing each model's results.
-            print("Date test taken: \(Date())")
             print("Model 1 results: \(model1Pred.label)")
             print("Model 2 results: \(model2Pred.label)")
             print("Model 3 results: \(model3Pred.label)")
@@ -119,7 +118,6 @@ class EmotionQuestionnaire: UIViewController {
             let receiverVC = segue.destination as! ResultEmotionAnalysis
             receiverVC.emotionsDetected = emotionsQsDetected
             receiverVC.sentimentsDetected = qsSentimentScores
-            receiverVC.currenDate = Date()
             receiverVC.profileID = profileID
             
             // Removing all elements just to be safe once the values have been passed.
@@ -144,7 +142,6 @@ class ResultEmotionAnalysis: UIViewController {
     
     var emotionsDetected:[String]?
     var sentimentsDetected:[Double]?
-    var currenDate:Date?
     
     var percentagesEmotions:[String: Double] = [:]
     
@@ -192,7 +189,7 @@ class ResultEmotionAnalysis: UIViewController {
             let percentage = (percentagesEmotions[key]! * 100)/15
             // Rounding to two decimal places.
             // Storing the dictionary's key and percent values separately on two different arrays for realm.
-            calculatedPercent.append(round(100*percentage)/100) //percents.
+            calculatedPercent.append(round(100*percentage)/100) //percents in two decimal places.
             emotions.append(key) //keys.
         }
         
@@ -215,8 +212,8 @@ class ResultEmotionAnalysis: UIViewController {
             emotionResults.emotionsPercentage.append(x)
         }
         
-        emotionResults.sentimentAverage = sentimentAverage
-        emotionResults.currentDate = currenDate
+        //Rounding the average sentiment score to two decimal places.
+        emotionResults.sentimentAverage = round(100*sentimentAverage)/100
         // ##########################################
         
         realm.beginWrite()

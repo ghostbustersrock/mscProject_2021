@@ -31,6 +31,5 @@ class EmotionAnalysisResults: Object {
     @objc dynamic var identifier:Int = 0 // To store user ID.
     var emotionsDetected = List<String>()
     var emotionsPercentage = List<Double>()
-    var sentimentAverage:Double?
-    @objc dynamic var currentDate:Date?
+    @objc dynamic var sentimentAverage:Double = 0
 }

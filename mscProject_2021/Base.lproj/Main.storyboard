@@ -133,18 +133,18 @@
                                     <action selector="loginButton:" destination="wPz-rP-uc2" eventType="touchUpInside" id="iEj-bA-1Ju"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_naNome" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-9e-0zo">
-                                <rect key="frame" x="123" y="87" width="150" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconOfApp" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-9e-0zo">
+                                <rect key="frame" x="138" y="122" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="JSj-Ld-WWt"/>
-                                    <constraint firstAttribute="width" constant="150" id="knF-nW-wee"/>
+                                    <constraint firstAttribute="height" constant="120" id="JSj-Ld-WWt"/>
+                                    <constraint firstAttribute="width" constant="120" id="knF-nW-wee"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uPC-mB-Ren"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EKa-9e-0zo" firstAttribute="centerY" secondItem="3Kf-GW-Rrf" secondAttribute="centerY" constant="-260" id="8pc-DD-ukN"/>
+                            <constraint firstItem="EKa-9e-0zo" firstAttribute="centerY" secondItem="3Kf-GW-Rrf" secondAttribute="centerY" constant="-240" id="8pc-DD-ukN"/>
                             <constraint firstItem="EKa-9e-0zo" firstAttribute="centerX" secondItem="3Kf-GW-Rrf" secondAttribute="centerX" constant="3" id="Aok-Wn-dwJ"/>
                             <constraint firstItem="xUo-oX-Zvg" firstAttribute="centerX" secondItem="3Kf-GW-Rrf" secondAttribute="centerX" id="EnG-bM-jaz"/>
                             <constraint firstItem="915-KH-90B" firstAttribute="centerY" secondItem="3Kf-GW-Rrf" secondAttribute="centerY" constant="45" id="iVM-mG-6A3"/>
@@ -3639,9 +3639,9 @@ you have been moving around a lot more than usual </string>
         <image name="giraffe" width="32" height="32"/>
         <image name="gorilla" width="32" height="32"/>
         <image name="help" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="iconOfApp" width="454" height="394"/>
         <image name="journal" width="33.333332061767578" height="33.333332061767578"/>
         <image name="lion" width="32" height="32"/>
-        <image name="logo_naNome" width="208.66667175292969" height="208.66667175292969"/>
         <image name="meditation" width="33.333332061767578" height="33.333332061767578"/>
         <image name="moodAssess" width="33.333332061767578" height="33.333332061767578"/>
         <image name="music" width="34.666667938232422" height="34.666667938232422"/>

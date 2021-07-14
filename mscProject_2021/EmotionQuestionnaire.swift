@@ -80,16 +80,23 @@ class EmotionQuestionnaire: UIViewController {
         }
     }
     
+    func alertMessage(msg: String) {
+        // Alert displayed if 'next' is pressed with not inputted text.
+        let alertView = UIAlertController(title: "Warning", message: msg, preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Ok", style: .cancel) {
+            alertAction in
+        }
+        alertView.addAction(okayAction)
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
     @IBAction func buttonFunc(_ sender: Any) {
         
         if inputText.text == "" {
-            // Alert displayed if 'next' is pressed with not inputted text.
-            let alertView = UIAlertController(title: "Warning", message: "Please input text before pressing the 'next' button. Thank you!", preferredStyle: .alert)
-            let okayAction = UIAlertAction(title: "Ok", style: .cancel) {
-                alertAction in
-            }
-            alertView.addAction(okayAction)
-            self.present(alertView, animated: true, completion: nil)
+            alertMessage(msg: "Please input some text before pressing the 'next' button. Thank you.")
+        }
+        else if inputText.text.count == 1 {
+            alertMessage(msg: "Please input a more descriptive answer. A good amount would be one to two whole sentences. Thank you.")
         }
         else {
             let textToAnalyse = inputText.text!

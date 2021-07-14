@@ -8,18 +8,21 @@
 import UIKit
 import RealmSwift
 
+// This array is used to select/deselect the profile image chosen by the user to then save.
 var pressedArray:[String: Bool] = ["bear":false, "cat":false, "dog":false, "frog":false, "giraffe":false, "gorilla":false, "lion":false, "rabbit":false, "tiger":false]
 
 var profile:String = "N/A"
 
+// MARK: Sign up to the app class
+// This class contains functions and variables used for new users to sign up to the application.
 class Register: UIViewController {
-    
+    // Creating an instance to open a connection to the database.
     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    // Outlets of the UI objects to make them interactive.
     @IBOutlet var tigerBack: UIButton!
     @IBOutlet var rabbitBack: UIButton!
     @IBOutlet var lionBack: UIButton!
@@ -34,7 +37,8 @@ class Register: UIViewController {
     @IBOutlet var repeatPassField: UITextField!
     @IBOutlet var errorMsg: UILabel!
     
-    func fieldsAlert(title:String = "Missing Field!", msg: String) -> Void {
+    // Function called whenever an alert needs to be displayed.
+    func fieldsAlert(title:String = "Missing Field!", msg: String) {
         
         let alertView = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let cancelAction = UIAlertAction (title: "Ok", style: .cancel ) {  alertAction in
@@ -44,19 +48,20 @@ class Register: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
-    func missingField() -> Void {
+    // Function called to highlight what is missing to be filled in, for the sign-up.
+    func missingField() {
         if !pressedArray.values.contains(true) {
             fieldsAlert(title: "Missing Profile Picture!" , msg: "Please select an icon as your profile picture.")
         }
-        else if usernameField.text!.isEmpty {
+        else if usernameField.text!.isEmpty { // Missing username.
             errorMsg.text = "Enter a username"
             borderUsername()
         }
-        else if passwordField.text!.isEmpty {
+        else if passwordField.text!.isEmpty { // Missing password.
             errorMsg.text = "Enter a password"
             borderPassword()
         }
-        else  if repeatPassField.text!.isEmpty {
+        else  if repeatPassField.text!.isEmpty { // Missing repeated password.
             errorMsg.text = "Enter your password again"
             borderRepeatPass()
         }
@@ -66,24 +71,30 @@ class Register: UIViewController {
         }
     }
     
-    func errorCriteria() -> Void {
+    // Function used to either save the entered details or check if the entered details meet the sign-up field criteria.
+    func errorCriteria() {
+        // Highlight username containing whitespaces.
         if usernameField.text?.hasWhitespacesNewlines() == true || usernameField.text!.hasDigits() == true {
             errorMsg.text = "Username contains whitespaces or numbers"
             borderUsername()
         }
+        // Highlight password being less than 8 characters or contains whitespaces.
         else if passwordField.text!.count < 8 || passwordField.text?.hasWhitespacesNewlines() == true {
             errorMsg.text = "Password doesn't match criteria"
             borderPassword()
         }
+        // Highlight repeated password not matching original.
         else if passwordField.text != repeatPassField.text {
             errorMsg.text = "The repeated password doesn't match your initial one"
             borderRepeatPassWrong()
         }
+        // If everything is correct save all the new information.
         else {
             // Check if username has been taken or not before saving everything!
             if realm.objects(User.self).filter("username == %@", usernameField.text!).first?.username != usernameField.text { // No same username has been found so save info.
-                let newUser = User()
+                let newUser = User() // Create new instance of Realms User() object, to save all the new user's information.
                 while true {
+                    // Assign a randomly generated integer ID to the new user and make sure it's not taken already, otherwise change it.
                     let randomNumber = Int.random(in: 1...100)
                     let data = realm.objects(User.self).filter("identifier == %@", randomNumber).first
                     if (data == nil) { // No user with same ID was found.
@@ -91,6 +102,7 @@ class Register: UIViewController {
                         break
                     }
                 }
+                // Save in the chosen profile picture, username and password to the database.
                 newUser.profilePic = profile
                 newUser.username = usernameField.text
                 newUser.password = passwordField.text
@@ -98,10 +110,10 @@ class Register: UIViewController {
                 realm.beginWrite()
                 realm.add(newUser)
                 try! realm.commitWrite()
-                print(Realm.Configuration.defaultConfiguration.fileURL!)
                 resetBorders()
                 errorMsg.text = ""
                 
+                // Display successful alert message to then perform a segue back to the app's launch page (aka login page) once a successful registration and data saving occurs.
                 let alertView = UIAlertController(title: "Success!", message: "You have successfully registered!", preferredStyle: .actionSheet)
 
                 let goHomeAction = UIAlertAction (title: "Go home", style: .default) { alertAction in
@@ -142,6 +154,7 @@ class Register: UIViewController {
         }
     }
     
+    // If the exit button is pressed while some data has been inputted a warning will be displayed asking confirmation if exiting is what the user wants to do, otherwise if no data is inputted in any field then the app returns the user to the main page.
     @IBAction func exitSignup(_ sender: Any) {
         
         if usernameField.text!.isEmpty && passwordField.text!.isEmpty && repeatPassField.text!.isEmpty && !pressedArray.values.contains(true) {
@@ -171,6 +184,7 @@ class Register: UIViewController {
         }
     }
     
+    // Function used to check which animal's image was selected.
     func animalPressed(name: String) -> Void {
         for (key,_) in pressedArray {
             if key == name {
@@ -182,6 +196,8 @@ class Register: UIViewController {
         }
     }
     
+    // ###########################################
+    // These next 9 IBAction functions are all respectively assigned to the animals images from which to select the profile picture. Whenever one is selected or deselected its background colour is changed to show this and the array storing the animals (pressedArray) will have that animals BOOL value changed to show it has been selected.
     @IBAction func bearFunc(_ sender: Any) {
         
         if pressedArray["bear"] == false {
@@ -400,7 +416,10 @@ class Register: UIViewController {
             profile = "N/A"
         }
     }
+    // ###########################################
     
+    
+    // Functions called to change the border color of the input fields whenever an alert in regards to them appears.
     func borderName() {
         usernameField.layer.borderColor = UIColor.clear.cgColor
         usernameField.layer.borderWidth = 0

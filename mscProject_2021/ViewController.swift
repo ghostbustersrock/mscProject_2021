@@ -8,16 +8,23 @@
 import UIKit
 import RealmSwift
 
+// MARK: Launch View Class
+// This class is in regards to the app's first view presented once launched.
 class ViewController: UIViewController {
 
+    // Creating an instance to open a connection to the database.
     let realm = try! Realm()
     
+    // Outlets to make the UI's text fields and labels functional.
     @IBOutlet var usernameInput: UITextField!
     @IBOutlet var passwordInput: UITextField!
     @IBOutlet var errorLabel: UILabel!
     
+    // Button action outlet to do stuff if pressed.
     @IBAction func loginButton(_ sender: Any) {
         
+        // Checking if the login details are complete and correct before logging in.
+        // If details are wrong or missing show errors.
         if usernameInput.text!.isEmpty || passwordInput.text!.isEmpty {
             if usernameInput.text!.isEmpty && passwordInput.text!.isEmpty {
                 errorLabel.text = "No username and password entered"
@@ -41,6 +48,7 @@ class ViewController: UIViewController {
                 errorLabel.text = "No password match"
             }
         }
+        // If details are correct login.
         else {
             errorLabel.text = ""
             self.performSegue(withIdentifier: "successfulLogin", sender: self)
@@ -53,10 +61,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Print path to access Realm file to view saved objects and field's values.
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        // Do any additional setup after loading the view.
     }
 
+    // When a segue to another UI occurs bring within the ProfileTab UI class the unique ID of the logged in user along other information to be displayed on their profile.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "successfulLogin" {
             let receiverVC = segue.destination as! UITabBarController

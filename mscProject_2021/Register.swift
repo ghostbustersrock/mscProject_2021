@@ -205,18 +205,18 @@ class Register: UIViewController {
             pressedArray["bear"] = true
             animalPressed(name: "bear")
             
-            tigerBack.backgroundColor = UIColor.white
-            dogBack.backgroundColor = UIColor.white
-            rabbitBack.backgroundColor = UIColor.white
-            giraffeBack.backgroundColor = UIColor.white
-            gorillaBack.backgroundColor = UIColor.white
-            catBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
+            dogBack.backgroundColor = UIColor.clear
+            rabbitBack.backgroundColor = UIColor.clear
+            giraffeBack.backgroundColor = UIColor.clear
+            gorillaBack.backgroundColor = UIColor.clear
+            catBack.backgroundColor = UIColor.clear
             bearBack.backgroundColor = UIColor.green
-            frogBack.backgroundColor = UIColor.white
-            lionBack.backgroundColor = UIColor.white
+            frogBack.backgroundColor = UIColor.clear
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            bearBack.backgroundColor = UIColor.white
+            bearBack.backgroundColor = UIColor.clear
             pressedArray["bear"] = false
             profile = "N/A"
         }
@@ -229,18 +229,18 @@ class Register: UIViewController {
             pressedArray["cat"] = true
             animalPressed(name: "cat")
             
-            tigerBack.backgroundColor = UIColor.white
-            dogBack.backgroundColor = UIColor.white
-            rabbitBack.backgroundColor = UIColor.white
-            giraffeBack.backgroundColor = UIColor.white
-            gorillaBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
+            dogBack.backgroundColor = UIColor.clear
+            rabbitBack.backgroundColor = UIColor.clear
+            giraffeBack.backgroundColor = UIColor.clear
+            gorillaBack.backgroundColor = UIColor.clear
             catBack.backgroundColor = UIColor.green
-            bearBack.backgroundColor = UIColor.white
-            frogBack.backgroundColor = UIColor.white
-            lionBack.backgroundColor = UIColor.white
+            bearBack.backgroundColor = UIColor.clear
+            frogBack.backgroundColor = UIColor.clear
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            catBack.backgroundColor = UIColor.white
+            catBack.backgroundColor = UIColor.clear
             pressedArray["cat"] = false
             profile = "N/A"
         }
@@ -253,18 +253,18 @@ class Register: UIViewController {
             pressedArray["dog"] = true
             animalPressed(name: "dog")
             
-            tigerBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
             dogBack.backgroundColor = UIColor.green
-            rabbitBack.backgroundColor = UIColor.white
-            giraffeBack.backgroundColor = UIColor.white
-            gorillaBack.backgroundColor = UIColor.white
-            catBack.backgroundColor = UIColor.white
-            bearBack.backgroundColor = UIColor.white
-            frogBack.backgroundColor = UIColor.white
-            lionBack.backgroundColor = UIColor.white
+            rabbitBack.backgroundColor = UIColor.clear
+            giraffeBack.backgroundColor = UIColor.clear
+            gorillaBack.backgroundColor = UIColor.clear
+            catBack.backgroundColor = UIColor.clear
+            bearBack.backgroundColor = UIColor.clear
+            frogBack.backgroundColor = UIColor.clear
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            dogBack.backgroundColor = UIColor.white
+            dogBack.backgroundColor = UIColor.clear
             pressedArray["dog"] = false
             profile = "N/A"
         }
@@ -277,18 +277,18 @@ class Register: UIViewController {
             pressedArray["frog"] = true
             animalPressed(name: "frog")
             
-            tigerBack.backgroundColor = UIColor.white
-            dogBack.backgroundColor = UIColor.white
-            rabbitBack.backgroundColor = UIColor.white
-            giraffeBack.backgroundColor = UIColor.white
-            gorillaBack.backgroundColor = UIColor.white
-            catBack.backgroundColor = UIColor.white
-            bearBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
+            dogBack.backgroundColor = UIColor.clear
+            rabbitBack.backgroundColor = UIColor.clear
+            giraffeBack.backgroundColor = UIColor.clear
+            gorillaBack.backgroundColor = UIColor.clear
+            catBack.backgroundColor = UIColor.clear
+            bearBack.backgroundColor = UIColor.clear
             frogBack.backgroundColor = UIColor.green
-            lionBack.backgroundColor = UIColor.white
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            frogBack.backgroundColor = UIColor.white
+            frogBack.backgroundColor = UIColor.clear
             pressedArray["frog"] = false
             profile = "N/A"
         }
@@ -301,18 +301,18 @@ class Register: UIViewController {
             pressedArray["giraffe"] = true
             animalPressed(name: "giraffe")
             
-            tigerBack.backgroundColor = UIColor.white
-            dogBack.backgroundColor = UIColor.white
-            rabbitBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
+            dogBack.backgroundColor = UIColor.clear
+            rabbitBack.backgroundColor = UIColor.clear
             giraffeBack.backgroundColor = UIColor.green
-            gorillaBack.backgroundColor = UIColor.white
-            catBack.backgroundColor = UIColor.white
-            bearBack.backgroundColor = UIColor.white
-            frogBack.backgroundColor = UIColor.white
-            lionBack.backgroundColor = UIColor.white
+            gorillaBack.backgroundColor = UIColor.clear
+            catBack.backgroundColor = UIColor.clear
+            bearBack.backgroundColor = UIColor.clear
+            frogBack.backgroundColor = UIColor.clear
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            giraffeBack.backgroundColor = UIColor.white
+            giraffeBack.backgroundColor = UIColor.clear
             pressedArray["giraffe"] = false
             profile = "N/A"
         }
@@ -326,18 +326,18 @@ class Register: UIViewController {
             pressedArray["gorilla"] = true
             animalPressed(name: "gorilla")
             
-            tigerBack.backgroundColor = UIColor.white
-            dogBack.backgroundColor = UIColor.white
-            rabbitBack.backgroundColor = UIColor.white
-            giraffeBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
+            dogBack.backgroundColor = UIColor.clear
+            rabbitBack.backgroundColor = UIColor.clear
+            giraffeBack.backgroundColor = UIColor.clear
             gorillaBack.backgroundColor = UIColor.green
-            catBack.backgroundColor = UIColor.white
-            bearBack.backgroundColor = UIColor.white
-            frogBack.backgroundColor = UIColor.white
-            lionBack.backgroundColor = UIColor.white
+            catBack.backgroundColor = UIColor.clear
+            bearBack.backgroundColor = UIColor.clear
+            frogBack.backgroundColor = UIColor.clear
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            gorillaBack.backgroundColor = UIColor.white
+            gorillaBack.backgroundColor = UIColor.clear
             pressedArray["gorilla"] = false
             profile = "N/A"
         }
@@ -350,18 +350,18 @@ class Register: UIViewController {
             pressedArray["lion"] = true
             animalPressed(name: "lion")
             
-            tigerBack.backgroundColor = UIColor.white
-            dogBack.backgroundColor = UIColor.white
-            rabbitBack.backgroundColor = UIColor.white
-            giraffeBack.backgroundColor = UIColor.white
-            gorillaBack.backgroundColor = UIColor.white
-            catBack.backgroundColor = UIColor.white
-            bearBack.backgroundColor = UIColor.white
-            frogBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
+            dogBack.backgroundColor = UIColor.clear
+            rabbitBack.backgroundColor = UIColor.clear
+            giraffeBack.backgroundColor = UIColor.clear
+            gorillaBack.backgroundColor = UIColor.clear
+            catBack.backgroundColor = UIColor.clear
+            bearBack.backgroundColor = UIColor.clear
+            frogBack.backgroundColor = UIColor.clear
             lionBack.backgroundColor = UIColor.green
         }
         else {
-            lionBack.backgroundColor = UIColor.white
+            lionBack.backgroundColor = UIColor.clear
             pressedArray["lion"] = false
             profile = "N/A"
         }
@@ -375,18 +375,18 @@ class Register: UIViewController {
             pressedArray["rabbit"] = true
             animalPressed(name: "rabbit")
             
-            tigerBack.backgroundColor = UIColor.white
-            dogBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
+            dogBack.backgroundColor = UIColor.clear
             rabbitBack.backgroundColor = UIColor.green
-            giraffeBack.backgroundColor = UIColor.white
-            gorillaBack.backgroundColor = UIColor.white
-            catBack.backgroundColor = UIColor.white
-            bearBack.backgroundColor = UIColor.white
-            frogBack.backgroundColor = UIColor.white
-            lionBack.backgroundColor = UIColor.white
+            giraffeBack.backgroundColor = UIColor.clear
+            gorillaBack.backgroundColor = UIColor.clear
+            catBack.backgroundColor = UIColor.clear
+            bearBack.backgroundColor = UIColor.clear
+            frogBack.backgroundColor = UIColor.clear
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            rabbitBack.backgroundColor = UIColor.white
+            rabbitBack.backgroundColor = UIColor.clear
             pressedArray["rabbit"] = false
             profile = "N/A"
         }
@@ -401,17 +401,17 @@ class Register: UIViewController {
             animalPressed(name: "tiger")
             
             tigerBack.backgroundColor = UIColor.green
-            dogBack.backgroundColor = UIColor.white
-            rabbitBack.backgroundColor = UIColor.white
-            giraffeBack.backgroundColor = UIColor.white
-            gorillaBack.backgroundColor = UIColor.white
-            catBack.backgroundColor = UIColor.white
-            bearBack.backgroundColor = UIColor.white
-            frogBack.backgroundColor = UIColor.white
-            lionBack.backgroundColor = UIColor.white
+            dogBack.backgroundColor = UIColor.clear
+            rabbitBack.backgroundColor = UIColor.clear
+            giraffeBack.backgroundColor = UIColor.clear
+            gorillaBack.backgroundColor = UIColor.clear
+            catBack.backgroundColor = UIColor.clear
+            bearBack.backgroundColor = UIColor.clear
+            frogBack.backgroundColor = UIColor.clear
+            lionBack.backgroundColor = UIColor.clear
         }
         else {
-            tigerBack.backgroundColor = UIColor.white
+            tigerBack.backgroundColor = UIColor.clear
             pressedArray["tiger"] = false
             profile = "N/A"
         }

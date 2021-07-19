@@ -22,11 +22,6 @@ class TabBarPHQ: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let navigationController = self.tabBarController!.viewControllers![2] as! UINavigationController
-        let destination = navigationController.topViewController as! TabBarPHQ
-        destination.profileID = profileID!
-        
         print("THIS IS THE LOG IN ID: \(profileID!)!!!")
     }
     

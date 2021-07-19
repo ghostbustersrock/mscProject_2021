@@ -148,6 +148,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
 
             let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
             pieChartDataSet.colors = ChartColorTemplates.colorful()
+            
 
             let pieChartData = PieChartData(dataSet: pieChartDataSet)
             pieChart.data = pieChartData
@@ -233,7 +234,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         
         // Passing the ID of the logged in user to the 'Questionnaires' tab-bar. This is necessary so to save the result of the questionnaires for the relative logged in user.
-        let navigationController = self.tabBarController!.viewControllers![2] as! UINavigationController
+        let navigationController = self.tabBarController!.viewControllers![1] as! UINavigationController
         let destination = navigationController.topViewController as! TabBarPHQ
         destination.profileID = profileID!
         

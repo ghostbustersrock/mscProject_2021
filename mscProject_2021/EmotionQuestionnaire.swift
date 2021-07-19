@@ -33,7 +33,6 @@ class EmotionQuestionnaire: UIViewController {
     
 //    function called to identify and return the emotion dected using my trained model, and the score of the text using Apple's NLP framework.
     func modelsAnalysis(textToAnalyse: String) {
-        
         // Creating an instance of the three emotion detecting models I created.
         let model1 = TrainedModel1()
         let model2 = TrainedModel2()
@@ -52,7 +51,6 @@ class EmotionQuestionnaire: UIViewController {
             let appleScore = Double(sentimentAnalysis?.rawValue ?? "0") ?? 0
             
             // MARK: Saving stuff in class variables!!!
-            
             emotionsQsDetected.append(model1Pred.label)
             emotionsQsDetected.append(model2Pred.label)
             emotionsQsDetected.append(model3Pred.label)
@@ -92,11 +90,11 @@ class EmotionQuestionnaire: UIViewController {
     
     @IBAction func buttonFunc(_ sender: Any) {
         
-        if inputText.text == "" {
+        if inputText.text.isEmpty {
             alertMessage(msg: "Please input some text before pressing the 'next' button. Thank you.")
         }
-        else if inputText.text.count == 1 {
-            alertMessage(msg: "Please input a more descriptive answer. A good amount would be one to two whole sentences. Thank you.")
+        else if !inputText.text.contains(" ") || inputText.text.count == 1 {
+            alertMessage(msg: "Please input a more descriptive answer. A good amount would be one to two sentences. Thank you.")
         }
         else {
             let textToAnalyse = inputText.text!
@@ -146,10 +144,8 @@ class ResultEmotionAnalysis: UIViewController {
     
     // Where to store the ID of the logged in user passed from the HomeQuestionnaireAnalysis view controller.
     var profileID:Int?
-    
     var emotionsDetected:[String]?
     var sentimentsDetected:[Double]?
-    
     var percentagesEmotions:[String: Double] = [:]
     
     @IBOutlet var resultsQ1: UILabel!
@@ -206,7 +202,6 @@ class ResultEmotionAnalysis: UIViewController {
     
     func saveInfoForGraph(emotionDetected: [String], percentEmotion: [Double], sentimentAverage: Double) {
         let realm = try! Realm()
-        
         // Storing new items in Realm properties.
         // ##########################################
         let emotionResults = EmotionAnalysisResults()

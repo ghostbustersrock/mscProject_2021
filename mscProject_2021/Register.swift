@@ -21,7 +21,12 @@ class Register: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameField.attributedPlaceholder = NSAttributedString(string: "i.e. msc_2021",
+                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x3F8098)])
+        
     }
+    
     // Outlets of the UI objects to make them interactive.
     @IBOutlet var tigerBack: UIButton!
     @IBOutlet var rabbitBack: UIButton!
@@ -74,8 +79,8 @@ class Register: UIViewController {
     // Function used to either save the entered details or check if the entered details meet the sign-up field criteria.
     func errorCriteria() {
         // Highlight username containing whitespaces.
-        if usernameField.text?.hasWhitespacesNewlines() == true || usernameField.text!.hasDigits() == true {
-            errorMsg.text = "Username contains whitespaces or numbers"
+        if usernameField.text?.hasWhitespacesNewlines() == true {
+            errorMsg.text = "Username contains whitespaces"
             borderUsername()
         }
         // Highlight password being less than 8 characters or contains whitespaces.
@@ -114,7 +119,7 @@ class Register: UIViewController {
                 errorMsg.text = ""
                 
                 // Display successful alert message to then perform a segue back to the app's launch page (aka login page) once a successful registration and data saving occurs.
-                let alertView = UIAlertController(title: "Success!", message: "You have successfully registered!", preferredStyle: .actionSheet)
+                let alertView = UIAlertController(title: "Success!", message: "You have successfully registered!", preferredStyle: .alert)
 
                 let goHomeAction = UIAlertAction (title: "Go home", style: .default) { alertAction in
                     // Just for sercurity purposes remove all values from the outlets and variables used, whose values need to be saved.
@@ -211,7 +216,7 @@ class Register: UIViewController {
             giraffeBack.backgroundColor = UIColor.clear
             gorillaBack.backgroundColor = UIColor.clear
             catBack.backgroundColor = UIColor.clear
-            bearBack.backgroundColor = UIColor.green
+            bearBack.backgroundColor = UIColor(hex: 0x519BB2)
             frogBack.backgroundColor = UIColor.clear
             lionBack.backgroundColor = UIColor.clear
         }
@@ -234,7 +239,7 @@ class Register: UIViewController {
             rabbitBack.backgroundColor = UIColor.clear
             giraffeBack.backgroundColor = UIColor.clear
             gorillaBack.backgroundColor = UIColor.clear
-            catBack.backgroundColor = UIColor.green
+            catBack.backgroundColor = UIColor(hex: 0x519BB2)
             bearBack.backgroundColor = UIColor.clear
             frogBack.backgroundColor = UIColor.clear
             lionBack.backgroundColor = UIColor.clear
@@ -254,7 +259,7 @@ class Register: UIViewController {
             animalPressed(name: "dog")
             
             tigerBack.backgroundColor = UIColor.clear
-            dogBack.backgroundColor = UIColor.green
+            dogBack.backgroundColor = UIColor(hex: 0x519BB2)
             rabbitBack.backgroundColor = UIColor.clear
             giraffeBack.backgroundColor = UIColor.clear
             gorillaBack.backgroundColor = UIColor.clear
@@ -284,7 +289,7 @@ class Register: UIViewController {
             gorillaBack.backgroundColor = UIColor.clear
             catBack.backgroundColor = UIColor.clear
             bearBack.backgroundColor = UIColor.clear
-            frogBack.backgroundColor = UIColor.green
+            frogBack.backgroundColor = UIColor(hex: 0x519BB2)
             lionBack.backgroundColor = UIColor.clear
         }
         else {
@@ -304,7 +309,7 @@ class Register: UIViewController {
             tigerBack.backgroundColor = UIColor.clear
             dogBack.backgroundColor = UIColor.clear
             rabbitBack.backgroundColor = UIColor.clear
-            giraffeBack.backgroundColor = UIColor.green
+            giraffeBack.backgroundColor = UIColor(hex: 0x519BB2)
             gorillaBack.backgroundColor = UIColor.clear
             catBack.backgroundColor = UIColor.clear
             bearBack.backgroundColor = UIColor.clear
@@ -330,7 +335,7 @@ class Register: UIViewController {
             dogBack.backgroundColor = UIColor.clear
             rabbitBack.backgroundColor = UIColor.clear
             giraffeBack.backgroundColor = UIColor.clear
-            gorillaBack.backgroundColor = UIColor.green
+            gorillaBack.backgroundColor = UIColor(hex: 0x519BB2)
             catBack.backgroundColor = UIColor.clear
             bearBack.backgroundColor = UIColor.clear
             frogBack.backgroundColor = UIColor.clear
@@ -358,7 +363,7 @@ class Register: UIViewController {
             catBack.backgroundColor = UIColor.clear
             bearBack.backgroundColor = UIColor.clear
             frogBack.backgroundColor = UIColor.clear
-            lionBack.backgroundColor = UIColor.green
+            lionBack.backgroundColor = UIColor(hex: 0x519BB2)
         }
         else {
             lionBack.backgroundColor = UIColor.clear
@@ -377,7 +382,7 @@ class Register: UIViewController {
             
             tigerBack.backgroundColor = UIColor.clear
             dogBack.backgroundColor = UIColor.clear
-            rabbitBack.backgroundColor = UIColor.green
+            rabbitBack.backgroundColor = UIColor(hex: 0x519BB2)
             giraffeBack.backgroundColor = UIColor.clear
             gorillaBack.backgroundColor = UIColor.clear
             catBack.backgroundColor = UIColor.clear
@@ -400,7 +405,7 @@ class Register: UIViewController {
             pressedArray["tiger"] = true
             animalPressed(name: "tiger")
             
-            tigerBack.backgroundColor = UIColor.green
+            tigerBack.backgroundColor = UIColor(hex: 0x519BB2)
             dogBack.backgroundColor = UIColor.clear
             rabbitBack.backgroundColor = UIColor.clear
             giraffeBack.backgroundColor = UIColor.clear
@@ -472,16 +477,5 @@ class Register: UIViewController {
         passwordField.layer.borderWidth = 0
         repeatPassField.layer.borderColor = UIColor.clear.cgColor
         repeatPassField.layer.borderWidth = 0
-    }
-}
-
-// Extension created by me to check if a string contains whitespaces, newlines and decimal digits.
-extension String {
-    func hasWhitespacesNewlines() -> Bool {
-        return rangeOfCharacter(from: .whitespacesAndNewlines) != nil
-    }
-    
-    func hasDigits() -> Bool {
-        return rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
     }
 }

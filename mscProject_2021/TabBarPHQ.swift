@@ -19,6 +19,9 @@ class TabBarPHQ: UIViewController {
         self.performSegue(withIdentifier: "toEMOTIONtest", sender: self)
     }
     
+    @IBAction func goBackQsHome(segue: UIStoryboardSegue) {
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

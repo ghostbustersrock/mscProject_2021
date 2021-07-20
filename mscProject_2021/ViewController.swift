@@ -63,6 +63,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Print path to access Realm file to view saved objects and field's values.
         print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        usernameInput.attributedPlaceholder = NSAttributedString(string: "Username",
+                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x3F8098)])
+        
+        passwordInput.attributedPlaceholder = NSAttributedString(string: "Password",
+                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x3F8098)])
+        
     }
 
     // When a segue to another UI occurs bring within the ProfileTab UI class the unique ID of the logged in user along other information to be displayed on their profile.
@@ -81,5 +88,25 @@ class ViewController: UIViewController {
     // This function is called to hide the keyboard whenever we touch the screen, after it appears.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+}
+
+// Extension used so for app to use HEX coded colours.
+extension UIColor {
+    convenience init(hex: Int) {
+        let rgbComponents = (R: CGFloat((hex>>16) & 0xff)/255, G: CGFloat((hex>>08) & 0xff)/255, B: CGFloat((hex>>00) & 0xff)/255)
+        self.init(red: rgbComponents.R, green: rgbComponents.G, blue: rgbComponents.B, alpha: 1)
+    }
+
+}
+
+// Extension used to check if a string contains whitespaces, newlines and decimal digits.
+extension String {
+    func hasWhitespacesNewlines() -> Bool {
+        return rangeOfCharacter(from: .whitespacesAndNewlines) != nil
+    }
+    
+    func hasDigits() -> Bool {
+        return rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
     }
 }

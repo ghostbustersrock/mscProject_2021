@@ -244,10 +244,6 @@ class HomeQuestionnaireAnalysis: UIViewController {
         self.performSegue(withIdentifier: "startAnalysisQ", sender: self)
     }
     
-    @IBAction func homeAnalysis(segue: UIStoryboardSegue) {
-
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startAnalysisQ" {
             let receiverVC = segue.destination as! EmotionQuestionnaire

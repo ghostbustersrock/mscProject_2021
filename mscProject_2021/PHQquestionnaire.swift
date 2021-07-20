@@ -29,45 +29,45 @@ class PHQquestionnaire: UIViewController {
     @IBAction func answer1(_ sender: Any) {
         pressedButton = 1
         points = 0
-        answersPHQ[0].backgroundColor = .systemGray2
-        answersPHQ[1].backgroundColor = .systemGray5
-        answersPHQ[2].backgroundColor = .systemGray5
-        answersPHQ[3].backgroundColor = .systemGray5
+        answersPHQ[0].backgroundColor = UIColor(hex: 0x519BB2)
+        answersPHQ[1].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[2].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[3].backgroundColor = UIColor(hex: 0x95C9E9)
     }
     
     @IBAction func answer2(_ sender: Any) {
         pressedButton = 2
         points = 1
-        answersPHQ[0].backgroundColor = .systemGray5
-        answersPHQ[1].backgroundColor = .systemGray2
-        answersPHQ[2].backgroundColor = .systemGray5
-        answersPHQ[3].backgroundColor = .systemGray5
+        answersPHQ[0].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[1].backgroundColor = UIColor(hex: 0x519BB2)
+        answersPHQ[2].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[3].backgroundColor = UIColor(hex: 0x95C9E9)
     }
     
     @IBAction func answer3(_ sender: Any) {
         pressedButton = 3
         points = 2
-        answersPHQ[0].backgroundColor = .systemGray5
-        answersPHQ[1].backgroundColor = .systemGray5
-        answersPHQ[2].backgroundColor = .systemGray2
-        answersPHQ[3].backgroundColor = .systemGray5
+        answersPHQ[0].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[1].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[2].backgroundColor = UIColor(hex: 0x519BB2)
+        answersPHQ[3].backgroundColor = UIColor(hex: 0x95C9E9)
     }
     
     @IBAction func answer4(_ sender: Any) {
         pressedButton = 4
         points = 3
-        answersPHQ[0].backgroundColor = .systemGray5
-        answersPHQ[1].backgroundColor = .systemGray5
-        answersPHQ[2].backgroundColor = .systemGray5
-        answersPHQ[3].backgroundColor = .systemGray2
+        answersPHQ[0].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[1].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[2].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[3].backgroundColor = UIColor(hex: 0x519BB2)
     }
     
     @IBAction func nextFinish(_ sender: Any) {
         
-        answersPHQ[0].backgroundColor = .systemGray5
-        answersPHQ[1].backgroundColor = .systemGray5
-        answersPHQ[2].backgroundColor = .systemGray5
-        answersPHQ[3].backgroundColor = .systemGray5
+        answersPHQ[0].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[1].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[2].backgroundColor = UIColor(hex: 0x95C9E9)
+        answersPHQ[3].backgroundColor = UIColor(hex: 0x95C9E9)
         
         atQuestion += 1
         questionHeader += 1
@@ -124,7 +124,7 @@ class PHQquestionnaire: UIViewController {
                 self.depressionTreatment = ""
                 
                 // Return to the homepage once "Go home" has been pressed.
-                self.performSegue(withIdentifier: "goBackToPHQ", sender: self)
+                self.performSegue(withIdentifier: "goBackHome", sender: self)
             }
 
             alertView.addAction(goHomeAction)
@@ -194,9 +194,5 @@ class MainScreenPHQ: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("THIS IS THE LOG IN ID: \(profileID!)!!! OHMG")
-    }
-    
-    @IBAction func goBackToPHQ(segue: UIStoryboardSegue) {
-
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C05FC542661A20A00E2A5B0 /* HelpTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05FC532661A20A00E2A5B0 /* HelpTab.swift */; };
 		6C0D018426A85BE60060630D /* CausesMHtts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D018326A85BE60060630D /* CausesMHtts.swift */; };
+		6C0D018B26A874250060630D /* UILabel+Copyable in Frameworks */ = {isa = PBXBuildFile; productRef = 6C0D018A26A874250060630D /* UILabel+Copyable */; };
 		6C22EC3A268C85880067E943 /* PHQquestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22EC39268C85880067E943 /* PHQquestionnaire.swift */; };
 		6C22EC3E268CC30B0067E943 /* TabBarPHQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22EC3D268CC30B0067E943 /* TabBarPHQ.swift */; };
 		6C3325DC266FD6F400C67FA9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3325DB266FD6F400C67FA9 /* Realm */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		6C05FC532661A20A00E2A5B0 /* HelpTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTab.swift; sourceTree = "<group>"; };
 		6C0D018326A85BE60060630D /* CausesMHtts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CausesMHtts.swift; sourceTree = "<group>"; };
+		6C0D018526A86FDD0060630D /* mscProject_2021-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mscProject_2021-Bridging-Header.h"; sourceTree = "<group>"; };
 		6C22EC39268C85880067E943 /* PHQquestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHQquestionnaire.swift; sourceTree = "<group>"; };
 		6C22EC3D268CC30B0067E943 /* TabBarPHQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPHQ.swift; sourceTree = "<group>"; };
 		6C5361A6269B2E160066E134 /* ActivitiesTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTab.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0D018B26A874250060630D /* UILabel+Copyable in Frameworks */,
 				6C3325DE266FD6F400C67FA9 /* RealmSwift in Frameworks */,
 				6CAEE985269C81DF0037F0B6 /* Charts in Frameworks */,
 				6C3325DC266FD6F400C67FA9 /* Realm in Frameworks */,
@@ -200,6 +203,7 @@
 				6C6789B82676774100F1DE53 /* IQKeyboardManagerSwift.h */,
 				6C6789B92676774100F1DE53 /* Categories */,
 				6C6789BF2676774100F1DE53 /* IQKeyboardManager+UITextFieldViewNotification.swift */,
+				6C0D018526A86FDD0060630D /* mscProject_2021-Bridging-Header.h */,
 			);
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
@@ -274,6 +278,7 @@
 				6C3325DB266FD6F400C67FA9 /* Realm */,
 				6C3325DD266FD6F400C67FA9 /* RealmSwift */,
 				6CAEE984269C81DF0037F0B6 /* Charts */,
+				6C0D018A26A874250060630D /* UILabel+Copyable */,
 			);
 			productName = mscProject_2021;
 			productReference = 6C612DEA265AB6AD00CD27E5 /* mscProject_2021.app */;
@@ -290,6 +295,7 @@
 				TargetAttributes = {
 					6C612DE9265AB6AD00CD27E5 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -305,6 +311,7 @@
 			packageReferences = (
 				6C3325DA266FD6F400C67FA9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				6C91888C269C7F2B007BC3FF /* XCRemoteSwiftPackageReference "Charts" */,
+				6C0D018926A874250060630D /* XCRemoteSwiftPackageReference "UILabel-Copyable" */,
 			);
 			productRefGroup = 6C612DEB265AB6AD00CD27E5 /* Products */;
 			projectDirPath = "";
@@ -521,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K9698EA2Q8;
 				INFOPLIST_FILE = mscProject_2021/Info.plist;
@@ -530,6 +538,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LucaSantarelli.mscProject-2021";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mscProject_2021/IQKeyboardManagerSwift/mscProject_2021-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K9698EA2Q8;
 				INFOPLIST_FILE = mscProject_2021/Info.plist;
@@ -549,6 +560,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LucaSantarelli.mscProject-2021";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mscProject_2021/IQKeyboardManagerSwift/mscProject_2021-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -578,6 +590,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6C0D018926A874250060630D /* XCRemoteSwiftPackageReference "UILabel-Copyable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexandreos/UILabel-Copyable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
 		6C3325DA266FD6F400C67FA9 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -597,6 +617,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6C0D018A26A874250060630D /* UILabel+Copyable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C0D018926A874250060630D /* XCRemoteSwiftPackageReference "UILabel-Copyable" */;
+			productName = "UILabel+Copyable";
+		};
 		6C3325DB266FD6F400C67FA9 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6C3325DA266FD6F400C67FA9 /* XCRemoteSwiftPackageReference "realm-cocoa" */;

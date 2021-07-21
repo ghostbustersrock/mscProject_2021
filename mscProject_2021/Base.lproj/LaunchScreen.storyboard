@@ -21,11 +21,20 @@
                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-6L-JJb">
+                                <rect key="frame" x="95" y="222" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2PZ-Eb-j2E"/>
+                                    <constraint firstAttribute="width" constant="200" id="KcG-uR-eG6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="8HN-CW-mFw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DUo-6N-wXX"/>
+                            <constraint firstItem="p3L-6L-JJb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="Nne-DM-6kK"/>
+                            <constraint firstItem="p3L-6L-JJb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NpR-z8-F36"/>
                             <constraint firstItem="8HN-CW-mFw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="U7p-C4-97A"/>
                         </constraints>
                     </view>
@@ -35,4 +44,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loading" width="2000" height="2000"/>
+    </resources>
 </document>

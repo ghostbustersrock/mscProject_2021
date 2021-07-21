@@ -111,7 +111,7 @@ class PHQquestionnaire: UIViewController {
             }
             
             
-            let alertView = UIAlertController(title: "Done!", message: "You have completed the PHQ-9 questionnaire with a score of \(totalScore)/27. From the PHQ-9 assessment table, your score suggests your depression severity to be \(depressionSeverity). The proposed treatment is the following: \(depressionTreatment). The results will be displayed on your profile underneath the pie chart. The newest scores will always be shown first.", preferredStyle: .alert)
+            let alertView = UIAlertController(title: "Done!", message: "You have completed the PHQ-9 questionnaire with a score of \(totalScore)/27. From the PHQ-9 assessment table, your score suggests your depression severity to be \(depressionSeverity). The proposed treatment is the following: \(depressionTreatment). The results will be displayed on your profile underneath the emotion analysis' pie chart and sentiment score results. The newest scores will always be shown first.", preferredStyle: .alert)
 
             let goHomeAction = UIAlertAction (title: "Exit Test", style: .default) { alertAction in
                 // Just for sercurity purposes remove all values from the outlets and variables used, whose values need to be saved.
@@ -141,13 +141,9 @@ class PHQquestionnaire: UIViewController {
     }
     
     func phqResult() {
-        if totalScore == 0 {
-            depressionSeverity = "N/A"
-            depressionTreatment = "N/A"
-        }
-        else if totalScore >= 1 && totalScore <= 4 {
-            depressionSeverity = "NONE"
-            depressionTreatment = "none"
+        if totalScore >= 0 && totalScore <= 4 {
+            depressionSeverity = "NONE-MINIMAL"
+            depressionTreatment = "None"
             
         }
         else if totalScore >= 5 && totalScore <= 9 {
@@ -160,11 +156,11 @@ class PHQquestionnaire: UIViewController {
         }
         else if totalScore >= 15 && totalScore <= 19 {
             depressionSeverity = "MODERATELY SEVERE"
-            depressionTreatment = "Immediate initiation of pharmacotherapy and/or psychotherapy"
+            depressionTreatment = "Active treatment with pharmacotherapy and/or psychotherapy"
         }
         else {
             depressionSeverity = "SEVERE"
-            depressionTreatment = " Immediate initiation of pharmacotherapy and, if severe impairment or poor response to therapy, expedited referral to a mental health specialist for psychotherapy and/or collaborative management"
+            depressionTreatment = "Immediate initiation of pharmacotherapy and, if severe impairment or poor response to therapy, expedited referral to a mental health specialist for psychotherapy and/or collaborative management"
         }
     }
 }

@@ -33,6 +33,56 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     @IBOutlet var profilePic: UIImageView!
     @IBOutlet var profileUsernameDisplay: UILabel!
     
+    @IBAction func infoOne(_ sender: Any) {
+        
+        let msg = ""
+        displayResultInfo(infoToDisplay: 0, title: "Emotion Analysis Results", msg: msg)
+    }
+    
+    @IBAction func infoTwo(_ sender: Any) {
+        displayResultInfo(infoToDisplay: 1, title: severityText.text!)
+    }
+    
+    func displayResultInfo(infoToDisplay: Int, title: String, msg: String = "") {
+        var displayMsg:String?
+        var displayTitle:String?
+        
+        if infoToDisplay == 0 {
+            displayTitle = msg
+            displayMsg = msg
+        }
+        else {
+            if title == "NONE-MINIMAL" {
+                displayTitle = "NONE-MINIMAL"
+                displayMsg = "None"
+            }
+            else if title == "MILD" {
+                displayTitle = "MILD"
+                displayMsg = "Watchful waiting; repeat PHQ-9 at follow-up"
+            }
+            else if title == "MODERATE" {
+                displayTitle = "MODERATE"
+                displayMsg = "Treatment plan, considering counseling, follow-up and/or pharmacotherapy"
+            }
+            else if title == "MODERATELY SEVERE" {
+                displayTitle = "MODERATELY SEVERE"
+                displayMsg = "Active treatment with pharmacotherapy and/or psychotherapy"
+            }
+            else {
+                displayTitle = "SEVERE"
+                displayMsg = "Immediate initiation of pharmacotherapy and, if severe impairment or poor response to therapy, expedited referral to a mental health specialist for psychotherapy and/or collaborative management"
+            }
+        }
+        
+        let alertView = UIAlertController(title: displayTitle, message: displayMsg, preferredStyle: .alert)
+        
+        let exitView = UIAlertAction(title: "Okay", style: .cancel)
+        
+        alertView.addAction(exitView)
+        self.present(alertView, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func logOutButton(_ sender: Any) {
         let alertView = UIAlertController(title: "Log out?", message: "Are you sure you want to log out of your profile?", preferredStyle: .alert)
         
@@ -110,7 +160,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             numberOfElements = data!.scoreResPHQ.count-1
             maxIndex = data!.scoreResPHQ.count-1
             
-            numberOfScore.text = "Newest Results"
+            numberOfScore.text = "Newest PHQ-9 test results"
             displayScoreText.text = "\((data?.scoreResPHQ[numberOfElements])!)/27"
             severityText.text = "Severity: \((data?.severityResPHQ[numberOfElements])!)"
         }
@@ -131,6 +181,15 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         // Returns all the objects based on the supplied ID.
         let emotionsData = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!)
         
+        //---------------------------------------------------------------------------
+        /*
+        Title: Charts
+        Author: Daniel Cohen Gindi (danielgindi)
+        Release date: 2015
+        Code version: v4.0.1 Release, 6 Nov. 2020
+        Availability: https://github.com/danielgindi/Charts.git */
+        
+        
         // If the user already has data to display, then display it.
         if emotionsData.count > 0 {
             
@@ -142,13 +201,15 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             // Plotting the
             for i in 0..<emotionsData[maxIndexEmotion].emotionsDetected.count {
                 let dataEntry = PieChartDataEntry(value: emotionsData[maxIndexEmotion].emotionsPercentage[i], label: emotionsData[maxIndexEmotion].emotionsDetected[i], data: emotionsData[maxIndexEmotion].emotionsDetected[i] as AnyObject)
-
+                
                 dataEntries.append(dataEntry)
             }
 
             let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-            pieChartDataSet.colors = ChartColorTemplates.colorful()
             
+            pieChartDataSet.colors = [UIColor(hex: 0xff6b6b), UIColor(hex: 0xF94144), UIColor(hex: 0xffe66d), UIColor(hex: 0xF9A32B), UIColor(hex: 0xF9C74F), UIColor(hex: 0x90BE6D), UIColor(hex: 0x6AB47C), UIColor(hex: 0x43AA8B), UIColor(hex: 0x577590)]
+            
+            pieChartDataSet.valueColors = [UIColor.black]
 
             let pieChartData = PieChartData(dataSet: pieChartDataSet)
             pieChart.data = pieChartData
@@ -162,13 +223,21 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             pieChart.noDataText = "No emotion analysis test taken yet"
             sentimentAveScoreLabel.text = "Sentiment average score: N/A"
         }
+        //---------------------------------------------------------------------------
     }
-    
     
     func displayGraph(totalElementsEmotionFunc: Int) {
         let emotionsData = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!)
         var dataEntries:[ChartDataEntry] = []
         // Plotting the
+        
+        //---------------------------------------------------------------------------
+        /*
+        Title: Charts
+        Author: Daniel Cohen Gindi (danielgindi)
+        Release date: 2015
+        Code version: v4.0.1 Release, 6 Nov. 2020
+        Availability: https://github.com/danielgindi/Charts.git */
         
         // emotionsData[totalElementsEmotion].emotionsDetected List<String>
         for i in 0..<emotionsData[totalElementsEmotionFunc].emotionsDetected.count {
@@ -178,13 +247,17 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         }
         
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-        pieChartDataSet.colors = ChartColorTemplates.colorful()
+        pieChartDataSet.colors = [UIColor(hex: 0xff6b6b), UIColor(hex: 0xF94144), UIColor(hex: 0xffe66d), UIColor(hex: 0xF9A32B), UIColor(hex: 0xF9C74F), UIColor(hex: 0x90BE6D), UIColor(hex: 0x6AB47C), UIColor(hex: 0x43AA8B), UIColor(hex: 0x577590)]
+        
+        pieChartDataSet.valueColors = [UIColor.black]
         
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         pieChart.data = pieChartData
         
         sentimentAveScoreLabel.text = "Sentiment average score: \(emotionsData[totalElementsEmotion].sentimentAverage)"
         pieChart.legend.enabled = false
+        
+        //---------------------------------------------------------------------------
     }
     
     
@@ -205,7 +278,6 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             else {
                 pieChart.centerText = "Emotion analysis\nresults"
             }
-//            sentimentAveScoreLabel.text = "Sentiment average score: \(emotionsData[totalElementsEmotion].sentimentAverage)"
         }
     }
     
@@ -232,6 +304,10 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     // Function called to execute code only once when the view is presented the first time.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pieChart.highlightPerTapEnabled = false
+        pieChart.holeColor = .clear
+        
         
         // Passing the ID of the logged in user to the 'Questionnaires' tab-bar. This is necessary so to save the result of the questionnaires for the relative logged in user.
         let navigationController = self.tabBarController!.viewControllers![1] as! UINavigationController

@@ -154,6 +154,16 @@ class ResultEmotionAnalysis: UIViewController {
     @IBOutlet var resultsQ4: UILabel!
     @IBOutlet var resultsQ5: UILabel!
     
+    @IBAction func interpretResults(_ sender: Any) {
+        
+        let msgToDisplay = "The first three values are the emotions detected by each trained machine model, while the decimal number (positive or negative) is the sentiment score. The application will count the number of times each emotion occured, throughout each question, and then calculate its percentage. These percentages, along to the emotion they relate to, will then be displayed on a pie chart on your profile The newest results will always be shown first.  The sentiment score will be displayed underneath the pie chart as an average, found using each question's sentiment score.  As these are not professional trained models, the identified emotions should always be taken with a pinch of salt. The sentiment score values are used to validate whether the identified emotions from the models are close to correct, in identifying the emotions the user was trying to transpire."
+        
+        let alertView = UIAlertController(title: "Interpreting the Results", message: msgToDisplay, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Okay", style: .cancel)
+        alertView.addAction(alertAction)
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -238,6 +248,25 @@ class HomeQuestionnaireAnalysis: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func displayInformation(title: String, msg: String) {
+        let alertView = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Okay", style: .cancel)
+        alertView.addAction(alertAction)
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    @IBAction func moreInfoED(_ sender: Any) {
+        let msgToDisplay = "The emotion analysis questionnaire uses three trained machine learning models to detect for each question's response an emotion. Each model was trained with a dataset comprising of textual inputs and an emotion assigned to it, classifying the emotion that textual input was portraying. Three models are used in the emotion analysis questionnaire, so to have more accuracy in detecting emotions within a user's reponse, rather than having only one model identify a single emotion.   The detectable emotions are nine: sadness, anger, joy, fear, happy, worry, hate, relief and boredom."
+        
+        displayInformation(title: "Emotions Detected", msg: msgToDisplay)
+    }
+    
+    @IBAction func moreInfoSS(_ sender: Any) {
+        let msgToDisplay = "Along the three implemented machine leanring models, Apple's NLTagger class will be used to assign to each question's response a decimal value in the range of -1 and +1. This class analyzes a text's language so to a sentiment score of it, meaning how positive (+1 being very positive) or negative (-1 being very negative) the user expressed themselves in their answer. Receiving a score of 0 means the text was identified as emotionally neutral."
+        
+        displayInformation(title: "Sentiment Score", msg: msgToDisplay)
     }
     
     @IBAction func startButton(_ sender: Any) {

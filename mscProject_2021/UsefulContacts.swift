@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import UILabel_Copyable
 
 class UsefulContacts: UIViewController {
     
     let funcsToCall = UsefulFunctions()
     
+    @IBOutlet var labelsToCopy: [UILabel]!
     
     @IBOutlet var phone_email_text: [UIButton]!
     
@@ -54,7 +56,19 @@ class UsefulContacts: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        for label in labelsToCopy {
+            
+            //---------------------------------------------------------------------------
+            /*
+            Title: UILabel+Copyable
+            Author: Alexandre Santos (alexandreos), Max Ainatchi (maxwellainatchi) and ReadmeCritic
+            Release date: 2015
+            Code version: v2.0.1 Release, 15 Mar. 2021
+            Availability: https://github.com/alexandreos/UILabel-Copyable.git */
+            
+            label.isCopyingEnabled = true
+            //---------------------------------------------------------------------------
+        }
     }
 }

@@ -117,34 +117,3 @@ class HealthProblems: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
-
-
-
-class SelfCare: UIViewController {
-    
-    let usefulFunctions = UsefulFunctions()
-    
-    @IBAction func linkt_to_site(_ sender: Any) {
-        usefulFunctions.openSite(siteName: "https://www.mind.org.uk/information-support/types-of-mental-health-problems/mental-health-problems-introduction/self-care/")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Put any launch code here.
-    }
-}
-
-
-class Treatments: UIViewController {
-    
-    let usefulFunctions = UsefulFunctions()
-    
-    @IBAction func treatment_link(_ sender: Any) {
-        usefulFunctions.openSite(siteName: "https://www.mind.org.uk/information-support/types-of-mental-health-problems/mental-health-problems-introduction/treatment-options/")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Put any launch code here.
-    }
-}

@@ -11,35 +11,19 @@ import AVFoundation
 
 class HelpTab: UIViewController {
     
-    @IBOutlet var provaTestoSpeech: UILabel!
+    @IBOutlet var videoYoutube: WKWebView!
+    @IBOutlet var textToSpeak: UILabel!
     
-    // Synth object
-        let synthesizer = AVSpeechSynthesizer()
-        // Utterance object
-        var utterance = AVSpeechUtterance(string: "")
+    // Synthesizer object
+    let synthesizer = AVSpeechSynthesizer()
+    // Utterance object
+    var utterance = AVSpeechUtterance(string: "")
     
     @IBOutlet var playButtons: [UIButton]!
     
     @IBAction func playButton1(_ sender: Any) {
-        if (synthesizer.isSpeaking) {
-            playButtons[0].setImage(UIImage(named: "tts_stop"), for: .normal)
-            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
-        }
-        else if (!synthesizer.isSpeaking) {
-            playButtons[0].setImage(UIImage(named: "tts_start"), for: .normal)
-            // Getting text to read from the UITextView (textView).
-            utterance = AVSpeechUtterance(string: provaTestoSpeech.text!)
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-            utterance.rate = 0.5
-            synthesizer.speak(utterance)
-        }
-    }
-    
-    @IBOutlet var videoYoutube: WKWebView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        playVideo(videoURL: "G0zJGDokyWQ")
-        
+        let usefulFuncs = UsefulFunctions()
+        usefulFuncs.playTextToSpeak(utterance: &utterance, synthesizer: synthesizer, buttonPressed: playButtons[0], tts: textToSpeak.text!)
     }
     
     func playVideo(videoURL: String) {
@@ -48,5 +32,11 @@ class HelpTab: UIViewController {
             let request:URLRequest = URLRequest(url: videoURL)
             videoYoutube.load(request)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        playVideo(videoURL: "G0zJGDokyWQ")
+        
     }
 }

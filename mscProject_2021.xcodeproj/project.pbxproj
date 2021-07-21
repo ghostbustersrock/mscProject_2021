@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C05FC542661A20A00E2A5B0 /* HelpTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C05FC532661A20A00E2A5B0 /* HelpTab.swift */; };
+		6C0D018426A85BE60060630D /* CausesMHtts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D018326A85BE60060630D /* CausesMHtts.swift */; };
 		6C22EC3A268C85880067E943 /* PHQquestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22EC39268C85880067E943 /* PHQquestionnaire.swift */; };
 		6C22EC3E268CC30B0067E943 /* TabBarPHQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22EC3D268CC30B0067E943 /* TabBarPHQ.swift */; };
 		6C3325DC266FD6F400C67FA9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3325DB266FD6F400C67FA9 /* Realm */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		6C05FC532661A20A00E2A5B0 /* HelpTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTab.swift; sourceTree = "<group>"; };
+		6C0D018326A85BE60060630D /* CausesMHtts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CausesMHtts.swift; sourceTree = "<group>"; };
 		6C22EC39268C85880067E943 /* PHQquestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHQquestionnaire.swift; sourceTree = "<group>"; };
 		6C22EC3D268CC30B0067E943 /* TabBarPHQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPHQ.swift; sourceTree = "<group>"; };
 		6C5361A6269B2E160066E134 /* ActivitiesTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTab.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				6C812584265D4402006058DA /* Register.swift */,
 				6CC9ADF226600D0200AA745E /* ProfileTab.swift */,
 				6C05FC532661A20A00E2A5B0 /* HelpTab.swift */,
+				6C0D018326A85BE60060630D /* CausesMHtts.swift */,
 				6C5361A6269B2E160066E134 /* ActivitiesTab.swift */,
 				6CA54B292663BEEC00BA92A1 /* HealthProblems.swift */,
 				6CE796212667A9C80082115C /* UsefulContacts.swift */,
@@ -332,6 +335,7 @@
 			files = (
 				6C6789C62676774100F1DE53 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				6C6789D32676774100F1DE53 /* IQUITextFieldView+Additions.swift in Sources */,
+				6C0D018426A85BE60060630D /* CausesMHtts.swift in Sources */,
 				6C5361A7269B2E160066E134 /* ActivitiesTab.swift in Sources */,
 				6C6789D12676774100F1DE53 /* IQUIScrollView+Additions.swift in Sources */,
 				6CE796222667A9C80082115C /* UsefulContacts.swift in Sources */,

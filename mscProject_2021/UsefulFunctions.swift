@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-import MessageUI // To open the text message and email composition emails.
+import AVFoundation
+
 
 // This class contains useful functions (i.e. to open websites) used in various other classes.
 
@@ -28,4 +29,20 @@ class UsefulFunctions: UIViewController {
     func openSite(siteName: String) {
         UIApplication.shared.open(URL(string: siteName)! as URL, options: [:], completionHandler: nil)
     }
+    
+    func playTextToSpeak(utterance: inout AVSpeechUtterance, synthesizer: AVSpeechSynthesizer, buttonPressed: UIButton, tts: String) {
+        if (synthesizer.isSpeaking) {
+            buttonPressed.setImage(UIImage(named: "tts_start"), for: .normal)
+            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+        }
+        else if (!synthesizer.isSpeaking) {
+            buttonPressed.setImage(UIImage(named: "tts_stop"), for: .normal)
+            // Getting text to read from the UITextView (textView).
+            utterance = AVSpeechUtterance(string: tts)
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+            utterance.rate = 0.5
+            synthesizer.speak(utterance)
+        }
+    }
+    
 }

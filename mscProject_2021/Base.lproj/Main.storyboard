@@ -846,38 +846,22 @@ Password*</string>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sK-he-teG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sK-he-teG">
                                                 <rect key="frame" x="30" y="243" width="330" height="514"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="Qcg-x0-g49"/>
                                                     <constraint firstAttribute="height" constant="514" id="kSj-mO-eFJ"/>
                                                 </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Mental health">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" metaFont="systemBold" size="14"/>
-                                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <mutableString key="content"> is like physical health, everybody has it and it has to be taken care of. This can be a positive mental health, which allows us to think, feel and react in ways we need and want within our life. Negative mental health are periods in which our thinking and feelings become difficult, or sometimes impossible, to cope with. This can be as bad or worse than physical illness. One in four people in any given year unfortunately suffer from mental health problems, ranging from depression and anxiety to more rarer and severe problems such as schizophrenia and bipolar disorder.
+                                                <mutableString key="text">Mental health is like physical health, everybody has it and it has to be taken care of. This can positive, allowing us to think, feel and react in ways we need and want within our life. Negative mental health are periods in which our thinking and feelings become difficult, or sometimes impossible, to cope with. This can be as bad or worse than physical illness. One in four people in any given year unfortunately suffer from mental health problems, ranging from depression and anxiety to more rarer and severe problems such as schizophrenia and bipolar disorder.
 
-Experiencing mental health problems can be confusing and frightening at first, as if you were “losing your mind”. Negative and unrealistic representations of mental health problems (i.e. TV shows, film, media, etc.) often reinforce such preliminary feelings and potentially stop you from seeking help, or most importantly, talking about it. 
- Mental health problems are a common human experience, however, finding combinations of self-care, treatment and support, that works for you, will help you feel better.
-  The following video from the YouTube channel Mental Health at Work (2016) gives extra information on what mental health is.</mutableString>
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" metaFont="menu" size="14"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+Experiencing mental health problems can be confusing and frightening at first. Negative and unrealistic representations of mental health problems (i.e. TV shows, films, etc.) often reinforce such preliminary feelings and potentially stop you from seeking help, or most importantly, talking about it. 
+ Mental health problems are a common human experience, however, finding combinations of self-care, treatment and support, that works for you, will help you feel better.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qs-bQ-P6m">
-                                                <rect key="frame" x="30" y="786" width="330" height="178"/>
+                                                <rect key="frame" x="30" y="741" width="330" height="178"/>
                                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="nlk-wc-REY"/>
@@ -889,7 +873,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 </wkWebViewConfiguration>
                                             </wkWebView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-JL-FeN" userLabel="more_links">
-                                                <rect key="frame" x="30" y="1010" width="330" height="220"/>
+                                                <rect key="frame" x="30" y="990" width="330" height="220"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may also want to see" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTi-g0-ne2">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="36.666666666666664"/>
@@ -954,34 +938,46 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJv-a4-hEU">
-                                                <rect key="frame" x="74.666666666666671" y="1261" width="240.66666666666663" height="18"/>
+                                                <rect key="frame" x="74.666666666666671" y="1281" width="240.66666666666663" height="18"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                 <color key="textColor" red="0.31449198719999999" green="0.49198657270000001" blue="0.58432847259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV3-2a-gva">
-                                                <rect key="frame" x="31" y="220" width="20" height="20"/>
+                                                <rect key="frame" x="31" y="260" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="TqK-FX-mUP"/>
                                                     <constraint firstAttribute="height" constant="20" id="oUQ-Z0-I5c"/>
                                                 </constraints>
-                                                <state key="normal" image="tts_stop"/>
+                                                <state key="normal" image="tts_start"/>
                                                 <connections>
                                                     <action selector="playButton1:" destination="iwz-bn-Y5L" eventType="touchUpInside" id="iWD-9o-3aK"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Mental Health at Work, 2016)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOK-jx-jNo">
+                                                <rect key="frame" x="70" y="935" width="250" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="HPH-9z-bno"/>
+                                                    <constraint firstAttribute="height" constant="20" id="xdU-Rq-RjO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <color key="textColor" red="0.31449198719999999" green="0.49198657270000001" blue="0.58432847259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="PV3-2a-gva" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="-520" id="4wM-wl-uq7"/>
-                                            <constraint firstItem="ZJv-a4-hEU" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="520" id="9qg-Ee-v8M"/>
-                                            <constraint firstItem="D9V-JL-FeN" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="370" id="A7e-gl-2Hn"/>
+                                            <constraint firstItem="gOK-jx-jNo" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="195" id="1cD-uZ-4IP"/>
+                                            <constraint firstItem="PV3-2a-gva" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="-480" id="4wM-wl-uq7"/>
+                                            <constraint firstItem="ZJv-a4-hEU" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="540" id="9qg-Ee-v8M"/>
+                                            <constraint firstItem="D9V-JL-FeN" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="350" id="A7e-gl-2Hn"/>
                                             <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="B2w-zW-fDk"/>
+                                            <constraint firstItem="gOK-jx-jNo" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="DNc-vR-RzT"/>
                                             <constraint firstItem="ZJv-a4-hEU" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="ELQ-CG-TW4"/>
                                             <constraint firstItem="Gpf-1H-WDD" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="-601" id="Fjk-qp-n1b"/>
                                             <constraint firstItem="D9V-JL-FeN" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="Lbw-cd-HXV"/>
                                             <constraint firstItem="PV3-2a-gva" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" constant="-154" id="MJr-mb-bqc"/>
-                                            <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="125" id="Siq-9a-oi3"/>
+                                            <constraint firstItem="7qs-bQ-P6m" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="80" id="Siq-9a-oi3"/>
                                             <constraint firstItem="0sK-he-teG" firstAttribute="centerX" secondItem="fN5-yZ-k11" secondAttribute="centerX" id="XG2-ZT-Tdm"/>
                                             <constraint firstItem="0sK-he-teG" firstAttribute="centerY" secondItem="fN5-yZ-k11" secondAttribute="centerY" constant="-250" id="XHp-Yd-qzV"/>
                                             <constraint firstAttribute="height" constant="1500" id="ZJM-i3-jff"/>
@@ -991,6 +987,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="fN5-yZ-k11" firstAttribute="top" secondItem="zYw-zQ-dyA" secondAttribute="top" id="4BB-c9-iY4"/>
                                     <constraint firstItem="fN5-yZ-k11" firstAttribute="leading" secondItem="zYw-zQ-dyA" secondAttribute="leading" id="DBg-Re-dme"/>
@@ -1001,7 +998,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YT8-Yj-1EP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zYw-zQ-dyA" firstAttribute="leading" secondItem="YT8-Yj-1EP" secondAttribute="leading" id="BaG-X8-ILZ"/>
                             <constraint firstAttribute="bottom" secondItem="zYw-zQ-dyA" secondAttribute="bottom" id="Sw6-Yt-d8X"/>
@@ -1012,7 +1009,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                     <navigationItem key="navigationItem" id="g14-i5-JS6"/>
                     <size key="freeformSize" width="390" height="1500"/>
                     <connections>
-                        <outlet property="provaTestoSpeech" destination="0sK-he-teG" id="2SW-2W-Cd9"/>
+                        <outlet property="textToSpeak" destination="0sK-he-teG" id="AtT-5v-nue"/>
                         <outlet property="videoYoutube" destination="7qs-bQ-P6m" id="uS7-cn-gFm"/>
                         <outletCollection property="playButtons" destination="PV3-2a-gva" collectionClass="NSMutableArray" id="1zl-CA-htJ"/>
                     </connections>
@@ -1029,42 +1026,19 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN3-Es-ruY">
-                                <rect key="frame" x="30" y="111.66666666666669" width="330" height="401.00000000000006"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN3-Es-ruY">
+                                <rect key="frame" x="30" y="131.66666666666663" width="330" height="401"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="401" id="ht8-fz-Tqx"/>
                                     <constraint firstAttribute="width" constant="330" id="nuX-7A-ay8"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <mutableString key="content">Mental health problems can be self-treated as well, depending on the severity. Changes in ones lifestyle or other techniques can help manage mental health problems as well as prevent their full development. These changes and techniques can work, as well as they cannot. It is important to always be aware when to seek the help of an expert (refer to the section '</mutableString>
-                                        <attributes>
-                                            <color key="NSColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" metaFont="system" size="15"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Useful contacts">
-                                        <attributes>
-                                            <color key="NSColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" metaFont="system" size="15"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="15"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <mutableString key="content">' in the previous page). It is also important to understand that there is not instant solution from recovering or pushing away mental health problems, it is a process that takes time, especially based on the severity of the issue.  Some self-care techniques can be for example keeping a mood diary, trying peer support (talking to others), take time for yourself, look after your physical health and more.  For more self-care suggestions and tips visit</mutableString>
-                                        <attributes>
-                                            <color key="NSColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" metaFont="system" size="15"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <mutableString key="text">Depending on the severity, mental health problems can also be self-treated. Changes in ones lifestyle or other techniques can help manage mental health problems as well as prevent their full development. These changes and techniques can work, as well as they cannot. It is important to always be aware when to seek the help of an expert (refer to the section 'Useful contacts' in the previous page). It is also important to understand that there is not instant solution from recovering or pushing away mental health problems, it is a process that takes time, especially based on the severity of the issue.  Some self-care techniques can be, for example, keeping a mood diary, trying peer support (talking to others), take time for yourself, look after your physical health and more.  For more self-care suggestions and tips visit</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeH-IK-B2Z">
-                                <rect key="frame" x="29" y="496" width="168" height="30"/>
+                                <rect key="frame" x="29" y="517" width="168" height="30"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="self-care on mind.org.uk">
@@ -1086,19 +1060,36 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                 <color key="textColor" red="0.31449198719999999" green="0.49198657270000001" blue="0.58432847259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pd-zr-aTF">
+                                <rect key="frame" x="31" y="112" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="HHL-1j-ybi"/>
+                                    <constraint firstAttribute="width" constant="20" id="L3b-gB-Ctf"/>
+                                </constraints>
+                                <state key="normal" image="tts_start"/>
+                                <connections>
+                                    <action selector="buttonPressed1:" destination="w24-o7-0XM" eventType="touchUpInside" id="DJ4-K5-sd3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qP5-hx-Jjk"/>
                         <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="AnJ-4n-BJM" firstAttribute="centerX" secondItem="dH5-rg-893" secondAttribute="centerX" id="7Db-jJ-SOV"/>
-                            <constraint firstItem="FeH-IK-B2Z" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="89" id="FuU-BZ-9eP"/>
+                            <constraint firstItem="FeH-IK-B2Z" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="110" id="FuU-BZ-9eP"/>
                             <constraint firstItem="FeH-IK-B2Z" firstAttribute="centerX" secondItem="dH5-rg-893" secondAttribute="centerX" constant="-82" id="OYk-AM-RFa"/>
-                            <constraint firstItem="gN3-Es-ruY" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="-110" id="OrV-gR-men"/>
+                            <constraint firstItem="gN3-Es-ruY" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="-90" id="OrV-gR-men"/>
                             <constraint firstItem="AnJ-4n-BJM" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="290" id="WJc-YH-wep"/>
+                            <constraint firstItem="2pd-zr-aTF" firstAttribute="centerX" secondItem="dH5-rg-893" secondAttribute="centerX" constant="-154" id="dNz-zZ-u8w"/>
+                            <constraint firstItem="2pd-zr-aTF" firstAttribute="centerY" secondItem="dH5-rg-893" secondAttribute="centerY" constant="-300" id="jBU-S8-OE9"/>
                             <constraint firstItem="gN3-Es-ruY" firstAttribute="centerX" secondItem="dH5-rg-893" secondAttribute="centerX" id="kY7-DW-Dkh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Self-care" id="bRA-ex-3n4"/>
+                    <connections>
+                        <outlet property="buttonPressed" destination="2pd-zr-aTF" id="i4q-Nv-z4V"/>
+                        <outlet property="ttsText" destination="gN3-Es-ruY" id="C2R-b5-Kna"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBb-lH-Mvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1118,8 +1109,19 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtw-Ie-97p">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="1400"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHk-6Z-KuA">
+                                                <rect key="frame" x="31" y="20" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="KrQ-jr-Q4a"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Tbk-fa-I3q"/>
+                                                </constraints>
+                                                <state key="normal" image="tts_start"/>
+                                                <connections>
+                                                    <action selector="buttonPressed1:" destination="czH-ZG-hth" eventType="touchUpInside" id="eGk-N9-9NB"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95N-Vh-nsR">
-                                                <rect key="frame" x="127.66666666666669" y="1235" width="135" height="30"/>
+                                                <rect key="frame" x="127.66666666666669" y="1300" width="135" height="30"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="More on treatments">
@@ -1137,56 +1139,104 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information taken from mind.org.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-v7-Q5a">
-                                                <rect key="frame" x="74.666666666666671" y="1341" width="240.66666666666663" height="18"/>
+                                                <rect key="frame" x="74.666666666666671" y="1361" width="240.66666666666663" height="18"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                 <color key="textColor" red="0.31449198719999999" green="0.49198657270000001" blue="0.58432847259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Bu3-x5-Qoz">
-                                                <rect key="frame" x="30" y="20" width="330" height="1200"/>
+                                                <rect key="frame" x="30" y="50" width="330" height="1250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6m-sQ-KJo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="125.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="128.66666666666666"/>
                                                         <string key="text">Different treatments are available to help fight against mental health problems. The NHS offers various of these, however, the two most common ones are the talking and psychiatric medication treatment. There are also available alternatives which will be talked about on this page.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talking treatments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKz-bm-89D">
-                                                        <rect key="frame" x="0.0" y="145.33333333333334" width="330" height="19.333333333333343"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                        <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3Q-BI-UUF">
+                                                        <rect key="frame" x="0.0" y="148.66666666666666" width="330" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talking treatments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKz-bm-89D">
+                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="20"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDO-T0-OHB">
+                                                                <rect key="frame" x="310" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="67O-ry-ok3"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="ZgK-2P-JlK"/>
+                                                                </constraints>
+                                                                <state key="normal" image="tts_start"/>
+                                                                <connections>
+                                                                    <action selector="buttonPressed2:" destination="czH-ZG-hth" eventType="touchUpInside" id="awf-Tr-uAH"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-Er-j6U">
-                                                        <rect key="frame" x="0.0" y="184.66666666666666" width="330" height="358.66666666666674"/>
-                                                        <string key="text">Talking treatments, as the words suggest, consists in having a time and space for someone to talk about their thoughs and experiences with an expert, in order to explore any issues. This can help with many different things like dealing with specific problems, coping with memories or experiences and more. Various terms are used to describe talking treatments, like consuelling, psychotherapy, therapy, talking therapy or psycological therapy. All these terms are talking treatments.   Contacting the NHS will most likely have them offer someone the Cognitive Behavioural Therapy (CBT) talking. This is a short-term treatment aiming to identify connections between someone’s thoughts, feelings and behaviours. This is done so to help develop practical skills to help manage negative patterns which may be causing such difficulties.</string>
+                                                        <rect key="frame" x="0.0" y="188.66666666666666" width="330" height="385.66666666666674"/>
+                                                        <mutableString key="text">Talking treatments consists in having a time and space for someone to talk about their thoughts and experiences with an expert, in order to explore any issues. This can help with many different things like dealing with specific problems, coping with memories or experiences, and more. Various terms are used to describe talking treatments, like counselling, psychotherapy, therapy, talking therapy or psychological therapy. All these terms are talking treatments.   Contacting the NHS will most likely have them offer the Cognitive Behavioural Therapy (CBT) talking. This is a short-term treatment aiming to identify connections between someone’s thoughts, feelings and behaviours. This is done so to help develop practical skills to help manage negative patterns which may be causing such difficulties. </mutableString>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medication treatments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE3-Ji-cRD">
-                                                        <rect key="frame" x="0.0" y="563.33333333333337" width="330" height="19.333333333333371"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                        <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5d-RJ-ST8">
+                                                        <rect key="frame" x="0.0" y="594.33333333333337" width="330" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medication treatments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE3-Ji-cRD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="20"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6I-Cx-toQ">
+                                                                <rect key="frame" x="310" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="9gN-va-8tu"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="hvh-vo-ald"/>
+                                                                </constraints>
+                                                                <state key="normal" image="tts_start"/>
+                                                                <connections>
+                                                                    <action selector="buttonPressed3:" destination="czH-ZG-hth" eventType="touchUpInside" id="pIK-cj-6Cb"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-Ua-KVI">
-                                                        <rect key="frame" x="0.0" y="602.66666666666663" width="330" height="251"/>
-                                                        <string key="text">Psychiatric medication consists in being prescribed medications, not to cure mental health problems rather ease many of their symptoms. Based on the diagnosis different medications will be offerred. These can be antidepressants, antipsychotics, sleeping pills, minor tranquillisers, mood stabilisers and more.  It is vital to know that although medications can help ease negative mental health symptoms, they can also have negative side effects. Example of these can be worsening your mood, physical harm and addictive if taken in too high doses.</string>
+                                                        <rect key="frame" x="0.0" y="634.33333333333337" width="330" height="257"/>
+                                                        <mutableString key="text">Psychiatric medication consists in being prescribed medications, not to cure mental health problems rather to ease their symptoms. Based on the diagnosis, different medications will be offered. These can be antidepressants, antipsychotics, sleeping pills, minor tranquillisers, mood stabilisers and more.  It is vital to know that although medications can help ease negative mental health symptoms, they can also have negative side effects. Example of these can be worsening your mood, physical harm and addictive if taken in too high doses.</mutableString>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternative therapies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFd-A1-JT8">
-                                                        <rect key="frame" x="0.0" y="873.66666666666663" width="330" height="19.333333333333371"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                        <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eic-D3-U0V">
+                                                        <rect key="frame" x="0.0" y="911.33333333333337" width="330" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternative therapies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFd-A1-JT8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="20"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juo-V4-Mbh">
+                                                                <rect key="frame" x="310" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="Asx-CA-P2z"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="PyO-Uy-rDE"/>
+                                                                </constraints>
+                                                                <state key="normal" image="tts_start"/>
+                                                                <connections>
+                                                                    <action selector="buttonPressed4:" destination="czH-ZG-hth" eventType="touchUpInside" id="9la-IM-FP1"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MN-qQ-V09">
-                                                        <rect key="frame" x="0.0" y="913" width="330" height="287"/>
-                                                        <string key="text">Many other alternatives are available to help prevent or ease mental health problems. One of the most common alternatives are arts and creative therapies. These consists in using the arts (i.e. music, patining, etc.) to express and understand yourself in therapeutic way and environment. Other activities, such as yoga, can also help, mainly to manage stress but also for common symptoms of mental health problems.     For more information on treatments (specifically medical ones) click the link below to be redirected to Mind's website.</string>
+                                                        <rect key="frame" x="0.0" y="951.33333333333337" width="330" height="298.66666666666663"/>
+                                                        <mutableString key="text">Many other alternatives are available to help prevent or ease mental health problems. One of the most common alternatives are arts and creative therapies. These consists in using the arts (i.e. music, painting, etc.) to express and understand yourself in a therapeutic way and environment. Other activities, such as yoga, can also help, mainly to manage stress, but also for common symptoms of mental health problems.     For more information on treatments (specifically medical ones) click the link below to be redirected to Mind's website.</mutableString>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -1194,22 +1244,25 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="MHE-nB-kQ8"/>
-                                                    <constraint firstAttribute="height" constant="1200" id="x4T-oX-Z1a"/>
+                                                    <constraint firstAttribute="height" constant="1250" id="x4T-oX-Z1a"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="95N-Vh-nsR" firstAttribute="centerY" secondItem="jtw-Ie-97p" secondAttribute="centerY" constant="550" id="0KG-4k-ohA"/>
-                                            <constraint firstItem="Bu3-x5-Qoz" firstAttribute="centerY" secondItem="jtw-Ie-97p" secondAttribute="centerY" constant="-80" id="GRa-Hn-PQb"/>
+                                            <constraint firstItem="95N-Vh-nsR" firstAttribute="centerY" secondItem="jtw-Ie-97p" secondAttribute="centerY" constant="615" id="0KG-4k-ohA"/>
+                                            <constraint firstItem="Bu3-x5-Qoz" firstAttribute="centerY" secondItem="jtw-Ie-97p" secondAttribute="centerY" constant="-25" id="GRa-Hn-PQb"/>
+                                            <constraint firstItem="xHk-6Z-KuA" firstAttribute="centerX" secondItem="jtw-Ie-97p" secondAttribute="centerX" constant="-154" id="Tzf-BY-kR3"/>
+                                            <constraint firstItem="xHk-6Z-KuA" firstAttribute="centerY" secondItem="jtw-Ie-97p" secondAttribute="centerY" constant="-670" id="V6T-BS-aYg"/>
                                             <constraint firstAttribute="height" constant="1400" id="YKV-w8-7SH"/>
                                             <constraint firstItem="f8Z-v7-Q5a" firstAttribute="centerX" secondItem="jtw-Ie-97p" secondAttribute="centerX" id="ctn-mg-lk7"/>
                                             <constraint firstItem="Bu3-x5-Qoz" firstAttribute="centerX" secondItem="jtw-Ie-97p" secondAttribute="centerX" id="psm-Ex-hMo"/>
                                             <constraint firstItem="95N-Vh-nsR" firstAttribute="centerX" secondItem="jtw-Ie-97p" secondAttribute="centerX" id="uBK-F6-491"/>
-                                            <constraint firstItem="f8Z-v7-Q5a" firstAttribute="centerY" secondItem="jtw-Ie-97p" secondAttribute="centerY" constant="650" id="uhN-iW-166"/>
+                                            <constraint firstItem="f8Z-v7-Q5a" firstAttribute="centerY" secondItem="jtw-Ie-97p" secondAttribute="centerY" constant="670" id="uhN-iW-166"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jtw-Ie-97p" secondAttribute="trailing" id="Hjn-xi-YwC"/>
                                     <constraint firstItem="jtw-Ie-97p" firstAttribute="leading" secondItem="Pa4-00-2nT" secondAttribute="leading" id="fdA-Dv-k7N"/>
@@ -1219,7 +1272,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zud-c7-BU6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Pa4-00-2nT" firstAttribute="top" secondItem="8pd-PO-9K0" secondAttribute="top" id="0oD-JI-3b3"/>
                             <constraint firstItem="jtw-Ie-97p" firstAttribute="width" secondItem="8pd-PO-9K0" secondAttribute="width" id="BvK-XK-bpH"/>
@@ -1230,6 +1283,16 @@ Experiencing mental health problems can be confusing and frightening at first, a
                     </view>
                     <navigationItem key="navigationItem" title="Treatment options" id="Huv-bE-2t5"/>
                     <size key="freeformSize" width="390" height="1400"/>
+                    <connections>
+                        <outletCollection property="playButtons" destination="xHk-6Z-KuA" collectionClass="NSMutableArray" id="cbJ-Ar-CmU"/>
+                        <outletCollection property="textToSpeak" destination="k6m-sQ-KJo" collectionClass="NSMutableArray" id="Uox-rn-m2f"/>
+                        <outletCollection property="playButtons" destination="uDO-T0-OHB" collectionClass="NSMutableArray" id="W0B-98-ZJd"/>
+                        <outletCollection property="textToSpeak" destination="FjU-Er-j6U" collectionClass="NSMutableArray" id="FfA-da-qBt"/>
+                        <outletCollection property="playButtons" destination="A6I-Cx-toQ" collectionClass="NSMutableArray" id="LND-gs-YJi"/>
+                        <outletCollection property="textToSpeak" destination="jQb-Ua-KVI" collectionClass="NSMutableArray" id="lhQ-kA-ZYi"/>
+                        <outletCollection property="playButtons" destination="juo-V4-Mbh" collectionClass="NSMutableArray" id="PwB-sF-3Ct"/>
+                        <outletCollection property="textToSpeak" destination="4MN-qQ-V09" collectionClass="NSMutableArray" id="jYS-Y6-qFI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgj-je-WvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1238,7 +1301,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
         <!--Causes of Mental Health Problems-->
         <scene sceneID="6mO-ee-G93">
             <objects>
-                <viewController id="AV5-IP-nSf" sceneMemberID="viewController">
+                <viewController id="AV5-IP-nSf" customClass="CausesMHtts" customModule="mscProject_2021" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJ2-xd-qqb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1249,76 +1312,120 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NP0-rc-e9h">
                                         <rect key="frame" x="0.0" y="17" width="390" height="1600"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-NI-bnW" userLabel="Button1">
+                                                <rect key="frame" x="31" y="25" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="0Xm-0a-7Ie"/>
+                                                    <constraint firstAttribute="height" constant="20" id="B5V-0D-7lZ"/>
+                                                </constraints>
+                                                <state key="normal" image="tts_start"/>
+                                                <connections>
+                                                    <action selector="playButton1:" destination="AV5-IP-nSf" eventType="touchUpInside" id="kfr-Rf-cGn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxA-dr-q8S" userLabel="Button2">
+                                                <rect key="frame" x="31" y="440" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="Qmc-z3-d2x"/>
+                                                    <constraint firstAttribute="height" constant="20" id="te8-9V-p8P"/>
+                                                </constraints>
+                                                <state key="normal" image="tts_start"/>
+                                                <connections>
+                                                    <action selector="playButton2:" destination="AV5-IP-nSf" eventType="touchUpInside" id="2Ki-XY-XRl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D40-d0-UFr" userLabel="Button3">
+                                                <rect key="frame" x="31" y="730" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="VFy-OC-t5h"/>
+                                                    <constraint firstAttribute="height" constant="20" id="usW-ef-vKJ"/>
+                                                </constraints>
+                                                <state key="normal" image="tts_start"/>
+                                                <connections>
+                                                    <action selector="playButton3:" destination="AV5-IP-nSf" eventType="touchUpInside" id="K4l-9C-hyZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsm-d8-cct" userLabel="Button4">
+                                                <rect key="frame" x="31" y="1185" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="kxG-cm-tCE"/>
+                                                    <constraint firstAttribute="width" constant="20" id="oHD-Wd-PxK"/>
+                                                </constraints>
+                                                <state key="normal" image="tts_start"/>
+                                                <connections>
+                                                    <action selector="playButton4:" destination="AV5-IP-nSf" eventType="touchUpInside" id="LuZ-qQ-1WQ"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uad-zj-pUu">
-                                                <rect key="frame" x="30" y="10.666666666666657" width="330" height="399"/>
+                                                <rect key="frame" x="30" y="50" width="330" height="360"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="g8L-Qm-i07"/>
-                                                    <constraint firstAttribute="height" constant="399" id="jf1-X9-vu8"/>
+                                                    <constraint firstAttribute="height" constant="360" id="jf1-X9-vu8"/>
                                                 </constraints>
-                                                <string key="text">There are a wide range of causes that may be factors to the development of mental health problems. These can be either single causes or a combination of them, which, based on the individual, can affect them at a more deeper level.  Some known factors which potentially can cause a period of poor mental health are:  -  Social disadvantage (i.e. poverty) -  Childhood abuse, trauma. -  The loss of someone close to you. -  Unemployment or job loss. -  Bullying, domestic violence or general abuse. -  Physical causes (i.e. neurological condition). -  Homelessness. -  Heartbroken. -  Stress (i.e. univeristy or work related). -  Misuse of drugs and alcohol. -  Social isolation or loneliness. </string>
+                                                <mutableString key="text">Mental health problems can be developed from a multitude of causes, either single or combinations of them, which, based on the individual, can affect them at a more deeper level.  Some known potential factors which can cause a period of poor mental health are:  -  Social disadvantage (i.e. poverty). -  Childhood abuse, trauma. -  The loss of someone close to you. -  Unemployment or job loss. -  Bullying, domestic violence or general abuse. -  Physical causes (i.e. neurological condition). -  Homelessness. -  Heartbroken. -  Stress (i.e. university or work related). -  Misuse of drugs and alcohol. -  Social isolation or loneliness.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b84-EE-p8x">
-                                                <rect key="frame" x="30" y="453" width="330" height="254"/>
+                                                <rect key="frame" x="30" y="490" width="330" height="220"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="2fD-Uo-ejI"/>
-                                                    <constraint firstAttribute="height" constant="254" id="QB9-QT-Pxw"/>
+                                                    <constraint firstAttribute="height" constant="220" id="QB9-QT-Pxw"/>
                                                 </constraints>
-                                                <string key="text">There are research that suggest mental health problems run in families. For example, having a parent affected by schizophrenia suggests that you yourself are more likely to develop it too. This, however, is still uncertain whether it is because of our genes or as other factors such as the environment the person grows in. Althougth research suggests that mental health problems may be influenced by genes, it is yet unsure which specific genes causes this. Researchers are still in doubt as many people who experience mental health problems do not have any parents, children or relatives with their same condition.</string>
+                                                <mutableString key="text">Some research suggests that mental health problems run in families. For example, having a parent affected by schizophrenia suggests that you yourself are more likely to develop it too. This, however, is still uncertain whether it is because of our genes or other factors. Althougth research suggests that mental health problems may be influenced by genes, it is yet unsure which, since researchers found that many people who experience mental health problems do not have any parents, children or relatives with their same condition.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is family a cause of mental health problems?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI6-X8-mzp">
-                                                <rect key="frame" x="30" y="391" width="330" height="70"/>
+                                                <rect key="frame" x="30" y="465" width="330" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="RHg-ow-urR"/>
-                                                    <constraint firstAttribute="height" constant="70" id="U3R-8e-2j6"/>
+                                                    <constraint firstAttribute="height" constant="20" id="U3R-8e-2j6"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is the brain's chemistry a factor?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmZ-NE-lvs">
-                                                <rect key="frame" x="30" y="722" width="330" height="46"/>
+                                                <rect key="frame" x="30" y="755" width="330" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="46" id="8ee-6r-YFW"/>
+                                                    <constraint firstAttribute="height" constant="20" id="8ee-6r-YFW"/>
                                                     <constraint firstAttribute="width" constant="330" id="JEV-MS-LQE"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How common are mental health problems?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2a-w9-lhf">
-                                                <rect key="frame" x="30" y="1160" width="330" height="46"/>
+                                                <rect key="frame" x="30" y="1210" width="330" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="46" id="8hf-1n-8oe"/>
+                                                    <constraint firstAttribute="height" constant="20" id="8hf-1n-8oe"/>
                                                     <constraint firstAttribute="width" constant="330" id="ewj-iR-Y1r"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m9-Ub-Mi7">
-                                                <rect key="frame" x="30" y="751" width="330" height="398"/>
+                                                <rect key="frame" x="30" y="771" width="330" height="398"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="MQY-J8-ocj"/>
                                                     <constraint firstAttribute="height" constant="398" id="fXG-Pc-gbU"/>
                                                 </constraints>
-                                                <string key="text">Some research suggests that variations in certain brain chemicals (i.e. serotonin and dopamine) may be linked to mental health problems, however, no one understands how or why. Although there is no strong evidence supporting such hypothesis, chemical imbalance in our brains is still used by some to explain mental health problems. This is due to two main reasons:  There is a lot of evidence showing how medications can possitively treat some mental health problem symptons (NOTE: drugs do not work the same way with everyone).  Since mental health problems can feel quite persona and hard to understand, the idea of there being a distinct physical cause for difficult thoughts and feelings may make it easier for people to talk about their experiences and consequently asking for help.</string>
+                                                <mutableString key="text">Some research suggests that variations in certain brain chemicals (i.e. serotonin and dopamine) may be linked to mental health problems, however, how or why is unknown. Although there is no strong evidence supporting such hypothesis, chemical imbalance in our brains is still used by some to explain mental health problems, mainly due to two reasons:  There is a lot of evidence showing how medications can positively treat some mental health symptoms (NOTE: drugs do not work the same way with everyone).  Since mental health problems can feel quite personal and hard to understand, the idea of there being a distinct physical cause for difficult thoughts and feelings may make it easier for people to talk about their experiences and consequently asking for help.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPV-uc-1hO">
-                                                <rect key="frame" x="30" y="1186.6666666666667" width="330" height="333"/>
+                                                <rect key="frame" x="30" y="1235" width="330" height="290"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="333" id="gGg-IE-79s"/>
+                                                    <constraint firstAttribute="height" constant="290" id="gGg-IE-79s"/>
                                                     <constraint firstAttribute="width" constant="330" id="tlY-N1-6e2"/>
                                                 </constraints>
-                                                <string key="text">Statistics from a 2007 and 2014 research conducted in England, suggests the each year in England 1 in 4 people experiences a kind of mental health problem. While 1 in 6 people report having experienced a common mental health problem (i.e. anxiety and depression) in any given week, always in England.  It is worth noting that unfortunately many of us go through some sort of mental health problem. Some more mildly others more severely. It is important to look after ourselves and understand when such problems can be self-treated or requires help from experts. A more important thing to understand is that it is okay to not be okay and that everyone may go through such issues.</string>
+                                                <mutableString key="text">Statistics from a 2007 and 2014 research conducted in England, suggests that each year in England 1 in 4 people experiences a kind of mental health problem and 1 in 6 people report having experienced a common mental health problem (i.e. anxiety and depression) in any given week.  Unfortunately, many of us go through some sort of mental health problem. Some more mildly others more severely. It is important to look after ourselves and understand when such problems can be self-treated or require expert help. A more important thing to understand is that it is okay to not be okay and that everyone may go through such issues.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -1336,26 +1443,35 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         </subviews>
                                         <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstItem="lsm-d8-cct" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" constant="-154" id="0QH-Ve-pHw"/>
                                             <constraint firstItem="zI6-X8-mzp" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="2Dz-DN-2sZ"/>
                                             <constraint firstItem="0m9-Ub-Mi7" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="4Ud-Sb-oZh"/>
-                                            <constraint firstItem="zI6-X8-mzp" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-374" id="5bT-ol-53a"/>
-                                            <constraint firstItem="b84-EE-p8x" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-220" id="7IQ-so-je6"/>
-                                            <constraint firstItem="hmZ-NE-lvs" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-55" id="CC8-b4-p5N"/>
+                                            <constraint firstItem="zI6-X8-mzp" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-325" id="5bT-ol-53a"/>
+                                            <constraint firstItem="b84-EE-p8x" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-200" id="7IQ-so-je6"/>
+                                            <constraint firstItem="D40-d0-UFr" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-60" id="7b1-Iz-YJ8"/>
+                                            <constraint firstItem="hmZ-NE-lvs" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-35" id="CC8-b4-p5N"/>
+                                            <constraint firstItem="lsm-d8-cct" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="395" id="G1b-bi-Zsf"/>
                                             <constraint firstItem="hmZ-NE-lvs" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="HkP-M4-RFP"/>
                                             <constraint firstItem="YTj-l8-BEA" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="750" id="Hmh-rL-75L"/>
                                             <constraint firstItem="uad-zj-pUu" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="J1x-DZ-9UI"/>
-                                            <constraint firstItem="0m9-Ub-Mi7" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="150" id="Lur-FX-uVW"/>
+                                            <constraint firstItem="D40-d0-UFr" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" constant="-154" id="JH3-0i-EIH"/>
+                                            <constraint firstItem="0m9-Ub-Mi7" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="170" id="Lur-FX-uVW"/>
+                                            <constraint firstItem="K7a-NI-bnW" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" constant="-154" id="MCA-E4-f29"/>
                                             <constraint firstItem="vPV-uc-1hO" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="Qg6-G4-LS6"/>
                                             <constraint firstItem="YTj-l8-BEA" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="U0C-cT-MNf"/>
-                                            <constraint firstItem="vPV-uc-1hO" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="553" id="VH4-rr-Opr"/>
+                                            <constraint firstItem="vPV-uc-1hO" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="580" id="VH4-rr-Opr"/>
+                                            <constraint firstItem="kxA-dr-q8S" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-350" id="d1P-vc-DQI"/>
                                             <constraint firstItem="b84-EE-p8x" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="eRe-32-dbJ"/>
                                             <constraint firstItem="n2a-w9-lhf" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" id="fvq-sb-xAh"/>
-                                            <constraint firstItem="uad-zj-pUu" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-590" id="gdv-1g-ZaT"/>
+                                            <constraint firstItem="uad-zj-pUu" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-570" id="gdv-1g-ZaT"/>
                                             <constraint firstAttribute="height" constant="1600" id="rML-pc-K7G"/>
-                                            <constraint firstItem="n2a-w9-lhf" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="383" id="uWR-xk-CAc"/>
+                                            <constraint firstItem="K7a-NI-bnW" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="-765" id="rk8-A8-51L"/>
+                                            <constraint firstItem="n2a-w9-lhf" firstAttribute="centerY" secondItem="NP0-rc-e9h" secondAttribute="centerY" constant="420" id="uWR-xk-CAc"/>
+                                            <constraint firstItem="kxA-dr-q8S" firstAttribute="centerX" secondItem="NP0-rc-e9h" secondAttribute="centerX" constant="-154" id="zGh-Gq-xqh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="NP0-rc-e9h" firstAttribute="leading" secondItem="ZO1-Cr-qgn" secondAttribute="leading" id="HVS-Ek-Sek"/>
                                     <constraint firstAttribute="trailing" secondItem="NP0-rc-e9h" secondAttribute="trailing" id="JMO-RJ-IWF"/>
@@ -1365,7 +1481,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ap4-dj-SxU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="NP0-rc-e9h" firstAttribute="width" secondItem="NJ2-xd-qqb" secondAttribute="width" id="IW7-5z-bBe"/>
                             <constraint firstItem="ZO1-Cr-qgn" firstAttribute="leading" secondItem="Ap4-dj-SxU" secondAttribute="leading" id="T1J-Qp-hd6"/>
@@ -1376,6 +1492,16 @@ Experiencing mental health problems can be confusing and frightening at first, a
                     </view>
                     <navigationItem key="navigationItem" title="Causes of Mental Health Problems" id="6SW-Lr-d05"/>
                     <size key="freeformSize" width="390" height="1600"/>
+                    <connections>
+                        <outletCollection property="textToSpeak" destination="uad-zj-pUu" collectionClass="NSMutableArray" id="vJG-6T-02E"/>
+                        <outletCollection property="textToSpeak" destination="b84-EE-p8x" collectionClass="NSMutableArray" id="fMg-3C-E1W"/>
+                        <outletCollection property="textToSpeak" destination="0m9-Ub-Mi7" collectionClass="NSMutableArray" id="g8x-SU-tFn"/>
+                        <outletCollection property="textToSpeak" destination="vPV-uc-1hO" collectionClass="NSMutableArray" id="ajX-aN-MHZ"/>
+                        <outletCollection property="playButtons" destination="K7a-NI-bnW" collectionClass="NSMutableArray" id="vni-EA-PFN"/>
+                        <outletCollection property="playButtons" destination="kxA-dr-q8S" collectionClass="NSMutableArray" id="898-gq-nMr"/>
+                        <outletCollection property="playButtons" destination="D40-d0-UFr" collectionClass="NSMutableArray" id="zEx-Lq-FBh"/>
+                        <outletCollection property="playButtons" destination="lsm-d8-cct" collectionClass="NSMutableArray" id="L8X-0Y-vGT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRB-hw-9Gb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1943,6 +2069,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="W7S-sP-R6P" firstAttribute="leading" secondItem="wRU-uE-7Ek" secondAttribute="leading" id="2Yd-eO-6jc"/>
                                     <constraint firstAttribute="bottom" secondItem="W7S-sP-R6P" secondAttribute="bottom" constant="-17" id="5Jh-Nw-J1P"/>
@@ -1952,7 +2079,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w2I-Hn-NIV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="wRU-uE-7Ek" firstAttribute="top" secondItem="EX0-ov-WJs" secondAttribute="top" id="3YK-dx-KoT"/>
                             <constraint firstAttribute="bottom" secondItem="wRU-uE-7Ek" secondAttribute="bottom" id="Hzi-hi-Nye"/>
@@ -2452,6 +2579,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5wD-fx-GbB" secondAttribute="trailing" id="1bc-eW-L8M"/>
                                     <constraint firstAttribute="bottom" secondItem="5wD-fx-GbB" secondAttribute="bottom" id="AvM-bx-Yfw"/>
@@ -2461,7 +2589,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JMk-S5-mGg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81402331589999999" green="0.90797418360000004" blue="0.99217039350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ffI-aK-zpu" firstAttribute="leading" secondItem="JMk-S5-mGg" secondAttribute="leading" id="7aw-v0-MoP"/>
                             <constraint firstItem="ffI-aK-zpu" firstAttribute="top" secondItem="Mbc-BC-RYF" secondAttribute="top" id="hGz-ZL-yQI"/>
@@ -2712,8 +2840,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHV-Z0-c0G">
                                                 <rect key="frame" x="175" y="0.0" width="155" height="58.333333333333336"/>
                                                 <color key="backgroundColor" red="0.62747687100000005" green="0.78561800719999997" blue="0.90197902919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-24" maxY="0.0"/>
-                                                <state key="normal" title="????">
+                                                <inset key="titleEdgeInsets" minX="-35" minY="0.0" maxX="-24" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="-27" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Painting" image="painting">
                                                     <color key="titleColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -2721,6 +2850,9 @@ Experiencing mental health problems can be confusing and frightening at first, a
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="paintingFunc:" destination="rK9-1j-Cgd" eventType="touchUpInside" id="fkV-JF-06G"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -2753,7 +2885,7 @@ Experiencing mental health problems can be confusing and frightening at first, a
                         <outletCollection property="activitiesButton" destination="c9Q-Ns-3vq" collectionClass="NSMutableArray" id="eZS-a7-rEb"/>
                         <outletCollection property="activitiesButton" destination="AgE-Ib-oTI" collectionClass="NSMutableArray" id="q0t-Rp-fW9"/>
                         <outletCollection property="activitiesButton" destination="AOd-Re-0gw" collectionClass="NSMutableArray" id="i6k-pr-Wi9"/>
-                        <outletCollection property="activitiesButton" destination="EHV-Z0-c0G" collectionClass="NSMutableArray" id="Lav-2E-Udk"/>
+                        <outletCollection property="activitiesButton" destination="EHV-Z0-c0G" collectionClass="NSMutableArray" id="b5b-nj-tIJ"/>
                         <segue destination="Pns-P3-bxM" kind="presentation" identifier="displayActivity" id="fnb-bd-Eue"/>
                     </connections>
                 </viewController>
@@ -3727,19 +3859,17 @@ you have been moving around a lot more than usual </string>
         <image name="moodAssess" width="33.333332061767578" height="33.333332061767578"/>
         <image name="music" width="34.666667938232422" height="34.666667938232422"/>
         <image name="new_sport" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="painting" width="32" height="32"/>
         <image name="pet_therapy" width="33.333332061767578" height="33.333332061767578"/>
         <image name="profile" width="33.333332061767578" height="33.333332061767578"/>
         <image name="rabbit" width="33.333332061767578" height="33.333332061767578"/>
         <image name="running" width="33.333332061767578" height="33.333332061767578"/>
         <image name="singing" width="32" height="32"/>
         <image name="tiger" width="32" height="32"/>
-        <image name="tts_stop" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="tts_start" width="33.333332061767578" height="33.333332061767578"/>
         <image name="walking" width="33.333332061767578" height="33.333332061767578"/>
         <image name="walking_ill" width="2000" height="2000"/>
         <image name="yoga" width="33.333332061767578" height="33.333332061767578"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

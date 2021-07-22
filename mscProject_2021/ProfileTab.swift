@@ -44,33 +44,43 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     }
     
     func displayResultInfo(infoToDisplay: Int, title: String, msg: String = "") {
-        var displayMsg:String?
-        var displayTitle:String?
+        var displayMsg = ""
+        var displayTitle = ""
         
         if infoToDisplay == 0 {
-            displayTitle = msg
-            displayMsg = msg
-        }
-        else {
-            if title == "NONE-MINIMAL" {
-                displayTitle = "NONE-MINIMAL"
-                displayMsg = "None"
-            }
-            else if title == "MILD" {
-                displayTitle = "MILD"
-                displayMsg = "Watchful waiting; repeat PHQ-9 at follow-up"
-            }
-            else if title == "MODERATE" {
-                displayTitle = "MODERATE"
-                displayMsg = "Treatment plan, considering counseling, follow-up and/or pharmacotherapy"
-            }
-            else if title == "MODERATELY SEVERE" {
-                displayTitle = "MODERATELY SEVERE"
-                displayMsg = "Active treatment with pharmacotherapy and/or psychotherapy"
+            if pieChart.noDataText == "No emotion analysis test taken yet" {
+                displayTitle = "N/A"
+                displayMsg = "\nFor results and an overall explanation of these above two sections, please take the Emotions Questionnaire, from within the Questionnaires."
             }
             else {
+                displayTitle = title
+                displayMsg = "\nThe pie chart shows the percentage of how much an emotion has been identified by the three machine learning models during each of the emotion analysis questions.\n\nThe average sentiment score identified by Apple's NLTagger, calculated using each question's sentiment score from this emotion analysis test, is beneath the pie chart. Values tending towards -1 indicate overall a negative sentiment expression identified from your answers, while values tending towards +1 indicate overall a positive sentiment. Values close to 0 indicate overall a neutral sentiment."
+            }
+        }
+        else {
+            if title.contains("NONE-MINIMAL") {
+                displayTitle = "NONE-MINIMAL"
+                displayMsg = "\nTreatment: None"
+            }
+            else if title.contains("MILD") {
+                displayTitle = "MILD"
+                displayMsg = "\nTreatment: Watchful waiting; repeat PHQ-9 at follow-up"
+            }
+            else if title.contains("MODERATELY SEVERE") {
+                displayTitle = "MODERATELY SEVERE"
+                displayMsg = "\nTreatment: Active treatment with pharmacotherapy and/or psychotherapy"
+            }
+            else if title.contains("MODERATE") {
+                displayTitle = "MODERATE"
+                displayMsg = "\nTreatment: Treatment plan, considering counseling, follow-up and/or pharmacotherapy"
+            }
+            else if title.contains("SEVERE"){
                 displayTitle = "SEVERE"
-                displayMsg = "Immediate initiation of pharmacotherapy and, if severe impairment or poor response to therapy, expedited referral to a mental health specialist for psychotherapy and/or collaborative management"
+                displayMsg = "\nTreatment: Immediate initiation of pharmacotherapy and, if severe impairment or poor response to therapy, expedited referral to a mental health specialist for psychotherapy and/or collaborative management"
+            }
+            else {
+                displayTitle = "N/A"
+                displayMsg = "\nTreatment: No treatment to reccomend because no PHQ-9 test has been taken yet.\n\nPlease take one, within the Questionnaires tab, for your results to be displayed and explained here."
             }
         }
         
@@ -80,7 +90,6 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         
         alertView.addAction(exitView)
         self.present(alertView, animated: true, completion: nil)
-        
     }
     
     @IBAction func logOutButton(_ sender: Any) {
@@ -121,7 +130,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
                 numberOfScore.text = "Oldest PHQ-9 test results"
             }
             else {
-                numberOfScore.text = ""
+                numberOfScore.text = "PHQ-9 test result"
             }
         }
     }
@@ -139,7 +148,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
                 numberOfScore.text = "Newest PHQ-9 test results"
             }
             else {
-                numberOfScore.text = ""
+                numberOfScore.text = "PHQ-9 test result"
             }
         }
     }
@@ -147,7 +156,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     // Function to display results of PHQ-9 test.
     func displayPHQresults(numberElementsPHQ: Int) {
         let data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
-        displayScoreText.text = "\((data?.scoreResPHQ[numberElementsPHQ])!)/27"
+        displayScoreText.text = "Score: \((data?.scoreResPHQ[numberElementsPHQ])!) out of 27"
         severityText.text = "Severity: \((data?.severityResPHQ[numberElementsPHQ])!)"
     }
     
@@ -161,13 +170,13 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             maxIndex = data!.scoreResPHQ.count-1
             
             numberOfScore.text = "Newest PHQ-9 test results"
-            displayScoreText.text = "\((data?.scoreResPHQ[numberOfElements])!)/27"
+            displayScoreText.text = "Score: \((data?.scoreResPHQ[numberOfElements])!) out of 27"
             severityText.text = "Severity: \((data?.severityResPHQ[numberOfElements])!)"
         }
         else { // Otherwise display nothing.
             maxIndex = 0
             numberOfScore.text = "No PHQ-9 test taken yet"
-            displayScoreText.text = "N/A"
+            displayScoreText.text = "Score: N/A"
             severityText.text = "Severity: N/A"
         }
         

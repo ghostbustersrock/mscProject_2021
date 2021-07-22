@@ -22,7 +22,9 @@ class EmotionQuestionnaire: UIViewController {
     var emotionsQsDetected:[String] = []
     var qsSentimentScores:[Double] = []
     
-    let questionsToDisplay:[String] = ["Describe how you are feeling and what is on your mind.", "Describe how you have been feeling in the past two weeks.", "Describe how something new recently made you feel.", "Describe how you are feeling mentally and physically.", "What are your thoughts telling you about yourself?"]
+    var questionsAlreadyAsked:[Int] = []
+    
+    let questionsToDisplay = ["Describe how you are feeling right now.", "Describe what is on your mind right now.", "Describe how you have been feeling this past week.", "Describe how something new recently made you feel.", "Describe how you are feeling mentally.", "Describe how you are feeling physically.", "What are your thoughts telling you about yourself right now?", "Describe what you think awaits you tomorrow.", "Describe how you would react to a sudden eventful change to your day right now.", "What would you tell your future self right now?", "Describe how recently, not having achieved something you wanted, made you feel.", "What are you expecting from yourself right now?", "Do you feel you are a glass half empty or full person right now and why?", "Do you feel you have the capability for real change in your life? Why or why not?", "Are you proud of the person you are today? Why or why not?", "Describe how you felt when you woke up this morning.", "How would you describe your current energy levels?", "Describe how, recently, eating has felt for you.", "Describe how, recently, you feel about your free time.", "Describe how, meeting someone new right now, would make you feel.", "Describe how, spending time by yourself or being alone right now, would make you feel."]
     
     var atQuestion:Int = 0
     var questionNumber:Int = 0
@@ -100,16 +102,15 @@ class EmotionQuestionnaire: UIViewController {
             let textToAnalyse = inputText.text!
             inputText.text = ""
             atQuestion += 1
-            questionNumber += 1
             
             modelsAnalysis(textToAnalyse: textToAnalyse)
             
             if atQuestion == 4 {
-                displayQuestion.text = "Question \(questionNumber+1): \(questionsToDisplay[questionNumber])"
+                displayQuestion.text = "Question \(atQuestion+1): \(questionsToDisplay[returnRandomNumber()])"
                 nextButton.setTitle("FINISH", for: .normal)
             }
             else if atQuestion < 5 {
-                displayQuestion.text = "Question \(questionNumber+1): \(questionsToDisplay[questionNumber])"
+                displayQuestion.text = "Question \(atQuestion+1): \(questionsToDisplay[returnRandomNumber()])"
             }
             else {
                 self.performSegue(withIdentifier: "endAnalysis", sender: self)
@@ -128,12 +129,25 @@ class EmotionQuestionnaire: UIViewController {
             // Removing all elements just to be safe once the values have been passed.
             emotionsQsDetected.removeAll()
             qsSentimentScores.removeAll()
+            questionsAlreadyAsked.removeAll()
         }
+    }
+    
+    func returnRandomNumber() -> Int {
+        var randomNumb = Int.random(in: 0..<21)
+        
+        while questionsAlreadyAsked.contains(randomNumb) {
+            randomNumb = Int.random(in: 0..<21)
+        }
+        
+        questionsAlreadyAsked.append(randomNumb)
+        return randomNumb
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayQuestion.text = "Question \(questionNumber+1): \(questionsToDisplay[questionNumber])"
+        
+        displayQuestion.text = "Question \(atQuestion+1): \(questionsToDisplay[returnRandomNumber()])"
     }
 }
 

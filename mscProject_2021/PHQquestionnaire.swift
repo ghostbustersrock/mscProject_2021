@@ -84,6 +84,7 @@ class PHQquestionnaire: UIViewController {
             questionDisplay[1].text = questionsPHQ[atQuestion]
         }
         else {
+            
             totalScore += points
             phqResult()
             
@@ -109,22 +110,27 @@ class PHQquestionnaire: UIViewController {
                 realm.add(phqResults)
                 try! realm.commitWrite()
             }
-            
-            
+        
             let alertView = UIAlertController(title: "Done!", message: "You have completed the PHQ-9 questionnaire with a score of \(totalScore)/27. From the PHQ-9 assessment table, your score suggests your depression severity to be \(depressionSeverity). The proposed treatment is the following: \(depressionTreatment). The results will be displayed on your profile underneath the emotion analysis' pie chart and sentiment score results. The newest scores will always be shown first.", preferredStyle: .alert)
 
             let goHomeAction = UIAlertAction (title: "Exit Test", style: .default) { alertAction in
-                // Just for sercurity purposes remove all values from the outlets and variables used, whose values need to be saved.
-                self.questionHeader = 0
-                self.atQuestion = 0
-                self.pressedButton = 0
-                self.totalScore = 0
-                self.points = 0
-                self.depressionSeverity = ""
-                self.depressionTreatment = ""
                 
-                // Return to the homepage once "Go home" has been pressed.
-                self.performSegue(withIdentifier: "goBackHome", sender: self)
+                if self.points != 0 {
+                    self.performSegue(withIdentifier: "cbtInfo", sender: self)
+                }
+                else {
+                    // Just for sercurity purposes remove all values from the outlets and variables used, whose values need to be saved.
+                    self.questionHeader = 0
+                    self.atQuestion = 0
+                    self.pressedButton = 0
+                    self.totalScore = 0
+                    self.points = 0
+                    self.depressionSeverity = ""
+                    self.depressionTreatment = ""
+                    
+                    // Return to the homepage once "Go home" has been pressed.
+                    self.performSegue(withIdentifier: "goBackHome", sender: self)
+                }
             }
 
             alertView.addAction(goHomeAction)
@@ -162,6 +168,19 @@ class PHQquestionnaire: UIViewController {
             depressionSeverity = "SEVERE"
             depressionTreatment = "Immediate initiation of pharmacotherapy and, if severe impairment or poor response to therapy, expedited referral to a mental health specialist for psychotherapy and/or collaborative management"
         }
+    }
+}
+
+
+class CbtInformation: UIViewController {
+    
+    @IBAction func cbtMoreInfo(_ sender: Any) {
+        let usefulFunc = UsefulFunctions()
+        usefulFunc.openSite(siteName: "https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
 

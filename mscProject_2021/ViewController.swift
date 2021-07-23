@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     // Button action outlet to do stuff if pressed.
     @IBAction func loginButton(_ sender: Any) {
         
-        // Checking if the login details are complete and correct before logging in.
+        // Checking if the login details are complete and correct before logging in by looking for the inputted login details on the database Realm and seeing if they return the inputs given, indicating that a login is possible.
         // If details are wrong or missing show errors.
         if usernameInput.text!.isEmpty || passwordInput.text!.isEmpty {
             if usernameInput.text!.isEmpty && passwordInput.text!.isEmpty {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
                 errorLabel.text = "No password match"
             }
         }
-        // If details are correct login.
+        // If details are correct login and re-direct with segue to the profile.
         else {
             errorLabel.text = ""
             self.performSegue(withIdentifier: "successfulLogin", sender: self)
@@ -64,6 +64,7 @@ class ViewController: UIViewController {
         // Print path to access Realm file to view saved objects and field's values.
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
+        // Setting some tesxt to the username and password fields placeholders.
         usernameInput.attributedPlaceholder = NSAttributedString(string: "Username",
                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x3F8098)])
         
@@ -75,8 +76,10 @@ class ViewController: UIViewController {
     // When a segue to another UI occurs bring within the ProfileTab UI class the unique ID of the logged in user along other information to be displayed on their profile.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "successfulLogin" {
+            
             let receiverVC = segue.destination as! UITabBarController
             let destinationVC = receiverVC.viewControllers![0] as! ProfileTab
+            // Information to pass to the profile's UI.
             destinationVC.profileID = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.identifier
             destinationVC.profileImage = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.profilePic
             destinationVC.profileUsername = realm.objects(User.self).filter("username == %@", usernameInput.text!).first!.username
@@ -91,7 +94,7 @@ class ViewController: UIViewController {
     }
 }
 
-// Extension used so for app to use HEX coded colours.
+// Extension used so to use throughout the application, HEX coded colours.
 extension UIColor {
     convenience init(hex: Int) {
         let rgbComponents = (R: CGFloat((hex>>16) & 0xff)/255, G: CGFloat((hex>>08) & 0xff)/255, B: CGFloat((hex>>00) & 0xff)/255)

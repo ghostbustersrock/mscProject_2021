@@ -90,8 +90,6 @@ class ActivitiesTab: UIViewController {
         toDisplayActivityInfo(image: imageActivity, name: nameActivity, description: descriptionActivity)
     }
     
-    
-    //MARK: WRITE ABOUT PET THERAPY
     @IBAction func petTherapyFunc(_ sender: Any) {
         let nameActivity = activitiesButton[10].currentTitle!
         let imageActivity = UIImage(named: "pet_therapy_ill")!

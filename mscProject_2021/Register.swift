@@ -13,7 +13,7 @@ var pressedArray:[String: Bool] = ["bear":false, "cat":false, "dog":false, "frog
 
 var profile:String = "N/A"
 
-// MARK: Sign up to the app class
+// MARK: Class to sign up to the app
 // This class contains functions and variables used for new users to sign up to the application.
 class Register: UIViewController {
     // Creating an instance to open a connection to the database.
@@ -21,10 +21,9 @@ class Register: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Setting the placeholder of the username field.
         usernameField.attributedPlaceholder = NSAttributedString(string: "i.e. msc_2021",
                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x3F8098)])
-        
     }
     
     // Outlets of the UI objects to make them interactive.
@@ -42,7 +41,7 @@ class Register: UIViewController {
     @IBOutlet var repeatPassField: UITextField!
     @IBOutlet var errorMsg: UILabel!
     
-    // Function called whenever an alert needs to be displayed.
+    // Function called, with specific parameters, whenever an alert needs to display a certain message.
     func fieldsAlert(title:String = "Missing Field!", msg: String) {
         
         let alertView = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -171,6 +170,7 @@ class Register: UIViewController {
 
             let exitAction = UIAlertAction (title: "Yes", style: .destructive ) { alertAction in
 
+                // Set global variables back to their original values to avoid possible errors while using the application.
                 profile = "N/A"
                 self.errorMsg.text = ""
                 self.resetBorders()
@@ -397,7 +397,6 @@ class Register: UIViewController {
         }
     }
 
-//    For the tiger background color.
     @IBAction func tigerFunc(_ sender: Any) {
 
         if pressedArray["tiger"] == false {

@@ -9,22 +9,24 @@ import UIKit
 import RealmSwift
 import Charts // Class to create graphs.
 
+// MARK: Class for the user's profile to display information and statistics
+// This is where the visual aids of the emotional analysis and PHQ-9 questionnaires results will be displayed for the user to scroll through them and check how they've been doing.
 class ProfileTab: UIViewController, ChartViewDelegate {
     
-    let realm = try! Realm()
+    let realm = try! Realm() // Creating an instance to access the database.
 
     var profileID: Int? // Where to store the ID of the person signed in.
     var profileImage: String? // Where to store the image of the person signed in.
-    var profileUsername: String?
+    var profileUsername: String? // Where to store the username of the person signed in.
     
     var data:PhqTestResults? // To save the information retrieved from the lists from the PHQ test results Realm class.
     var numberOfElements: Int = 0 // To save the size of the lists of the PHQ test results Realm class.
-    var maxIndex: Int = 0
+    var maxIndex: Int = 0 // To keep track of the max index of the above Realm retrieved list.
     
-    //var emotionsData:EmotionAnalysisResults? // To save the information retrieved from the lists from the Emotion test results Realm class.
     var totalElementsEmotion:Int = 0
     var maxIndexEmotion:Int = 0
     
+    // Outlets used to make UI objects functional.
     @IBOutlet var pieChart: PieChartView! // Outlet to work on the graph view.
     @IBOutlet var sentimentAveScoreLabel: UILabel!
     @IBOutlet var severityText: UILabel!
@@ -33,22 +35,28 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     @IBOutlet var profilePic: UIImageView!
     @IBOutlet var profileUsernameDisplay: UILabel!
     
+    // Action for the first information button
     @IBAction func infoOne(_ sender: Any) {
         
         let msg = ""
+        //Function called to display explanation for the emotional analysis test.
         displayResultInfo(infoToDisplay: 0, title: "Emotion Analysis Results", msg: msg)
     }
     
+    // Action for the second information button
     @IBAction func infoTwo(_ sender: Any) {
+        //Function called to display explanation for the PHQ-9 test results..
         displayResultInfo(infoToDisplay: 1, title: severityText.text!)
     }
     
+    // Function to display information when clicking either of the information buttons.
     func displayResultInfo(infoToDisplay: Int, title: String, msg: String = "") {
         var displayMsg = ""
         var displayTitle = ""
         
         if infoToDisplay == 0 {
-            if pieChart.noDataText == "No emotion analysis test taken yet" {
+            // Information to display for the first information button.
+            if sentimentAveScoreLabel.text!.contains("N/A") {
                 displayTitle = "N/A"
                 displayMsg = "\nFor results and an overall explanation of these above two sections, please take the Emotions Questionnaire, from within the Questionnaires."
             }
@@ -58,6 +66,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             }
         }
         else {
+            // Information to display for the second information button. Different things are shown based on the severity type PHQ-9 test result the user is currently viewing from their profile.
             if title.contains("NONE-MINIMAL") {
                 displayTitle = "NONE-MINIMAL"
                 displayMsg = "\nTreatment: None"
@@ -92,6 +101,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    // Action to logout from a user's profile.
     @IBAction func logOutButton(_ sender: Any) {
         let alertView = UIAlertController(title: "Log out?", message: "Are you sure you want to log out of your profile?", preferredStyle: .alert)
         
@@ -106,7 +116,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         self.present(alertView, animated: true, completion: nil)
     }
     
-    
+    // Function called to display an alert with a specific message thanks to the parameters used.
     func displayAlert(title: String, msg: String) {
         let alertView = UIAlertController(title: title, message: msg, preferredStyle: .alert)
 
@@ -117,6 +127,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    // Action to scroll back and view old PHQ-9 test results.
     @IBAction func previousPHQ(_ sender: Any) {
         numberOfElements -= 1
         if numberOfElements < 0 {
@@ -135,6 +146,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         }
     }
     
+    // Action to scroll forward and view new PHQ-9 test results.
     @IBAction func nextPHQ(_ sender: Any) {
         numberOfElements += 1
         if numberOfElements > maxIndex {
@@ -153,18 +165,18 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         }
     }
     
-    // Function to display results of PHQ-9 test.
+    // Function to display results of the PHQ-9 test.
     func displayPHQresults(numberElementsPHQ: Int) {
         let data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
         displayScoreText.text = "Score: \((data?.scoreResPHQ[numberElementsPHQ])!) out of 27"
         severityText.text = "Severity: \((data?.severityResPHQ[numberElementsPHQ])!)"
     }
     
-    // Function called everytime the profile tab bar is clicked to refresh the page in order for new content to appear.
+    // Function called everytime the profile tab bar is clicked to refresh the page in order for new content to appear for each questionnaire's visual aids.
     override func viewWillAppear(_ animated: Bool) {
         // Retrieving information from the user signed in.
         data = realm.objects(PhqTestResults.self).filter("identifier == %@", profileID!).first
-        // If the user already as data to display, then display it.
+        // If the user already has data to display, then display it.
         if data != nil {
             numberOfElements = data!.scoreResPHQ.count-1
             maxIndex = data!.scoreResPHQ.count-1
@@ -198,8 +210,9 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         Code version: v4.0.1 Release, 6 Nov. 2020
         Availability: https://github.com/danielgindi/Charts.git */
         
+        // The official Charts documentation was followed to write these lines of code below.
         
-        // If the user already has data to display, then display it.
+        // If the user already has data to display, then display it on the pie chart.
         if emotionsData.count > 0 {
             
             totalElementsEmotion = emotionsData.count-1
@@ -207,7 +220,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             
             //MARK: PLOT GRAPH!!!
             var dataEntries:[ChartDataEntry] = []
-            // Plotting the
+            // Creating the entries to display on the pie chart.
             for i in 0..<emotionsData[maxIndexEmotion].emotionsDetected.count {
                 let dataEntry = PieChartDataEntry(value: emotionsData[maxIndexEmotion].emotionsPercentage[i], label: emotionsData[maxIndexEmotion].emotionsDetected[i], data: emotionsData[maxIndexEmotion].emotionsDetected[i] as AnyObject)
                 
@@ -215,9 +228,10 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             }
 
             let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-            
+            // Setting colors to use for the pie chart's slices.
             pieChartDataSet.colors = [UIColor(hex: 0xff6b6b), UIColor(hex: 0xF94144), UIColor(hex: 0xffe66d), UIColor(hex: 0xF9A32B), UIColor(hex: 0xF9C74F), UIColor(hex: 0x90BE6D), UIColor(hex: 0x6AB47C), UIColor(hex: 0x43AA8B), UIColor(hex: 0x577590)]
             
+            // Setting the pie chart's text's color.
             pieChartDataSet.valueColors = [UIColor.black]
 
             let pieChartData = PieChartData(dataSet: pieChartDataSet)
@@ -228,17 +242,17 @@ class ProfileTab: UIViewController, ChartViewDelegate {
             
             sentimentAveScoreLabel.text = "Sentiment average score: \(emotionsData[totalElementsEmotion].sentimentAverage)"
         }
-        else { // Otherwise display nothing.
+        else { // Otherwise display nothing if no emotion analysis questionnaires have been taken yet.
             pieChart.noDataText = "No emotion analysis test taken yet"
             sentimentAveScoreLabel.text = "Sentiment average score: N/A"
         }
         //---------------------------------------------------------------------------
     }
     
+    // Function called to display a new graph with new information everytime the older or newer results button from the emotion analysis visual aids sections are pressed.
     func displayGraph(totalElementsEmotionFunc: Int) {
         let emotionsData = realm.objects(EmotionAnalysisResults.self).filter("identifier == %@", profileID!)
         var dataEntries:[ChartDataEntry] = []
-        // Plotting the
         
         //---------------------------------------------------------------------------
         /*
@@ -247,6 +261,8 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         Release date: 2015
         Code version: v4.0.1 Release, 6 Nov. 2020
         Availability: https://github.com/danielgindi/Charts.git */
+        
+        // The official Charts documentation was followed to write these lines of code below.
         
         // emotionsData[totalElementsEmotion].emotionsDetected List<String>
         for i in 0..<emotionsData[totalElementsEmotionFunc].emotionsDetected.count {
@@ -269,8 +285,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         //---------------------------------------------------------------------------
     }
     
-    
-    
+    // Action to scroll forwards and view new emotion analysis test results pie charts.
     @IBAction func newerEmotionsButton(_ sender: Any) {
         totalElementsEmotion += 1
         if totalElementsEmotion > maxIndexEmotion {
@@ -290,6 +305,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
         }
     }
     
+    // Action to scroll backwards and view older emotion analysis test results pie charts.
     @IBAction func olderEmotionsButton(_ sender: Any) {
         totalElementsEmotion -= 1
         if totalElementsEmotion < 0 {
@@ -314,6 +330,7 @@ class ProfileTab: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Disabling properties from the pie chart.
         pieChart.highlightPerTapEnabled = false
         pieChart.holeColor = .clear
         

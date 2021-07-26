@@ -3578,7 +3578,6 @@ you have been moving around a lot more than usual </string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="exitButton:" destination="yVN-rv-KJI" eventType="touchUpInside" id="Kv6-w1-ncH"/>
                                     <segue destination="HVm-PW-umb" kind="unwind" unwindAction="goBackQsHomeWithSegue:" id="1EA-U5-VIk"/>
                                 </connections>
                             </button>
@@ -3859,7 +3858,7 @@ you have been moving around a lot more than usual </string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-Yd-UOr">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="174"/>
-                                        <string key="text">You will be asked to answer five random questions. For each, please provide, as much as you can, an honest, complete and descriptive response. For each question's response, three emotions and a sentiment score (between -1 and +1) will be detected.</string>
+                                        <string key="text">You will be asked to answer five questions. For each, please provide, as much as you can, an honest, complete and descriptive response. For each question's response, three emotions and a sentiment score (between -1 and +1) will be detected.</string>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <color key="textColor" red="0.1215386167" green="0.22132676840000001" blue="0.30981582400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>

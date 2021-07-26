@@ -7,10 +7,13 @@
 
 import UIKit
 
+//MARK: Class of the UI presenting the different mental health problems
 class HealthProblems: UIViewController {
 
+    //Creating an instance of the UsefulFunctions class to open a link to a website.
     let usefulFunctions = UsefulFunctions()
     
+    // Function called to display the the title and definition of a specific mental health problem when selecting from those available.
     func displayDefinition(displayTitle: String, msg: String) {
         let defAction = UIAlertController(title: displayTitle, message: msg, preferredStyle: .alert)
         
@@ -22,10 +25,13 @@ class HealthProblems: UIViewController {
         self.present(defAction, animated: true, completion: nil)
     }
     
+    // Outlet of the button to open a website and re-direct a user to it.
     @IBAction func completeList(_ sender: Any) {
         usefulFunctions.openSite(siteName: "https://www.mind.org.uk/information-support/types-of-mental-health-problems/")
     }
     
+    //####################################################
+    // All the below IBAction functions are used for each mental health problem displayed, to choose from, to have their name and definition shown to the user, using the displayDefinition() class method.
     @IBAction func anger(_ sender: Any) {
         displayDefinition(displayTitle: "Anger", msg: "A strong feeling of annoyance, displesure or hostility.")
     }
@@ -111,6 +117,7 @@ class HealthProblems: UIViewController {
     @IBAction func trauma(_ sender: Any) {
         displayDefinition(displayTitle: "Trauma", msg: "This is when a person goes through very stressful, frightening or distressing events. Traumatic events can occur at any age and can cause long lasting harm. Each person has a different reaction to trauma, meaning effects can be noticed either quickly or after a long time.")
     }
+    //####################################################
     
     override func viewDidLoad() {
         super.viewDidLoad()

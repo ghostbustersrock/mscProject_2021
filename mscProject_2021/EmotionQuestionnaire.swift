@@ -7,7 +7,7 @@
 
 import UIKit
 import NaturalLanguage // For Apple's sentiment analysis score retrieval.
-import CoreML
+import CoreML // Library to use the models imported in XCode (the .mlmodel files).
 import RealmSwift
 
 
@@ -22,8 +22,10 @@ class EmotionQuestionnaire: UIViewController {
     var emotionsQsDetected:[String] = []
     var qsSentimentScores:[Double] = []
     
+    // To keep track of the questions already asked to the user, thus avoiding asking them again.
     var questionsAlreadyAsked:[Int] = []
     
+    // Array containing the questions to ask the user and for the application to select 5 at random from them.
     let questionsToDisplay = ["Describe how you are feeling right now.", "Describe what is on your mind right now.", "Describe how you have been feeling this past week.", "Describe how something new recently made you feel.", "Describe how you are feeling mentally.", "Describe how you are feeling physically.", "What are your thoughts telling you about yourself right now?", "Describe what you think awaits you tomorrow.", "Describe how you would react to a sudden eventful change to your day right now.", "What would you tell your future self right now?", "Describe how recently, not having achieved something you wanted, made you feel.", "What are you expecting from yourself right now?", "Do you feel you are a glass half empty or full person right now and why?", "Do you feel you have the capability for real change in your life? Why or why not?", "Are you proud of the person you are today? Why or why not?", "Describe how you felt when you woke up this morning.", "How would you describe your current energy levels?", "Describe how, recently, eating has felt for you.", "Describe how, recently, you feel about your free time.", "Describe how, meeting someone new right now, would make you feel.", "Describe how, spending time by yourself or being alone right now, would make you feel."]
     
     var atQuestion:Int = 0
@@ -52,20 +54,19 @@ class EmotionQuestionnaire: UIViewController {
             let sentimentAnalysis = tagger.tag(at: textToAnalyse.startIndex, unit: .paragraph, scheme: .sentimentScore).0
             let appleScore = Double(sentimentAnalysis?.rawValue ?? "0") ?? 0
             
-            // MARK: Saving stuff in class variables!!!
+            // Saving stuff in class variables!!!
             emotionsQsDetected.append(model1Pred.label)
             emotionsQsDetected.append(model2Pred.label)
             emotionsQsDetected.append(model3Pred.label)
             qsSentimentScores.append(appleScore)
             
-            // For DEBUGGING purposes!!!
-            print("##########################")
-            // Printing each model's results.
-            print("Model 1 results: \(model1Pred.label)")
-            print("Model 2 results: \(model2Pred.label)")
-            print("Model 3 results: \(model3Pred.label)")
-            print("Apple model result: \(appleScore)")
-            print("##########################")
+//            print("##########################")
+//            // Printing each model's results.
+//            print("Model 1 results: \(model1Pred.label)")
+//            print("Model 2 results: \(model2Pred.label)")
+//            print("Model 3 results: \(model3Pred.label)")
+//            print("Apple model result: \(appleScore)")
+//            print("##########################")
             
         } catch  {
             // If an error occurs during the emotion sentiment analysis, print an alert with the error and exit the questionnaire.
@@ -80,6 +81,7 @@ class EmotionQuestionnaire: UIViewController {
         }
     }
     
+    // Function called to create an alert message upon a warning being encountered.
     func alertMessage(msg: String) {
         // Alert displayed if 'next' is pressed with not inputted text.
         let alertView = UIAlertController(title: "Warning", message: msg, preferredStyle: .alert)
@@ -90,14 +92,18 @@ class EmotionQuestionnaire: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    // IBAction function to control the NEXT button and navigate to the next question.
     @IBAction func buttonFunc(_ sender: Any) {
         
+        //Show alert if NEXT is pressed with not text being inputted.
         if inputText.text.isEmpty {
             alertMessage(msg: "Please input some text before pressing the 'next' button. Thank you.")
         }
+        //Show alert if NEXT is pressed with only one word or character being inputted.
         else if !inputText.text.contains(" ") || inputText.text.count == 1 {
             alertMessage(msg: "Please input a more descriptive answer. A good amount would be one to two sentences. Thank you.")
         }
+        //If everything is correct identify the emotions using the models, by calling the modelsAnalysis() function.
         else {
             let textToAnalyse = inputText.text!
             inputText.text = ""
@@ -112,14 +118,15 @@ class EmotionQuestionnaire: UIViewController {
             else if atQuestion < 5 {
                 displayQuestion.text = "Question \(atQuestion+1): \(questionsToDisplay[returnRandomNumber()])"
             }
+            //Once all questions are answered redirect user to the results UI, to show them their results.
             else {
                 self.performSegue(withIdentifier: "endAnalysis", sender: self)
             }
         }
     }
     
+    //Passing to the results UI page the emotions and sentiment score detected for each question's answer.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "endAnalysis" {
             let receiverVC = segue.destination as! ResultEmotionAnalysis
             receiverVC.emotionsDetected = emotionsQsDetected
@@ -133,6 +140,7 @@ class EmotionQuestionnaire: UIViewController {
         }
     }
     
+    //Function called to return a random number indicating the index of one of the 21 questions to ask to the user. Once this number, which hasn't been picked already, is genereated, it is aved in the questionsAlreadyAsked array, to keep track of the questions already asked.
     func returnRandomNumber() -> Int {
         var randomNumb = Int.random(in: 0..<21)
         
@@ -146,7 +154,7 @@ class EmotionQuestionnaire: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Upon launching the questionnaire's UI display the first question.
         displayQuestion.text = "Question \(atQuestion+1): \(questionsToDisplay[returnRandomNumber()])"
     }
 }
@@ -157,19 +165,21 @@ class EmotionQuestionnaire: UIViewController {
 class ResultEmotionAnalysis: UIViewController {
     
     // Where to store the ID of the logged in user passed from the HomeQuestionnaireAnalysis view controller.
+    //The two variables beneath are where to store the results, passed from the previous UI, from the questions asked.
     var profileID:Int?
     var emotionsDetected:[String]?
     var sentimentsDetected:[Double]?
     var percentagesEmotions:[String: Double] = [:]
     
+    //Outlets to change the text for each of the five question's labels to display the appropriate results.
     @IBOutlet var resultsQ1: UILabel!
     @IBOutlet var resultsQ2: UILabel!
     @IBOutlet var resultsQ3: UILabel!
     @IBOutlet var resultsQ4: UILabel!
     @IBOutlet var resultsQ5: UILabel!
     
+    //IBAction function to display information on how to read the presented results.
     @IBAction func interpretResults(_ sender: Any) {
-        
         let msgToDisplay = "The first three values are the emotions detected by each trained machine model, while the decimal number (positive or negative) is the sentiment score. The application will count the number of times each emotion occured, throughout each question, and then calculate its percentage. These percentages, along to the emotion they relate to, will then be displayed on a pie chart on your profile The newest results will always be shown first.  The sentiment score will be displayed underneath the pie chart as an average, found using each question's sentiment score.  As these are not professional trained models, the identified emotions should always be taken with a pinch of salt. The sentiment score values are used to validate whether the identified emotions from the models are close to correct, in identifying the emotions the user was trying to transpire."
         
         let alertView = UIAlertController(title: "Interpreting the Results", message: msgToDisplay, preferredStyle: .alert)
@@ -178,6 +188,7 @@ class ResultEmotionAnalysis: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //Upon launching this UI immediatley present the results for each of the five questions.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -191,27 +202,26 @@ class ResultEmotionAnalysis: UIViewController {
         
         resultsQ5.text = "\(emotionsDetected![12]), \(emotionsDetected![13]), \(emotionsDetected![14]), \(sentimentsDetected![4])"
         
+        // Function called to calculate the percentage of an emotion detected throughout the five questions.
         calculatePercentages()
         
     }
     
+    // Function used to calculate the percentage of an emotion detected throughout the five questions.
     func calculatePercentages() {
         // Average of all the sentiment text scores.
         let averageSentiments = ((sentimentsDetected?.reduce(0, +))!)/5
         
-        print(averageSentiments)
-        
+        //Counting the number of times an emotion occurs throughout the five questions.
         for item in emotionsDetected! {
             percentagesEmotions[item] = (percentagesEmotions[item] ?? 0) + 1
         }
-        
-        print(percentagesEmotions)
         
         // These two arrays are used to store the information of the emotions detected and their calculated percentages, seperately on two differnt arrays.
         var emotions:[String] = []
         var calculatedPercent:[Double] = []
         
-        // Convert total count of emotions into percentages
+        // Convert the total count of an emotion into a percentage.
         for (key, _) in percentagesEmotions {
             let percentage = (percentagesEmotions[key]! * 100)/15
             // Rounding to two decimal places.
@@ -224,8 +234,9 @@ class ResultEmotionAnalysis: UIViewController {
         saveInfoForGraph(emotionDetected: emotions, percentEmotion: calculatedPercent, sentimentAverage: averageSentiments)
     }
     
+    //Function used to save to realm the emotions detected and its percentage. These are separately saved on Realm's EmotionAnalysisResults object class variables.
     func saveInfoForGraph(emotionDetected: [String], percentEmotion: [Double], sentimentAverage: Double) {
-        let realm = try! Realm()
+        let realm = try! Realm() //Creating an instance of the Realm database to access it.
         // Storing new items in Realm properties.
         // ##########################################
         let emotionResults = EmotionAnalysisResults()
@@ -246,10 +257,6 @@ class ResultEmotionAnalysis: UIViewController {
         realm.add(emotionResults)
         try! realm.commitWrite()
     }
-    
-    @IBAction func exitButton(_ sender: Any) {
-        
-    }
 }
 
 
@@ -264,6 +271,7 @@ class HomeQuestionnaireAnalysis: UIViewController {
         super.viewDidLoad()
     }
     
+    //Function used to display an alert containing some specific information.
     func displayInformation(title: String, msg: String) {
         let alertView = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Okay", style: .cancel)
@@ -271,22 +279,26 @@ class HomeQuestionnaireAnalysis: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //IBAction function to display more information on the emotion analysis results interpretation.
     @IBAction func moreInfoED(_ sender: Any) {
         let msgToDisplay = "The emotion analysis questionnaire uses three trained machine learning models to detect for each question's response an emotion. Each model was trained with a dataset comprising of textual inputs and an emotion assigned to it, classifying the emotion that textual input was portraying. Three models are used in the emotion analysis questionnaire, so to have more accuracy in detecting emotions within a user's reponse, rather than having only one model identify a single emotion.   The detectable emotions are nine: sadness, anger, joy, fear, happy, worry, hate, relief and boredom."
         
         displayInformation(title: "Emotions Detected", msg: msgToDisplay)
     }
     
+    //IBAction function to display more information on the sentiment score result interpretation.
     @IBAction func moreInfoSS(_ sender: Any) {
         let msgToDisplay = "Along the three implemented machine leanring models, Apple's NLTagger class will be used to assign to each question's response a decimal value in the range of -1 and +1. This class analyzes a text's language so to a sentiment score of it, meaning how positive (+1 being very positive) or negative (-1 being very negative) the user expressed themselves in their answer. Receiving a score of 0 means the text was identified as emotionally neutral."
         
         displayInformation(title: "Sentiment Score", msg: msgToDisplay)
     }
     
+    //IBAction to start the test and have the user redirect to the UI of the start of the test.
     @IBAction func startButton(_ sender: Any) {
         self.performSegue(withIdentifier: "startAnalysisQ", sender: self)
     }
     
+    //Function used to pass in to the next classes above the profile ID of the user taking the test. This is necessary to save new results for that specific user.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startAnalysisQ" {
             let receiverVC = segue.destination as! EmotionQuestionnaire

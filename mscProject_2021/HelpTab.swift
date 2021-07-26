@@ -38,7 +38,7 @@ class HelpTab: UIViewController {
      Channel: Mental Health at Work
      Date uploaded: July 1, 2016
      
-     Mental Health at Work (2016) What is Mental Health? [online video] Available at: https://www.youtube.com/watch?v=G0zJGDokyWQ&t=2s [Accessed: June 14, 2021]
+     Mental Health at Work (2016) What is Mental Health? [online video] Available at: https://www.youtube.com/watch?v=G0zJGDokyWQ&t=2s [Accessed: May 28, 2021]
      */
     func playVideo(videoURL: String) {
         

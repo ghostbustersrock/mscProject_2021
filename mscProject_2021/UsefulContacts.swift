@@ -6,21 +6,22 @@
 //
 
 import UIKit
-import UILabel_Copyable
+import UILabel_Copyable //To allow phone numbers labels to be copied when long pressed.
 
+//MARK: Class used for the useful mental health services contacts.
 class UsefulContacts: UIViewController {
     
     let funcsToCall = UsefulFunctions()
     
+    //Outlets for the phone numbers, emails and websites for useful services.
     @IBOutlet var labelsToCopy: [UILabel]!
-    
     @IBOutlet var phone_email_text: [UIButton]!
     
-    
+    //####################################################
+    // The below IBAction functions are used to open websites for the related mental health services.
     @IBAction func anxietySite(_ sender: Any) {
         funcsToCall.openSite(siteName: "https://www.\(String((phone_email_text[0].titleLabel?.text)!))")
     }
-    
     
     @IBAction func beatSite(_ sender: Any) {
         funcsToCall.openSite(siteName: "https://www.\(String((phone_email_text[1].titleLabel?.text)!))")
@@ -53,10 +54,12 @@ class UsefulContacts: UIViewController {
     @IBAction func moreContacts(_ sender: Any) {
         funcsToCall.openSite(siteName: "https://www.mind.org.uk/information-support/types-of-mental-health-problems/mental-health-problems-introduction/useful-contacts/")
     }
+    //####################################################
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //For loop used to make the phone numbers copyable when long pressed.
         for label in labelsToCopy {
             
             //---------------------------------------------------------------------------

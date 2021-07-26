@@ -7,19 +7,18 @@
 
 import UIKit
 
+//MARK: Class to make the activities UI objects functional.
 class ActivitiesTab: UIViewController {
     
     var imageAc:UIImage?
     var nameAc:String?
     var descriptionAc:String?
     
-//    @IBOutlet var activitiesButton: [UIButton]!
-    
+    // Outlet to make the activities buttons interactive and display their information.
     @IBOutlet var activitiesButton: [UIButton]!
     
-    
-    
-    
+    //####################################################
+    //These next 12 IBAction outlets are used to call the toDisplayActivityInfo() function for each activity to display an image of it, its title and a description of theirs.
     @IBAction func walkingFunc(_ sender: Any) {
         let nameActivity = activitiesButton[0].currentTitle!
         let imageActivity = UIImage(named: "walking_ill")!
@@ -65,7 +64,7 @@ class ActivitiesTab: UIViewController {
     @IBAction func singingFunc(_ sender: Any) {
         let nameActivity = activitiesButton[6].currentTitle!
         let imageActivity = UIImage(named: "singing_ill")!
-        let descriptionActivity = "Signing, like shouting, can have its benefits of releasing anger or tension within you. Putting music on and loudly signing the lyrics will tend to make you feel lighter. It can have all the negative within you be kicked out simply by signing along to a song, making you feel relaxed but also happy at the end for the great performance and relief you just had."
+        let descriptionActivity = "Singing, like shouting, can have its benefits of releasing anger or tension within you. Putting music on and loudly singing the lyrics will tend to make you feel lighter. It can have all the negative within you be kicked out simply by singing along to a song, making you feel relaxed but also happy at the end for the great performance and relief you just had."
         toDisplayActivityInfo(image: imageActivity, name: nameActivity, description: descriptionActivity)
     }
     
@@ -103,8 +102,10 @@ class ActivitiesTab: UIViewController {
         let descriptionActivity = "Painting is a great way to express our feelings. This can be done either painting on canvas or simply by drawing doodles. Taking the pen or paint and beginning to draw a visible or abstract figure can help relieve oneself from their inner negative tension, anger or negative emotions. Painting or drawing can also be done angrily and fiercely to embrace what we are currently feeling and let ourselves go on the canvas or paper."
         toDisplayActivityInfo(image: imageActivity, name: nameActivity, description: descriptionActivity)
     }
+    //####################################################
     
     
+    // Function taking in an image, title and description of the activity to display on a separate UI, passed in using the prepare() function of a segue.
     func toDisplayActivityInfo(image: UIImage, name: String, description: String) {
         imageAc = image
         nameAc = name
@@ -112,6 +113,7 @@ class ActivitiesTab: UIViewController {
         self.performSegue(withIdentifier: "displayActivity", sender: self)
     }
     
+    //Function called when preparing the segue to pass to the bottom class' variables specific values.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "displayActivity" {
             let receiverVC = segue.destination as! ActivityDisplayInfo
@@ -128,16 +130,20 @@ class ActivitiesTab: UIViewController {
 }
 
 
+//MARK: Class used to present information on an activity.
 class ActivityDisplayInfo: UIViewController {
     
+    // Where to store in the values passed from the above class when selecting an activity.
     var activityImage:UIImage?
     var activityName:String?
     var activityDescription:String?
     
+    //Outlets used to set specific values to the image and labels fields of this UI.
     @IBOutlet var imageActivity: UIImageView!
     @IBOutlet var nameActivity: UILabel!
     @IBOutlet var descriptionActivity: UILabel!
     
+    // Upon launching this UI, present some information of the activity selected.
     override func viewDidLoad() {
         super.viewDidLoad()
         imageActivity.image = activityImage

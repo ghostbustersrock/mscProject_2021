@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* Title: Keyboard manager to avoid keyboard from hiding UI content, built in Swift
         Author: Iftekhar Qurashi (hackiftekhar)
         Date: 2020
-        Code version: Latest commit 20 Oct. 2020
+        Code version: v6.5.0 Release, 26 Sep. 2019
         Availability: https://github.com/hackiftekhar/IQKeyboardManager.git */
         IQKeyboardManager.shared.enable = true
         //---------------------------------------------------------------------------
